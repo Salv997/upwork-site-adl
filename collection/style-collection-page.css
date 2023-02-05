@@ -58,6 +58,9 @@ footer{
     color: rgb(63, 63, 63);
     padding-bottom: 1.5rem;
 }
+ul li .gray-text:hover{
+    color: black;
+}
 
 
 .line-up{
