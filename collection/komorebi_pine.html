@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <title>Antilla Di Lauro - About</title>
+    <link rel="stylesheet" href="style-collection-page.css">
+    <script src="script.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.svg">
+</head>
+<body>
+    <div class="line-up"></div>
+    <div class="line-down"></div>
+    <div class="navbar">
+        <div class="logo">
+            <a href="/index.html">ANTILLA DI LAURO</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/about.html" class="gray-text">ABOUT</a></li>
+                <li><a href="/collection.html" class="active">COLLECTION</a></li>
+                <li><a href="/manufactoring.html" class="gray-text">MANUFACTORING</a></li>
+                <li><a href="/contact.html" class="gray-text">CONTACT</a></li>
+            </ul>
+        </nav>
+        <div class="menu">
+        <div id="menuToggle">
+            <input title="menu" class="toggler" type="checkbox"/>
+            <span></span>
+            <span id="invisible"></span>
+            <span></span>
+                <ul id="menu">
+                    <li><a href="/about.html" class="menu-a">About</a></li>
+                    <li><a href="/collection.html" class="menu-a">Collection</a></li>
+                    <li><a href="/manufactoring.html" class="menu-a">Manufactoring</a></li>
+                    <li><a href="/contact.html" class="menu-a">Contact</a></li>
+                </ul>
+          </div>
+          <script>
+              function hideMenu(){
+                  let menuOpen = document.querySelector('.toggler').checked;
+                  if(menuOpen = true){
+                      document.querySelector('.toggler').checked = false;
+                  }
+              }
+              window.addEventListener("scroll", hideMenu);
+          </script>
+        </div>
+    </div>
+    <main>
+        <section>
+            <div class="left-col">
+                <img src="/img/Komorebi_Pine.png" alt="item">
+            </div>
+            <div class="right-col">
+                <h1>KOMOREBI PINE</h1>
+                <div class="tech">
+                    <h2>TECHNIQUE</h2>
+                    <p>Hand-tufted</p>
+                    <p>200.000 knots/sq.meter</p>
+                </div>
+                <div class="tech">
+                    <h2>MATERIALS</h2>
+                    <p>60% New Zealand wool</p>
+                    <p>40% Bamboo silk</p>
+                </div>
+                <div class="tech">
+                    <h2>DIMENSIONS</h2>
+                    <p>270 x 180 cm</p>
+                    <p>Pile height 8 mm</p>
+                </div>
+                <div class="tech">
+                    <h2>BESPOKE</h2>
+                    <p>All rugs are customizable in color, dimensions, shape, materials</p>
+                    <p>For custom quotations get in touch with us at hello@antilladilauro.com</p>
+                </div>
+                <div class="tech">
+                    <h2>SHIPPING</h2>
+                    <p>We ship worldwide</p>
+                </div>
+                <div class="tech">
+                    <h2>LEAD TIME</h2>
+                    <p>6 weeks</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="gray-text">
+        © 2023 Antilla Di Lauro
+    </footer>
+</body>
+</html>
