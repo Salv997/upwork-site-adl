@@ -9,24 +9,26 @@
     src: url("font/Minion-Regular.woff") format("woff");
     font-weight: 400;
 }
-@font-face {
-    font-family: "minion";
-    src: url("font/MinionPro-Semibold.woff") format("woff");
-    font-weight: 600;
-}
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+html{
+    color: #40413D;
+}
 .navbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2.25rem 4vw 1rem 4vw;
+    padding: 2.2rem 2rem 1rem 2rem;
     position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 100%;
     background-color: white;
+
 }
 .navbar .logo{
     font-size: 1.4rem;
@@ -43,7 +45,7 @@ nav ul{
 }
 a{
     text-decoration: none;
-    color: black;
+    color: #40413D;
 }
 nav ul li{
     font-family: 'minion';
@@ -54,14 +56,15 @@ footer{
     padding-top: 2.5rem;
     text-align: center;
     color: rgb(63, 63, 63);
-    padding-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    font-size: 1rem;
 }
 .gray-text{
     color: #69696f;
 }
 .line-up{
     width: 100%;
-    height: 1rem;
+    height: 0.5rem;
     background-color: #231F20;
     position: fixed;
     top: 0;
@@ -70,7 +73,7 @@ footer{
 }
 .line-down{
     width: 100%;
-    height: 1rem;
+    height: 0.5rem;
     background-color: #231F20;
     position: fixed;
     bottom: 0;
@@ -84,6 +87,67 @@ ul li .gray-text:hover{
     color: black;
 }
 
+.transition-1 {
+    position: fixed;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    background-color: #10261E;
+    transition: 1s cubic-bezier(.215, .61, .355, 1);
+    opacity: 1;
+}
+.transition-1.is-active {
+    bottom: 0;
+    border-radius: 0;
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.transition-1 h2{
+    font-size: clamp(1.8rem, 6vw, 4rem);
+    text-transform: uppercase;
+    font-family: 'couture';
+    color: #5c5c5c;
+    position: relative;
+}
+.transition-1 h2::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #DDDAD5;
+    overflow: hidden;
+    animation: animate 1.2s ease-in-out forwards;
+}
+@keyframes animate{
+    0%{
+        width: 0;
+    }
+    100%{
+        width: 100%;
+    }
+}
+.line-up-transition{
+    width: 100%;
+    height: 0.5rem;
+    background-color: #DDDAD5;
+    position: absolute;
+    top: 0;
+    left:0;
+}
+.line-down-transition{
+    width: 100%;
+    height: 0.5rem;
+    background-color: #DDDAD5;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
 @media (max-width: 60rem){
     nav{
         display: none;

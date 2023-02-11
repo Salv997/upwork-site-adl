@@ -1,0 +1,18 @@
+main {
+    margin: 0 8vw;
+    font-family: 'minion';
+    height: calc(100vh - 2.7rem);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+}
+h1{
+    font-weight: 400;
+}
+
+@media (max-width: 60rem){
+    main {
+        font-size: 1.2rem;
+    }
+}
