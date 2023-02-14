@@ -13,8 +13,7 @@ main .sec-1{
     display: flex;
     gap: 7%;
     align-items: center;
-    min-height: 100vh;
-    padding-top: 5rem;
+    padding-top: 10rem;
 }
 main p{
     text-align: justify;
@@ -31,7 +30,6 @@ main .description{
 }
 main .sec-2{
     padding-top: 10rem;
-    min-height: calc(100vh - 2rem);
     display: flex;
     justify-content: space-around;
     align-items: center;

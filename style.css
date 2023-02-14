@@ -7,7 +7,6 @@
 @font-face {
     font-family: "minion";
     src: url("font/Minion-Regular.woff") format("woff");
-    font-weight: 400;
 }
 *{
     margin: 0;
@@ -107,7 +106,7 @@ ul li .gray-text:hover{
     justify-content: center;
 }
 .transition-1 h2{
-    font-size: clamp(1.8rem, 6vw, 4rem);
+    font-size: clamp(1.8rem, 8vw, 4.5rem);
     text-transform: uppercase;
     font-family: 'couture';
     color: #5c5c5c;
