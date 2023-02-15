@@ -8,6 +8,10 @@
     font-family: "minion";
     src: url("font/Minion-Regular.woff") format("woff");
 }
+@font-face {
+    font-family: "Minion-Variable";
+    src: url("font/Minion-Variable-Concept.otf") format("opentype");
+}
 *{
     margin: 0;
     padding: 0;
@@ -20,17 +24,18 @@ html{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2.2rem 2rem 1rem 2rem;
+    padding: 2.2rem 5rem 1rem 5rem;
     position: fixed;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 100%;
     background-color: white;
+    max-width: 90rem;
 
 }
 .navbar .logo{
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-family: 'couture';
     position: relative;
 }
@@ -40,7 +45,7 @@ html{
 nav ul{
     list-style: none;
     display: flex;
-    gap: 3vw;
+    gap: 4rem;
 }
 a{
     text-decoration: none;
@@ -49,7 +54,7 @@ a{
 nav ul li{
     font-family: 'minion';
     font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 footer{
     padding-top: 2.5rem;
@@ -147,7 +152,15 @@ ul li .gray-text:hover{
     bottom: 0;
     left: 0;
 }
+@media (max-width: 75rem){
+    .navbar{
+        padding: 2.2rem 2rem 1rem 2rem;
+    }
+}
 @media (max-width: 60rem){
+    .navbar{
+        padding: 2.2rem 1rem 1rem 1rem;
+    }
     nav{
         display: none;
     }

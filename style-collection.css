@@ -1,9 +1,40 @@
 main{
-    max-width: 70rem;
+    max-width: 90rem;
     margin: 0 auto;
-    padding: 7rem 0 6rem 0;
+    padding: 7rem 5rem 6rem 5rem;
     padding-top: 12rem;
 }
+section{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 3rem;
+    row-gap: 2rem;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+}
+.card .image{
+    background-color: #eee;
+    width: 100%;
+    aspect-ratio: 6.65/7.65;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.card .image img{
+    max-width: 70%;
+    max-height: 18rem;
+}
+.card .title{
+    font-size: 1.05rem;
+    font-weight: 600;
+    padding: 0.2rem 0.5rem;
+}
+
+/*
 section{
     display: flex;
     gap: 3rem;
@@ -11,30 +42,42 @@ section{
     flex-wrap: wrap;
 }
 .card{
+    flex-grow: 1;
+    width: calc(100%- 20px);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
 .card .image{
-    width: 21rem;
-    height: 26rem;
     background-color: #eee;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.card .title{
-    font-size: 1.05rem;
-    font-weight: 600;
-    padding: 0.2rem 0.5rem;
-}
 .card .image img{
     max-width: 16rem;
     max-height: 21rem;
-}
+}*/
 
+@media (max-width: 75rem){
+    main{
+        padding: 7rem 2rem 6rem 2rem;
+    }
+}
 @media (max-width: 60rem){
+    main{
+        padding: 7rem 1rem 6rem 1rem;
+    }
     section{
-        gap: 3rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 1rem;
+        row-gap: 1.5rem;
+    }
+}
+@media (max-width: 30rem){
+    .card .image img{
+        max-width: 70%;
+        max-height: 10rem;
     }
 }

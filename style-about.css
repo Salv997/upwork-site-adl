@@ -1,9 +1,9 @@
 
 .portrait img{
-    width: clamp(15rem, 40vw, 30rem);
+    width: clamp(15rem, 40vw, 35rem);
 }
 main {
-    padding: 0 8vw;
+    padding: 0 5rem;
     font-family: 'minion';
     max-width: 90rem;
     margin: 0 auto;
@@ -12,7 +12,7 @@ main {
 main .sec-1{
     display: flex;
     gap: 7%;
-    align-items: center;
+    align-items: flex-start;
     padding-top: 10rem;
 }
 main p{
@@ -21,6 +21,9 @@ main p{
 }
 main h1{
     font-size: 2rem;
+    font-family: 'Minion-Variable';
+    line-height: 1;
+    padding-bottom: 1rem;
 }
 main .description{
     display: flex;
@@ -44,10 +47,17 @@ main .sec-2 .column-three
     font-size: 2rem;
     gap: 0.2rem;
 }
-
+@media (max-width: 75rem){
+    main{
+        padding: 0 2rem;
+    }
+}
 @media (max-width: 60rem){
     .portrait img{
         width: 100%;
+    }
+    main{
+        padding: 0 1rem;
     }
     main .sec-1{
         display: flex;

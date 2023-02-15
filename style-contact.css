@@ -5,7 +5,7 @@ main{
     justify-content: flex-end;
     max-width: 90rem;
     margin: 0 auto;
-    padding: 0 8vw;
+    padding: 0 5rem;
     padding-top: 3rem;
     font-family: 'minion';
 }
@@ -16,7 +16,8 @@ section{
     justify-content: flex-end;
 }
 section img{
-    width: 24rem;
+    padding-top: 2rem;
+    width: clamp(15rem, 30vw, 35rem);
 }
 section .left-col > div{
     display: flex;
@@ -29,6 +30,11 @@ section .left-col .bold{
 
 
 
+@media (max-width: 75rem){
+    main{
+        padding: 0 2rem;
+    }
+}
 @media (max-width: 60rem){
     main{
         display: flex;
@@ -36,7 +42,7 @@ section .left-col .bold{
         justify-content: flex-end;
         max-width: 90rem;
         margin: 0 auto;
-        padding: 0 8vw;
+        padding: 0 1rem;
         padding-top: 3rem;
         font-family: 'minion';
     }
@@ -49,7 +55,7 @@ section .left-col .bold{
         flex-direction: column-reverse;
     }
     section img{
-        max-width: 20rem;
+        max-width: 25rem;
         width: 100%;
     }
 }
