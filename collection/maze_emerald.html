@@ -10,11 +10,11 @@
     <link rel="icon" href="../img/favicon.ico">
 </head>
 <body>
-    <div class="line-up"></div>
-    <div class="line-down"></div>
+    <div class="line-up" id="lineone"></div>
+    <div class="line-down" id="linetwo"></div>
     <div class="navbar">
         <div class="logo">
-            <a href="/index.html">ANTILLA DI LAURO</a>
+            <a href="../index.html" id="navtitle">ANTILLA DI LAURO</a>
         </div>
         <nav>
             <ul>
@@ -26,25 +26,46 @@
         </nav>
         <div class="menu">
         <div id="menuToggle">
-            <input title="menu" class="toggler" type="checkbox"/>
+            <input title="menu" id="checkbox" class="toggler" type="checkbox"/>
             <span></span>
-            <span id="invisible"></span>
+            <span></span>
             <span></span>
                 <ul id="menu">
-                    <li><a href="/about.html" class="menu-a">About</a></li>
-                    <li><a href="/collection.html" class="menu-a">Collection</a></li>
-                    <li><a href="/manufacturing.html" class="menu-a">Manufacturing</a></li>
-                    <li><a href="/contact.html" class="menu-a">Contact</a></li>
+                    <li><a href="../about.html" class="menu-a">About</a></li>
+                    <li><a href="../collection.html" class="menu-a">Collection</a></li>
+                    <li><a href="../manufacturing.html" class="menu-a">Manufacturing</a></li>
+                    <li><a href="../contact.html" class="menu-a">Contact</a></li>
                 </ul>
           </div>
           <script>
               function hideMenu(){
+                  const logo = document.querySelector('.logo');
                   let menuOpen = document.querySelector('.toggler').checked;
                   if(menuOpen = true){
                       document.querySelector('.toggler').checked = false;
                   }
               }
               window.addEventListener("scroll", hideMenu);
+          </script>
+          <script>
+                const checkbox = document.getElementById("checkbox");
+                const lineup = document.getElementById("lineone");
+                const linedown = document.getElementById("linetwo");
+                const title = document.getElementById("navtitle");
+
+                checkbox.addEventListener("click", function() {
+                if (this.checked) {
+                    setTimeout(function(){
+                        lineup.style.backgroundColor = "#DDDAD5";
+                        linedown.style.backgroundColor = "#DDDAD5";
+                        title.style.color = "#DDDAD5";
+                    }, 200);
+                } else {
+                    lineup.style.backgroundColor = "#231F20";
+                    linedown.style.backgroundColor = "#231F20";
+                    title.style.color = "#231F20";
+                }
+                });
           </script>
         </div>
     </div>

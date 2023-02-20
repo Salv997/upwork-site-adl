@@ -32,12 +32,12 @@ html{
     width: 100%;
     background-color: white;
     max-width: 90rem;
-
 }
 .navbar .logo{
     font-size: 1.2rem;
     font-family: 'couture';
     position: relative;
+    z-index: 999;
 }
 .active{
     font-weight: 600;
@@ -73,7 +73,7 @@ footer{
     position: fixed;
     top: 0;
     left:0;
-    z-index: 0;
+    z-index: 99;
 }
 .line-down{
     width: 100%;
@@ -82,7 +82,7 @@ footer{
     position: fixed;
     bottom: 0;
     left: 0;
-    z-index: 99;
+    z-index: 5;
 }
 .menu{
     display: none;
@@ -184,7 +184,7 @@ ul li .gray-text:hover{
         height: 25px;
         position: absolute;
         opacity: 0;
-        z-index: 2;
+        z-index: 1000;
         -webkit-touch-callout: none;
     }
     #menuToggle span{
@@ -210,6 +210,8 @@ ul li .gray-text:hover{
         opacity: 1;
         transform: rotate(45deg) translate(-2px, -1px);
         background: #DDDAD5;
+        position: relative;
+        z-index: 1000;
     }
     #menuToggle input:checked ~ span:nth-last-child(3){
         opacity: 0;
@@ -254,127 +256,6 @@ ul li .gray-text:hover{
         font-weight: 400;
         transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
     }
-    #menu li a:active{
-        opacity: 0.8;
-        font-size: 2.45em;
-    }
     #menuToggle input:checked ~ ul{ transform: none; }
-    .colored{
-        color: red;
-    }
-    .line-1{
-        width: 120vw;
-        height: 0.5rem;
-        background-color: #DDDAD5;
-        position: relative;
-        top: -9.3rem;
-        left: 0;
-    }
-    
-    /*
-    #menuToggle{
-        position: relative;
-        z-index: 5;
-        -webkit-user-select: none;
-        user-select: none;
-        bottom: 2px;
-    }
-    #menuToggle a{
-        text-decoration: none;
-        color: #DDDAD5;
-        transition: color 0.3s ease;
-        font-family: 'minion';
-        font-weight: 400;
-        text-transform: uppercase;
-        font-size: 2rem;
-    }
-    #menuToggle a:hover{
-        color: #5c5c5c;
-    }
-    #menuToggle input{
-        width: 40px;
-        height: 20px;
-        position: absolute;
-        opacity: 0;
-        z-index: 2;
-        -webkit-touch-callout: none;
-    }
-    #menuToggle span{
-        display: block;
-        width: 24px;
-        height: 2px;
-        margin-bottom: 4px;
-        position: relative;
-        background: #111;
-        z-index: 1;
-        transform-origin: 14px -5px;
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                    opacity 0.55s ease;
-    }
-    #menuToggle span:first-child{
-        transform-origin: 0% 100%;
-    }
-    #menuToggle span:nth-last-child(2){
-        transform-origin: 0% 100%;
-    }
-    #menuToggle input:checked ~ span {
-        opacity: 1;
-        transform: rotate(45deg) translate(-2px, -1px);
-        background: #DDDAD5;
-    }
-    #menuToggle input:checked ~ span:nth-last-child(3){
-        opacity: 0;
-        transform: rotate(0deg) scale(0.2, 0.2);
-    }
-    #menuToggle input:checked ~ span:nth-last-child(2){
-        transform: rotate(-45deg) translate(0, -1px);
-    }
-    #menu{
-        background-color: #10261E;
-        position: absolute;
-        width: 120vw;
-        height: 100vh;
-        padding: 50px;
-        top: -50px;
-        right: -20vw;
-        padding-top: 23vh;
-        padding-right: 10%;
-        list-style-type: none;
-        -webkit-font-smoothing: antialiased;
-        transform-origin: 50% 50%;
-        transform: translate(100%, 0);
-        transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-    }
-    #menu li{
-        padding-bottom: 25px;
-    }
-    #menu li a{
-        font-size: 1.2rem;
-        color: #DDDAD5;
-        font-weight: 600;
-        transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
-    }
-    #menu li a:active{
-        opacity: 0.8;
-    }
-    #menuToggle input:checked ~ ul{ transform: none; }
-    .line-up-menu{
-        width: 100%;
-        height: 1rem;
-        background-color: #DDDAD5;
-        position: absolute;
-        top: 0;
-        left:0;
-        z-index: 999999;
-    }
-    .line-down-menu{
-        width: 100%;
-        height: 1rem;
-        background-color: #DDDAD5;
-        position: absolute;
-        top: 0;
-        left:0;
-        z-index: 999999;
-    }*/
+
 }

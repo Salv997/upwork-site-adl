@@ -29,35 +29,10 @@ section{
     max-height: 18rem;
 }
 .card .title{
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 600;
     padding: 0.2rem 0.5rem;
 }
-
-/*
-section{
-    display: flex;
-    gap: 3rem;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-.card{
-    flex-grow: 1;
-    width: calc(100%- 20px);
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-.card .image{
-    background-color: #eee;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.card .image img{
-    max-width: 16rem;
-    max-height: 21rem;
-}*/
 
 @media (max-width: 75rem){
     main{
