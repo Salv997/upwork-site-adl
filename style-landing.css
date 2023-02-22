@@ -23,7 +23,7 @@ html{
 #desktop{
     width: 100vw;
     min-height: 100dvh;
-    background-image: url(./img/bg.jpg);
+    background-image: url(./img/bg.webp);
     background-size: cover;
     background-position: center 40%;
     background-repeat: no-repeat;
@@ -72,7 +72,7 @@ a{
         display: block;
         width: 100vw;
         min-height: 100dvh;
-        background-image: url(./img/bg-mob.jpg);
+        background-image: url(./img/bg-mob.webp);
         background-size: cover;
         background-position: 100% center;
         background-repeat: no-repeat;
