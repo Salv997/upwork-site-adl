@@ -118,10 +118,12 @@ main h1{
 }
 main h2{
     font-size: 1.4rem;
+    padding-bottom: 0.4rem;
 }
 main p{
     font-family: 'minion';
     font-weight: 300;
+    padding-bottom: 0.2rem;
 }
 section .right-col{
     display: flex;
