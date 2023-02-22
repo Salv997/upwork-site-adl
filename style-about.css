@@ -18,12 +18,14 @@ main .sec-1{
 main p{
     text-align: justify;
     color: #555;
+    font-weight: 400;
 }
 main h1{
     font-size: 2rem;
     font-family: 'Minion-Variable';
     line-height: 1;
     padding-bottom: 1rem;
+    font-weight: 500;
 }
 main .description{
     display: flex;
@@ -37,6 +39,7 @@ main .sec-2{
     justify-content: space-around;
     align-items: center;
     gap: 5%;
+    padding-bottom: 4rem;
 }
 main .sec-2 .column-one,
 main .sec-2 .column-three
