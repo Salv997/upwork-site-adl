@@ -1,7 +1,5 @@
 
-.portrait img{
-    width: clamp(15rem, 40vw, 35rem);
-}
+
 main {
     padding: 0 5rem;
     font-family: 'minion';
@@ -49,6 +47,9 @@ main .sec-2 .column-three
     text-align: center;
     font-size: 2rem;
     gap: 0.2rem;
+}
+.portrait img{
+    width: clamp(15rem, 40vw, 35rem);
 }
 @media (max-width: 75rem){
     main{
