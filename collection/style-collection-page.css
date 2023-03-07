@@ -27,7 +27,7 @@ html{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 2.2rem 5rem 1rem 5rem;
+    padding: 2.8rem 5rem 2rem 5rem;
     position: fixed;
     top: 0;
     left: 50%;
@@ -105,20 +105,20 @@ section{
     gap: 10vw;
 }
 section img{
-    max-width: 28rem;
-    max-height: 28rem;
-}
-main h1,
-main h2{
-    font-family: 'swiss';
+    max-width: 100%;
+    max-height: 36rem;
 }
 main h1{
     font-size: 2rem;
     padding-bottom: 1rem;
+    font-family: 'swiss';
+    color: black;
 }
 main h2{
     font-size: 1.4rem;
     padding-bottom: 0.4rem;
+    font-family: 'Couture';
+    color: black;
 }
 main p{
     font-family: 'minion';

@@ -8,6 +8,7 @@ main{
     padding: 0 5rem;
     padding-top: 3rem;
     font-family: 'minion';
+    color: black;
 }
 section{
     display: flex;
