@@ -1,5 +1,5 @@
 main{
-    min-height: calc(100vh - 2.7rem);
+    min-height: calc(100vh - 5.55rem);
     display: flex;
     align-items: center;
     justify-content: flex-end;
@@ -18,7 +18,7 @@ section{
 }
 section img{
     padding-top: 2rem;
-    width: clamp(15rem, 30vw, 35rem);
+    width: clamp(15rem, 28vw, 35rem);
 }
 section .left-col > div{
     display: flex;
@@ -58,5 +58,20 @@ section .left-col .bold{
     section img{
         max-width: 25rem;
         width: 100%;
+    }
+}
+@media (max-width: 40rem){
+    section img{
+        width: 100%;
+        max-width: 100rem;
+    }
+    main{
+        padding: 0 0;
+        padding-top: 2rem;
+        justify-content: center;
+        width: 100%;
+    }
+    .left-col{
+        padding-right: 1rem;
     }
 }

@@ -1,7 +1,7 @@
 /* FONT */
 @font-face {
     font-family: "couture";
-    src: url("font/couture.woff") format("woff");
+    src: url("font/couture-bld.otf") format("opentype");
     font-weight: 400;
 }
 @font-face {
@@ -51,6 +51,9 @@ a{
     text-decoration: none;
     color: #40413D;
 }
+.navbar a {
+    color: black;
+}
 nav ul li{
     font-family: 'Minion-Variable';
     font-weight: 400;
@@ -64,7 +67,7 @@ footer{
     font-size: 0.9rem;
 }
 .gray-text{
-    color: #69696f;
+    color: rgb(66, 65, 61);
 }
 .line-up{
     width: 100%;

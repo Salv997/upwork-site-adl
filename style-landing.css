@@ -1,7 +1,7 @@
 /* FONT */
 @font-face {
     font-family: "couture";
-    src: url("font/couture.woff") format("woff");
+    src: url("font/couture-bld.otf") format("opentype");
     font-weight: 400;
 }
 @font-face {
@@ -35,7 +35,7 @@ html{
 #desktop h1{
     font-family: 'couture';
     font-size: 2.4rem;
-    padding-bottom: 1.5rem;
+    margin-bottom: 5rem;
 }
 a{
     text-decoration: none;
