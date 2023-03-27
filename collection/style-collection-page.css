@@ -19,6 +19,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+::-webkit-scrollbar {
+    width: 0.5em;
+    height: 0.5rem;
+}
+::-webkit-scrollbar-track {
+    background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 0.25em;
+}
 
 html{
     color: #40413D;
@@ -225,7 +236,7 @@ section .right-col{
         height: 120vh;
         padding: 50px;
         top: -50px;
-        right: -20vw;
+        right: -16.5vw;
         padding-top: 23vh;
         padding-right: 10%;
         list-style-type: none;
@@ -276,5 +287,9 @@ section .right-col{
         top: 0;
         left:0;
         z-index: 999999;
+    }
+    ::-webkit-scrollbar {
+        width: 0;
+        height: 0;
     }
 }

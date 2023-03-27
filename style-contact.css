@@ -18,7 +18,7 @@ section{
 }
 section img{
     padding-top: 2rem;
-    width: clamp(15rem, 28vw, 35rem);
+    width: clamp(15rem, 30vw, 35rem);
 }
 section .left-col > div{
     display: flex;
@@ -28,10 +28,17 @@ section .left-col > div{
 section .left-col .bold{
     font-weight: 600;
 }
+footer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 1rem;
+}
 
 
 
-@media (max-width: 75rem){
+@media (max-width: 70rem){
     main{
         padding: 0 2rem;
     }
