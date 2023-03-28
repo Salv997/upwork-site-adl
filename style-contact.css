@@ -29,11 +29,8 @@ section .left-col .bold{
     font-weight: 600;
 }
 footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding-top: 1rem;
+    position: relative;
+    z-index: -1;
 }
 .email a{
     color: black;
