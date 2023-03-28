@@ -25,7 +25,7 @@
     background-color: #fff;
 }
 ::-webkit-scrollbar-thumb {
-  background-color: #a0a0a0;
+  background-color: #cccccc;
 }
 html{
     color: #40413D;
@@ -64,11 +64,6 @@ a{
 .navbar a {
     color: black;
 }
-nav ul li{
-    font-family: 'Minion-Variable';
-    font-weight: 400;
-    font-size: 1rem;
-}
 footer{
     padding-top: 2.5rem;
     text-align: center;
@@ -76,8 +71,14 @@ footer{
     padding-bottom: 2rem;
     font-size: 0.9rem;
 }
-.gray-text{
+.navbar a.gray-text {
     color: rgb(66, 65, 61);
+}
+nav ul li{
+    font-family: 'Minion-Variable';
+    font-weight: 400;
+    font-size: 1rem;
+    color: rgb(66, 65, 61) 
 }
 .line-up{
     width: 100%;
@@ -124,11 +125,11 @@ ul li .gray-text:hover{
     justify-content: center;
 }
 .transition-1 h2{
-    font-size: clamp(1.8rem, 8vw, 4.5rem);
-    text-transform: uppercase;
+    font-size: clamp(2rem, 8vw, 4.5rem);
     font-family: 'couture';
     color: #5c5c5c;
     position: relative;
+    font-weight: 100;
 }
 .transition-1 h2::before{
     content: attr(data-text);

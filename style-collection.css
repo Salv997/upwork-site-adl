@@ -33,6 +33,7 @@ section{
     font-family: 'Variable-Concept';
     font-weight: 600;
     padding: 0.4rem 0;
+    color: black;
 }
 
 @media (max-width: 75rem){
