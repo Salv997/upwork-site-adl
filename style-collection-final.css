@@ -44,44 +44,31 @@ main .header h1{
 h2 {
     font-size:1.8rem;
 }
-.description{ list-style: none;}
-.description li.active .info {
-    max-height: 100% !important;
-    padding-bottom: 25px;
-    transition: max-height 0.5s ease, padding-bottom 0.5s ease;
-}
-.parent-container .question{
-    display: flex;
-    align-items: center;
-    padding: 1rem 0;
+
+.list-desc{
     font-size: 1rem;
-    border-radius: 15px;
-    transition: color 0.5s ease;
-    cursor: pointer;
-}
-.parent-container .info{
-    font-size: 1rem;
-    font-weight: 400;
     max-height: 0;
     overflow: hidden;
-}
-.faq li.active .info {
-    max-height: 100% !important;
-    padding-bottom: 25px;
-}
-.info{
+    transition: max-height 0.2s ease;
     display: flex;
     flex-direction: column;
     gap: 1.2rem;
 }
-.info h4{
+.list-desc h4{
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 700;
 }
-.info p{
+.list-desc p{
     font-weight: 500;
     font-size: 0.9rem;
     padding-bottom: 0.2rem;
+}
+.description.active .list-desc{
+    max-height: 20rem;
+}
+.description .togg{
+    cursor: pointer;
+    padding: 1rem 0;
 }
 .slide-nav{display: flex; gap: 0.2rem;}
 .navigator i{
@@ -91,11 +78,12 @@ img{
     max-width: 100%;
     max-height: 48rem;
 }
-.colonna-sx,
-.reverse .colonna-dx{
+.colonna-dx,
+.reverse .colonna-sx{
     height: 52rem;
 }
 .top-btn{
+    margin-top: 7rem;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -104,7 +92,6 @@ img{
     font-family: 'Minion-Variable';
     font-size: 1.5rem;
     text-align: center;
-    width: auto;
 }
 
 
@@ -135,8 +122,8 @@ img{
     .reverse .colonna-sx{
         order: 2;
     }
-    .colonna-sx,
-    .reverse .colonna-dx{
+    .colonna-dx,
+    .reverse .colonna-sx{
         height: auto;
     }
 }
