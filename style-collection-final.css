@@ -50,6 +50,7 @@ h2 {
     height: 16px;
     position: relative;
     width: 16px;
+    z-index:-1;
 }
 .plus-minus-toggle::before{
     height: 2.5px;
