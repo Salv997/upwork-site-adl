@@ -115,7 +115,7 @@ h2 {
     color: black;
 }
 .description.active .list-desc{
-    max-height: 28rem;
+    max-height: 30rem;
 }
 .description .togg{
     cursor: pointer;
