@@ -130,6 +130,7 @@ img{
     .riga{
         grid-template-columns: 100%;
         grid-template-rows: 1fr auto;
+        row-gap: 2rem;
     }
     .reverse .colonna-dx{
         order: 1;
