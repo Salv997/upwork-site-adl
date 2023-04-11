@@ -2,13 +2,13 @@ main{
     max-width: 90rem;
     margin: 0 auto;
     padding: 7rem 5rem 6rem 5rem;
-    padding-top: 12rem;
     font-family: 'Minion-Variable';
     color: black;
+    padding-top: 12rem;
 }
 main .header h1{
     color: black;
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 400;
     line-height: 1.1;
     padding-bottom: 5rem;
@@ -16,7 +16,150 @@ main .header h1{
 .grid{
     display: grid;
     grid-auto-flow: row;
-    row-gap: 7rem;
+    row-gap: 10rem;
+}
+.riga{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 5rem;
+}
+img{
+    width: 100%;
+}
+.navigator{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 0.8rem;
+    padding-top: 2rem;
+}
+.slide-nav{
+    display: flex;
+}
+.plus-minus-toggle {
+    cursor: pointer;
+    height: 16px;
+    position: relative;
+    width: 16px;
+    z-index:-1;
+}
+.plus-minus-toggle::before{
+    height: 1px;
+    width: 16px;
+    background-color: black;
+    content: '';
+    position: absolute;
+    top: 10px;
+    transform: rotate(-90deg);
+    transition: transform 500ms ease;
+}
+.plus-minus-toggle::after{
+    height: 1px;
+    width: 16px;
+    background-color: black;
+    content: '';
+    position: absolute;
+    top: 10px;
+    transform: rotate(180deg);
+    transition: transform 500ms ease;
+}
+.active .plus-minus-toggle::before{
+    transform: rotate(0);
+}
+.active .plus-minus-toggle::after{
+    transform: rotate(0);
+}
+.list-desc{
+    font-size: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+.list-desc h4{
+    font-size: 1rem;
+    font-weight:400;
+}
+.list-desc p{
+    font-weight: 400;
+    font-size: 0.9rem;
+    padding-bottom: 0.2rem;
+}
+.list-desc a{
+    color: black;
+}
+.description.active .list-desc{
+    max-height: 30rem;
+}
+.description .togg{
+    cursor: pointer;
+    padding: 1rem 0;
+}
+.slide-nav{display: flex; gap: 0.2rem;}
+.top-btn{
+    margin-top: 7rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.top-btn a{
+    font-family: 'Minion-Variable';
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+@media (max-width: 75rem){
+    main{
+        padding: 7rem 2rem 6rem 2rem;
+    }
+}
+
+@media (max-width: 60rem){
+    main{
+        padding: 7rem 1rem 6rem 1rem;
+    }
+    main .header h1{
+        font-size: 1.6rem;
+    }
+    img{padding: 0 5rem;}
+    .riga{
+        grid-template-columns: 100%;
+        grid-template-rows: 1fr auto;
+    }
+    .reverse .colonna-dx{
+        order: 1;
+    }
+    .reverse .colonna-sx{
+        order: 2;
+    }
+}
+
+
+/*
+main{
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 7rem 5rem 6rem 5rem;
+    padding-top: 12rem;
+    font-family: 'Minion-Variable';
+    color: black;
+}
+main .header h1{
+    color: black;
+    font-size: 2.8rem;
+    font-weight: 400;
+    line-height: 1.1;
+    padding-bottom: 5rem;
+}
+.grid{
+    display: grid;
+    grid-auto-flow: row;
+    row-gap: 0rem;
 }
 .riga{
     display: flex;
@@ -68,7 +211,7 @@ h2 {
     z-index:-1;
 }
 .plus-minus-toggle::before{
-    height: 2.5px;
+    height: 1px;
     width: 16px;
     background-color: black;
     content: '';
@@ -78,7 +221,7 @@ h2 {
     transition: transform 500ms ease;
 }
 .plus-minus-toggle::after{
-    height: 2.5px;
+    height: 1px;
     width: 16px;
     background-color: black;
     content: '';
@@ -145,7 +288,6 @@ img{
 }
 
 
-
 @media (max-width: 75rem){
     main{
         padding: 7rem 2rem 6rem 2rem;
@@ -183,3 +325,4 @@ img{
 }
 
 
+*/
