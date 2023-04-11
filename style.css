@@ -12,6 +12,10 @@
     font-family: "Minion-Variable";
     src: url("font/Minion-Variable-Concept.otf") format("opentype");
 }
+@font-face {
+    font-family: "elephant";
+    src: url("font/Elephant.ttf") format("truetype");
+}
 *{
     margin: 0;
     padding: 0;
