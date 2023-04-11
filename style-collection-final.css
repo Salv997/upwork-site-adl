@@ -13,6 +13,11 @@ main .header h1{
     line-height: 1.1;
     padding-bottom: 5rem;
 }
+h2 {
+    font-size:1.3rem;
+    font-weight: 400;
+    padding-bottom: 1rem;
+}
 .grid{
     display: grid;
     grid-auto-flow: row;
@@ -191,11 +196,6 @@ main .header h1{
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-h2 {
-    font-size:1.2rem;
-    font-weight: 400;
-    padding-bottom: 1rem;
 }
 .riga p{
     font-size: 1.05rem;
