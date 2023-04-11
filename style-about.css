@@ -50,6 +50,10 @@ main .sec-2 .column-three
 .portrait img{
     width: clamp(15rem, 40vw, 35rem);
 }
+span{color:black}
+.gray-text {
+    color: rgb(66, 65, 61);
+}
 @media (max-width: 75rem){
     main{
         padding: 0 2rem;
