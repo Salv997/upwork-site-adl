@@ -24,6 +24,7 @@ main .header h1{
     -moz-hyphens: auto;
     -webkit-hyphens: auto;
     hyphens: auto;
+
 }
 main h2 {
     font-size:1.3rem;
@@ -160,6 +161,9 @@ img{
     visibility: visible;
     opacity: 1;
 }
+.mobile{
+    display: none;
+}
 
 @media (max-width: 75rem){
     main{
@@ -171,6 +175,11 @@ img{
 }
 
 @media (max-width: 60rem){
+    .desktop{display: none}
+    .mobile{display: inline-block;}
+    p.mobile{
+        padding-top: 2rem;
+    }
     .navbar{
         padding: 2.2rem 1rem 1rem 1rem;
     }
