@@ -95,7 +95,7 @@ img{
     transition: max-height 0.2s ease;
     display: flex;
     flex-direction: column;
-    gap: 1.2rem;
+    gap: 0.7rem;
 }
 .list-desc h4{
     font-size: 1rem;
@@ -159,6 +159,9 @@ img{
 }
 
 @media (max-width: 60rem){
+    .navbar{
+        padding: 2.8rem 5rem 2rem 5rem;
+    }
     main{
         padding: 7rem 2.5rem 6rem 1rem;
     }
