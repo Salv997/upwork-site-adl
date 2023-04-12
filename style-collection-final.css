@@ -14,7 +14,7 @@ main .header h1{
     padding-bottom: 5rem;
     text-align: justify;
 }
-h2 {
+main h2 {
     font-size:1.3rem;
     font-weight: 100;
     padding-bottom: 1rem;
@@ -138,6 +138,15 @@ img{
 }
 .img-slide.right{
     float: right;
+}
+#topbtn{
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .4s, visibility .4s;
+}
+#topbtn.show{
+    visibility: visible;
+    opacity: 1;
 }
 
 @media (max-width: 75rem){
