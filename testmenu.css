@@ -1,39 +1,12 @@
-/* FONT */
-@font-face {
-    font-family: "couture";
-    src: url("font/couture-bld.otf") format("opentype");
-    font-weight: 400;
-}
-@font-face {
-    font-family: "minion";
-    src: url("font/Minion-Regular.woff") format("woff");
-}
-@font-face {
-    font-family: "Minion-Variable";
-    src: url("font/Minion-Variable-Concept.otf") format("opentype");
-}
-@font-face {
-    font-family: "elephant";
-    src: url("font/Elephant.ttf") format("truetype");
-}
-*{
-    margin: 0;
-    padding: 0;
+*{padding:0; margin:0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
-}
-::-webkit-scrollbar {
-    width: 0.5em;
-    height: 0.5rem;
-}
-::-webkit-scrollbar-track {
-    background-color: #fff;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #cccccc;
-}
-html{
-    color: #40413D;
+    scroll-behavior: smooth;}
+main{
+    max-width:90rem;
+    height: 1000px;
+    margin: 0 auto;
+    background-color: red;
+    position: relative;
 }
 .navbar{
     display: flex;
@@ -47,6 +20,7 @@ html{
     width: 100%;
     background-color: white;
     max-width: 90rem;
+    z-index:999;
 }
 .navbar .logo{
     font-size: 1.2rem;
@@ -69,106 +43,6 @@ a{
 .navbar a {
     color: black;
 }
-footer{
-    padding-top: 2.5rem;
-    text-align: center;
-    color: rgb(63, 63, 63);
-    padding-bottom: 2rem;
-    font-size: 0.9rem;
-}
-.navbar a.gray-text {
-    color: rgb(66, 65, 61);
-}
-nav ul li{
-    font-family: 'Minion-Variable';
-    font-weight: 400;
-    font-size: 1rem;
-    color: rgb(66, 65, 61) 
-}
-.line-up{
-    width: 100%;
-    height: 0.65rem;
-    background-color: black;
-    position: fixed;
-    top: 0;
-    left:0;
-    z-index: 99;
-}
-.line-down{
-    width: 100%;
-    height: 0.65rem;
-    background-color: black;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 5;
-}
-ul li .gray-text:hover{
-    color: black;
-}
-
-.transition-1 {
-    position: fixed;
-    right: 100%;
-    bottom: 0;
-    width: 100%;
-    height: 100svh;
-    z-index: 99999;
-    background-color: #10261E;
-    transition: 0.2s cubic-bezier(.215, .61, .355, 1);
-    opacity: 1;
-}
-.transition-1.is-active {
-    right: 0;
-    border-radius: 0;
-    opacity: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.transition-1 h2{
-    font-size: clamp(2rem, 8vw, 4.5rem);
-    font-family: 'couture';
-    color: #5c5c5c;
-    position: relative;
-    font-weight: 100;
-}
-.transition-1 h2::before{
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 100%;
-    color: #DDDAD5;
-    overflow: hidden;
-    animation: animate 1.2s ease-in-out forwards;
-}
-@keyframes animate{
-    0%{
-        width: 0;
-    }
-    100%{
-        width: 100%;
-    }
-}
-.line-up-transition{
-    width: 100%;
-    height: 0.65rem;
-    background-color: #DDDAD5;
-    position: absolute;
-    top: 0;
-    left:0;
-}
-.line-down-transition{
-    width: 100%;
-    height: 0.65rem;
-    background-color: #DDDAD5;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
 #menuToggle{
     position: relative;
     z-index: 5;
@@ -260,8 +134,10 @@ ul li .gray-text:hover{
     transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
 }
 #menuToggle input:checked ~ ul{ transform: none; }
-
-
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
 
 @media (max-width: 75rem){
     .navbar{
@@ -269,7 +145,7 @@ ul li .gray-text:hover{
     }
     #menu{
         right: -2rem;
-        padding-left: 2.5rem;
+        padding-left: 2rem;
     }
 }
 @media (max-width: 60rem){
@@ -280,9 +156,4 @@ ul li .gray-text:hover{
         right: -1rem;
         padding-left: 1rem;
     }
-    ::-webkit-scrollbar {
-        width: 0;
-        height: 0;
-    }
-
 }
