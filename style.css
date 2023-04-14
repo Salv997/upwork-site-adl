@@ -253,11 +253,14 @@ ul li .gray-text:hover{
     padding-bottom: 0.8rem;
 }
 #menu li a{
-    font-size: 1rem;
+    font-size: 1.8rem;
     color: #DDDAD5;
     text-transform: uppercase;
     font-weight: 400;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+}
+#menu li a:hover{
+    color: #a8a5a1;
 }
 #menuToggle input:checked ~ ul{ transform: none; }
 
@@ -271,6 +274,9 @@ ul li .gray-text:hover{
         right: -2rem;
         padding-left: 2.5rem;
     }
+    #menu li a{
+        font-size: 1.4rem;
+    }
 }
 @media (max-width: 60rem){
     .navbar{
@@ -279,6 +285,9 @@ ul li .gray-text:hover{
     #menu{
         right: -1rem;
         padding-left: 1rem;
+    }
+    #menu li a{
+        font-size: 1rem;
     }
     ::-webkit-scrollbar {
         width: 0;
