@@ -155,5 +155,6 @@ a{
     #menu{
         right: -1rem;
         padding-left: 1rem;
+        box-shadow: -1px 0px 0px 100px #10261E;
     }
 }

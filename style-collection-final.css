@@ -132,6 +132,7 @@ img{
     position: fixed;
     bottom: 5rem;
     right: -2rem;
+    z-index: -1;
 }
 .top-btn a{
     font-family: 'Minion-Variable';
