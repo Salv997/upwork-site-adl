@@ -230,7 +230,7 @@ ul li .gray-text:hover{
     padding: 50px;
     top: -2.9rem;
     right: -5rem;
-    padding-top: 23vh;
+    padding-top: 30vh;
     padding-left: 5rem;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
@@ -250,12 +250,12 @@ ul li .gray-text:hover{
     font-family: 'couture';
 }
 #menu li{
-    padding-bottom: 0.8rem;
+    padding-bottom: 2.6rem;
 }
 #menu li a{
-    font-size: 1.8rem;
+    font-size: 3.5rem;
     color: #DDDAD5;
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-weight: 400;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
 }
@@ -273,9 +273,14 @@ ul li .gray-text:hover{
     #menu{
         right: -2rem;
         padding-left: 2.5rem;
+        padding-top: 28vh;
+    }
+    #menu li{
+        padding-bottom: 2rem;
     }
     #menu li a{
-        font-size: 1.4rem;
+        font-size: 2.2rem;
+        text-transform: capitalize;
     }
 }
 @media (max-width: 60rem){
@@ -286,9 +291,14 @@ ul li .gray-text:hover{
         right: -1rem;
         padding-left: 1rem;
         box-shadow: -1px 0px 0px 1px #10261E;
+        padding-top: 22vh;
     }
     #menu li a{
         font-size: 1rem;
+        text-transform: uppercase;
+    }
+    #menu li{
+        padding-bottom: 0.8rem;
     }
     ::-webkit-scrollbar {
         width: 0;
