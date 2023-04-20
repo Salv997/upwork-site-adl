@@ -237,7 +237,7 @@ ul li .gray-text:hover{
     transform-origin: 50% 50%;
     transform: translate(300%, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
-    z-index: 99;
+    z-index: 999;
     box-shadow: -1px 0px 0px 1000px #10261E;
 }
 #menu h2{
