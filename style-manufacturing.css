@@ -1,18 +1,16 @@
-main {
-    margin: 0 8vw;
-    font-family: 'minion';
-    height: calc(100vh - 5.55rem);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.3rem;
+main{
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 7rem 5rem 6rem 5rem;
+    font-family: 'Minion-Variable';
+    color: black;
+    padding-top: 10rem;
 }
-h1{
+main .header h1{
+    color: black;
+    font-size: 2rem;
     font-weight: 400;
-}
-
-@media (max-width: 60rem){
-    main {
-        font-size: 1.2rem;
-    }
+    line-height: 1.1;
+    padding-bottom: 5rem;
+    text-align: justify;
 }
