@@ -6,11 +6,57 @@ main{
     color: black;
     padding-top: 10rem;
 }
+.navbar{
+    padding: 2.8rem 5rem 6rem 5rem;
+}
+.manufacturing{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    padding-bottom: 10rem;
+}
+.materials{
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
 main .header h1{
     color: black;
     font-size: 2rem;
     font-weight: 400;
     line-height: 1.1;
     padding-bottom: 5rem;
+    text-align: justify;
+}
+main h2{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 100;
+    padding-bottom: 1rem;
+    padding-top: 3rem;
+}
+main .grid .riga{
+    display: flex;
+    height: 30rem;
+    gap: 5rem;
+}
+main .grid img{
+    height: 100%;
+}
+main h3{
+    font-family: 'Elephant';
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 100;
+    padding-bottom: 1.2rem;
+}
+main h4{
+    font-family: 'Minion-Variable';
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    font-weight: 100;
+    padding-bottom: 1.2rem;
+}
+main p{
     text-align: justify;
 }
