@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Collection - Antilla Di Lauro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style-slider.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+    <link rel="icon" href="./img/favicon.ico">
+    <meta name="robots" content="index,follow">
+    <meta name="author" content="Antilla Di Lauro">
+    <meta name="description" content="Discover the exclusive collection of luxury rugs. Handcrafted with the finest materials, our rugswill elevate the style of any room. Shop now and add a touch of elegance to your life.">
+    <meta name="keywords" content="almadra, arashi, casablanca, komorebi, kouyou, lola, marea, maze, mesanpar, mustique, tito, zahir, collection">
+    <meta property="og:title" content="Collection - Antilla Di Lauro">
+    <meta property="og:description" content="Discover the exclusive collection of luxury rugs. Handcrafted with the finest materials, our rugswill elevate the style of any room. Shop now and add a touch of elegance to your life.">
+    <meta property="og:url" content="https://www.antilladilauro.com/collection.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Antilla Di Lauro">
+    <script src="https://kit.fontawesome.com/238170af42.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            <a href="./index.html" id="navtitle">ANTILLA DI LAURO</a>
+        </div>
+        <div class="menu">
+        <div id="menuToggle">
+            <input title="menu" id="checkbox" class="toggler" type="checkbox"/>
+            <span></span>
+            <span></span>
+            <span></span>
+                <ul id="menu">
+                    <li><a href="./about.html" class="menu-a">About</a></li>
+                    <li><a href="./collection.html" class="menu-a">Collection</a></li>
+                    <li><a href="./manufacturing.html" class="menu-a">Manufacturing</a></li>
+                    <li><a href="./contact.html" class="menu-a">Contact</a></li>
+                </ul>
+          </div>
+          <script>
+              function hideMenu(){
+                  const logo = document.querySelector('.logo');
+                  let menuOpen = document.querySelector('.toggler').checked;
+                  if(menuOpen = true){
+                      document.querySelector('.toggler').checked = false;
+                  }
+              }
+              window.addEventListener("scroll", hideMenu);
+          </script>
+          <script>
+                const checkbox = document.getElementById("checkbox");
+                const lineup = document.getElementById("lineone");
+                const linedown = document.getElementById("linetwo");
+                const title = document.getElementById("navtitle");
+
+                checkbox.addEventListener("click", function() {
+                if (this.checked) {
+                    setTimeout(function(){
+                        lineup.style.backgroundColor = "#DDDAD5";
+                        linedown.style.backgroundColor = "#DDDAD5";
+                        title.style.color = "#DDDAD5";
+                    }, 200);
+                } else {
+                    lineup.style.backgroundColor = "#231F20";
+                    linedown.style.backgroundColor = "#231F20";
+                    title.style.color = "#231F20";
+                }
+                });
+          </script>
+        </div>
+    </div>
+    <main>
+        <div class="grid">
+            <div class="riga">
+                <div class="sinistra">
+                    <div class="slider">
+                        <div class="image">
+                            <img class="slide-maze" src="img/Casablanca_Burgundy.webp" alt="">
+                            <img class="slide-maze" src="img/Diriyah_Sample 1.JPEG" alt="">
+                            <img class="slide-maze" src="img/Nomansland_Sample 1.png" alt="">
+                        </div>
+                        <i class="fa-solid fa-chevron-left" onclick="plusDivsMaze(-1);decrementaNumeroMaze()"></i>
+                        <i class="fa-solid fa-chevron-right" onclick="plusDivsMaze(+1);aggiungiNumeroMaze()"></i>
+                    </div>
+                </div>
+                <div class="destra">
+                    <h2>CASABLANCA /</h2>
+                    <p class="desktop">
+                        With its intricate woven geometry Maze reinterprets the intricate patterns and labyrinths 
+                        found in traditional Asian art such as mandalas and other sacred geometries. 
+                        For centuries, these patterns have served as focal points for meditation and 
+                        self-reflection across Asia, with a rich history and cultural significance from 
+                        India to China and Japan.    
+                    </p>
+                    <div class="parent-container desktop">
+                        <div class="description">
+                            <h3 class="togg" id="toggle">
+                                <div class="plus-minus-toggle collapsed"></div>
+                            </h3>
+                            <div class="list-desc" id="show">
+                                <div class="tech">
+                                    <h4>TECHNIQUE AND QUALITY</h4>
+                                    <p>Hand-knotted in Nepal</p>
+                                    <p>200.000 knots/sq.meter</p>
+                                </div>
+                                <div class="comp">
+                                    <h4>COMPOSITION</h4>
+                                    <p>60% New Zealand wool</p>
+                                    <p>40% Bamboo silk</p>
+                                </div>
+                                <div class="dim">
+                                    <h4>DIMENSIONS</h4>
+                                    <p>270 x 200 cm</p>
+                                </div>
+                                <div class="bespoke">
+                                    <h4>BESPOKE</h4>
+                                    <p>All rugs are customizable in color, dimensions, shape, composition.</p>
+                                    <p>For custom quotations get in touch with us at <a href="mailto:hello@antilladilauro.com?subject=Your Maze Rug in Emerald Color">hello@antilladilauro.com</a></p>
+                                </div>
+                                <div class="lead">
+                                    <h4>LEAD TIME</h4>
+                                    <p>12 weeks</p>
+                                </div>
+                                <div class="ship">
+                                    <h4>SHIPPING</h4>
+                                    <p>We ship worldwide</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>
+            <div class="riga">
+                <div class="sinistra">
+                    <h2>MESANPAR /</h2>
+                    <p class="desktop">
+                        With its intricate woven geometry Maze reinterprets the intricate patterns and labyrinths 
+                        found in traditional Asian art such as mandalas and other sacred geometries. 
+                        For centuries, these patterns have served as focal points for meditation and 
+                        self-reflection across Asia, with a rich history and cultural significance from 
+                        India to China and Japan.    
+                    </p>
+                    <div class="parent-container desktop">
+                        <div class="description">
+                            <h3 class="togg" id="toggle">
+                                <div class="plus-minus-toggle collapsed"></div>
+                            </h3>
+                            <div class="list-desc" id="show">
+                                <div class="tech">
+                                    <h4>TECHNIQUE AND QUALITY</h4>
+                                    <p>Hand-knotted in Nepal</p>
+                                    <p>200.000 knots/sq.meter</p>
+                                </div>
+                                <div class="comp">
+                                    <h4>COMPOSITION</h4>
+                                    <p>60% New Zealand wool</p>
+                                    <p>40% Bamboo silk</p>
+                                </div>
+                                <div class="dim">
+                                    <h4>DIMENSIONS</h4>
+                                    <p>270 x 200 cm</p>
+                                </div>
+                                <div class="bespoke">
+                                    <h4>BESPOKE</h4>
+                                    <p>All rugs are customizable in color, dimensions, shape, composition.</p>
+                                    <p>For custom quotations get in touch with us at <a href="mailto:hello@antilladilauro.com?subject=Your Maze Rug in Emerald Color">hello@antilladilauro.com</a></p>
+                                </div>
+                                <div class="lead">
+                                    <h4>LEAD TIME</h4>
+                                    <p>12 weeks</p>
+                                </div>
+                                <div class="ship">
+                                    <h4>SHIPPING</h4>
+                                    <p>We ship worldwide</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+                <div class="destra">
+                    <div class="slider">
+                        <div class="image">
+                            <img class="slide-mes" src="img/Mesanpar_Peacock.webp" alt="">
+                            <img class="slide-mes" src="img/Diriyah_Sample 1.JPEG" alt="">
+                            <img class="slide-mes" src="img/Nomansland_Sample 1.png" alt="">
+                        </div>
+                        <i class="fa-solid fa-chevron-left" onclick="plusDivsMes(-1);"></i>
+                        <i class="fa-solid fa-chevron-right" onclick="plusDivsMes(+1);"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        const description = document.querySelectorAll(".description");
+        description.forEach((desc) => {
+        desc.addEventListener("click", () => {
+            desc.classList.toggle("active");
+        })
+        })
+
+
+
+        var slideIndex = 1;
+            showDivs(slideIndex);
+        
+            function plusDivsMaze(n) {
+            showDivs(slideIndex += n);
+            }
+        
+            function showDivs(n) {
+            var i;
+            var x = document.getElementsByClassName("slide-maze");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length} ;
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+        }
+
+        
+
+        var slideIndexMes = 1;
+        showDivsMes(slideIndexMes);
+
+        function plusDivsMes(n) {
+        showDivsMes(slideIndexMes += n);
+        }
+
+        function showDivsMes(n) {
+        var i;
+        var x = document.getElementsByClassName("slide-mes");
+        if (n > x.length) {slideIndexMes = 1}
+        if (n < 1) {slideIndexMes = x.length} ;
+        for (i = 0; i < x.length; i++) {
+            x[i].style.display = "none";
+        }
+        x[slideIndexMes-1].style.display = "block";
+        }
+
+    </script>
+</body>
+</html>

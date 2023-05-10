@@ -1,0 +1,127 @@
+.navbar{z-index: 999;}
+main{
+    max-width: 90rem;
+    margin: 0 auto;
+    padding: 7rem 5rem 6rem 5rem;
+    font-family: 'Minion-Variable';
+    color: black;
+    padding-top: 12rem;
+    position: relative;
+    z-index: 1;
+}
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 10rem;
+}
+.riga{display:grid; grid-template-columns: 1fr 1fr; column-gap: 10rem; }
+.slider{
+    width: 100%;
+    aspect-ratio: 3/4;
+    height: 100%;
+}
+
+
+.slider{position: relative}
+.fa-chevron-left{
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 50%;
+    left: 0.5rem;
+    font-size: 1.4rem;
+    transform: translateY(-50%);
+    cursor:pointer;
+    color:white;
+}
+.fa-chevron-right{
+    padding: 1rem;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    font-size: 1.4rem;
+    transform: translateY(-50%);
+    cursor:pointer;
+    color:white;
+}
+.fa-chevron-left:hover,
+.fa-chevron-right:hover{
+    background-color: rgba(0,0,0,0.7);
+}
+.image{
+    max-height: 100%;
+    display: flex;
+}
+.image img{
+    width: 100%;
+    object-fit: contain;
+}
+
+
+.plus-minus-toggle {
+    cursor: pointer;
+    height: 16px;
+    position: relative;
+    width: 16px;
+    z-index:-1;
+}
+.plus-minus-toggle::before{
+    height: 1px;
+    width: 16px;
+    background-color: black;
+    content: '';
+    position: absolute;
+    top: 10px;
+    transform: rotate(-90deg);
+    transition: transform 500ms ease;
+}
+.plus-minus-toggle::after{
+    height: 1px;
+    width: 16px;
+    background-color: black;
+    content: '';
+    position: absolute;
+    top: 10px;
+    transform: rotate(180deg);
+    transition: transform 500ms ease;
+}
+.active .plus-minus-toggle::before{
+    transform: rotate(0);
+}
+.active .plus-minus-toggle::after{
+    transform: rotate(0);
+}
+.list-desc{
+    font-size: 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+.list-desc h4{
+    font-size: 1rem;
+    font-weight:400;
+}
+.list-desc p{
+    font-weight: 400;
+    font-size: 0.9rem;
+    padding-bottom: 0.2rem;
+}
+.list-desc a{
+    color: black;
+}
+.description.active .list-desc{
+    max-height: 30rem;
+}
+.description .togg{
+    cursor: pointer;
+    padding: 1rem 0;
+}
+
+
+.goleft{
+    background-color: white;
+}
