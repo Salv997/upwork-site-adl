@@ -8,6 +8,7 @@ main{
 }
 .navbar{
     padding: 2.8rem 5rem 6rem 5rem;
+    z-index: 2;
 }
 main .header h1{
     color: black;
@@ -36,7 +37,6 @@ main h2 {
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 1fr 1fr;
-    column-gap: 10rem;
 }
 img{
     width: 100%;
@@ -116,7 +116,7 @@ img{
     cursor: pointer;
     padding: 1rem 0;
 }
-.slide-nav{display: flex; gap: 0.2rem;}
+.slide-nav{display: none; gap: 0.2rem;}
 .top-btn{
     width: 8rem;
     rotate: -90deg;
@@ -138,7 +138,7 @@ img{
     margin-left: 0.6rem;
 }
 .img-slide{
-    width: 90%;
+    width: 100%;
 }
 .img-slide.right{
     float: right;
@@ -154,6 +154,24 @@ img{
 }
 .mobile{
     display: none;
+}
+.riga .colonna-sx{
+    padding-right: 8rem;
+}
+.riga.reverse .colonna-dx{
+    padding-left: 8rem;
+}
+.riga.reverse .colonna-sx{
+    padding-right: 0;
+}
+.img-slide{position: relative; z-index: 1;}
+.navigator{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+    justify-content: space-between;
+    padding: 0 2rem;
 }
 
 @media (max-width: 75rem){

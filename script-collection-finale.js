@@ -9,10 +9,6 @@ $(window).scroll(function() {
   }
 });
 
-btn.on('click', function(e) {
-  e.preventDefault();
-  $('html, body').animate({scrollTop:0}, '30');
-});
 
 // TOGGLE DESCRIZIONE //
 const description = document.querySelectorAll(".description");
