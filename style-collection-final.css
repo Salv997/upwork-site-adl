@@ -16,14 +16,6 @@ main .header h1{
     line-height: 1.1;
     padding-bottom: 5rem;
     text-align: justify;
-    overflow-wrap: break-word;
-    word-wrap: break-word;
-    -ms-word-break: break-all;
-    word-break: break-word;
-    -ms-hyphens: auto;
-    -moz-hyphens: auto;
-    -webkit-hyphens: auto;
-    hyphens: auto;
 }
 main h2 {
     font-size:1.3rem;
@@ -189,7 +181,7 @@ img{
         padding: 7rem 2.5rem 6rem 1rem;
     }
     main .header h1{
-        font-size: 1.6rem;
+        font-size: 1.35rem;
     }
     img{padding: 0 5rem;}
     .img-slide{
