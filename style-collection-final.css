@@ -184,6 +184,13 @@ img{
     left: 50%;
     transform: translateX(-50%);
 }
+.navigator{
+    opacity: 0;
+    transition: 0.3s;
+}
+.img-slide:hover > .navigator{
+    opacity: 1;
+}
 
 @media (max-width: 75rem){
     .navbar{
