@@ -178,6 +178,7 @@ img{
 .navigator p{cursor: pointer}
 .img-slide img{
     height: calc(100vh - 10rem);
+    max-height: 45rem;
     position: relative;
     width: auto;
     left: 50%;
