@@ -3,7 +3,8 @@ html{
     scroll-padding-top: 8rem;
 }
 .header,
-.riga{
+.riga,
+footer{
     scroll-snap-align: start;
 }
 main{
@@ -211,6 +212,25 @@ main h2 {
 }
 
 @media (max-width: 60rem){
+    html{
+        scroll-snap-type: y proximity;
+        scroll-padding-top: 6rem;
+    }
+    .navigator{opacity: 100%}
+    .img-slide{
+        height: 20rem;
+    }
+    .img-slide img{
+        max-width: 70%;
+        max-height: 80%;
+    }
+    .riga .colonna-sx{
+        padding-right: 0;
+    }
+    .riga.reverse .colonna-dx{
+        padding-left: 0;
+    }
+    
     .desktop{display: none}
     .mobile{display: inline-block;}
     p.mobile{
@@ -224,10 +244,6 @@ main h2 {
     }
     main .header h1{
         font-size: 1.35rem;
-    }
-    img{padding: 0 5rem;}
-    .img-slide{
-        width: 100%;
     }
     .riga{
         grid-template-columns: 100%;
