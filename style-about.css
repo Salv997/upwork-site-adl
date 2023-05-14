@@ -9,14 +9,14 @@ footer{
 main {
     padding: 0 5rem;
     font-family: 'minion';
-    max-width: 90rem;
+    max-width: 85rem;
     margin: 0 auto;
 }
 main .sec-1{
     display: flex;
     gap: 7%;
     align-items: center;
-    padding-top: 6.5rem;
+    padding-top: 5rem;
     min-height:100vh;
 }
 main .description p{
@@ -78,11 +78,11 @@ main .sec-2 .column-three
 }
 .portrait img{
     height: calc(100vh - 8rem);
-    max-height: 30rem;
+    max-height: 33rem;
 }
 .sec-2 img{
     width: 100%;
-    max-width: 25rem;
+    max-width: 23rem;
 }
 main .sec-3{
     min-height: 100vh;
@@ -96,7 +96,7 @@ main .sec-3 .grid-2{
     align-items: center;
 }
 .image img{
-    max-width: 35rem;
+    max-width: 30rem;
 }
 main .description p{
     color: black;
@@ -111,7 +111,7 @@ main .description p{
 }
 span{color:black}
 .gray-text {
-    color: rgb(64, 65, 61);
+    color: rgb(93, 93, 90);
 }
 @media(min-width:100rem){
     main .sec-1,

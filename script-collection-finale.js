@@ -20,6 +20,7 @@ description.forEach((desc) => {
 
 // maze //
 var slideIndex = 1;
+var timer;
     showDivs(slideIndex);
 
     function plusDivsMaze(n) {
@@ -27,922 +28,883 @@ var slideIndex = 1;
     }
 
     function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("slide-maze");
-    if (n > x.length) {slideIndex = 1}
-    if (n < 1) {slideIndex = x.length} ;
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    x[slideIndex-1].style.display = "block";
-}
-            
-let numero = 1;
-function aggiungiNumeroMaze() {
-    var numeroDiv = document.getElementById("cambia-numero-maze");
-    numero++;
-    if(numero > 2) {
-    numero = 1;
-    }
-    numeroDiv.innerHTML = numero.toString();
-}
-function decrementaNumeroMaze() {
-    var numeroDiv = document.getElementById("cambia-numero-maze");
-    numero--;
-    if(numero < 1) {
-    numero = 2;
-    }
-    numeroDiv.innerHTML = numero.toString();
-}
+      var i;
+      var x = document.getElementsByClassName("slide-maze");
+      if (n > x.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = x.length} ;
+      for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+      clearTimeout(timer);
+      timer = setTimeout(function() {
+        slideIndex++;
+        if (slideIndex > x.length) {slideIndex = 1}
+        showDivs(slideIndex);
+      }, 5000);
+  }   
+  showDivs(slideIndex);
 
-// casablanca //
+// CASABLANCA
 var slideIndexCasablanca = 1;
-showDivsCasa(slideIndexCasablanca);
-
+var timerCasa;
 function plusDivsCasablanca(n) {
   showDivsCasa(slideIndexCasablanca += n);
 }
-
 function showDivsCasa(n) {
   var i;
   var x = document.getElementsByClassName("slide-casablanca");
-  if (n > x.length) {slideIndexCasablanca = 1}
-  if (n < 1) {slideIndexCasablanca = x.length} ;
+  if (n > x.length) { slideIndexCasablanca = 1; }
+  if (n < 1) { slideIndexCasablanca = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexCasablanca-1].style.display = "block";
-}
-
-let numeroCasa = 1;
-function aggiungiNumeroCasa() {
-    var numeroDivCasa = document.getElementById("cambia-numero-casa");
-    numeroCasa++;
-    if(numeroCasa > 2) {
-    numeroCasa = 1;
+  x[slideIndexCasablanca - 1].style.display = "block";
+  clearTimeout(timerCasa);
+  timerCasa = setTimeout(function() {
+    slideIndexCasablanca++;
+    if (slideIndexCasablanca > x.length) {
+      slideIndexCasablanca = 1;
     }
-    numeroDivCasa.innerHTML = numeroCasa.toString();
+    showDivsCasa(slideIndexCasablanca);
+  }, 2000);
 }
-function decrementaNumeroCasa() {
-    var numeroDivCasa = document.getElementById("cambia-numero-casa");
-    numeroCasa--;
-    if(numeroCasa < 1) {
-    numeroCasa = 2;
+function handleDivVisibility(entries, observer) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div CB1 è visibile!");
+      showDivsCasa(slideIndexCasablanca);
     }
-    numeroDivCasa.innerHTML = numeroCasa.toString();
+  });
 }
+const divToObserve = document.querySelector("#CB1");
+const observer = new IntersectionObserver(handleDivVisibility);
+observer.observe(divToObserve);
 
-
-// diriyah //
+// DIRYAH
 var slideIndexTito = 1;
-showDivsTito(slideIndexTito);
-
+var timerTito;
 function plusDivsTito(n) {
   showDivsTito(slideIndexTito += n);
 }
-
 function showDivsTito(n) {
   var i;
   var x = document.getElementsByClassName("slide-tito");
-  if (n > x.length) {slideIndexTito = 1}
-  if (n < 1) {slideIndexTito = x.length} ;
+  if (n > x.length) { slideIndexTito = 1; }
+  if (n < 1) { slideIndexTito = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexTito-1].style.display = "block";
-}
-
-let numeroTito = 1;
-function aggiungiNumeroTito() {
-    var numeroDivTito = document.getElementById("cambia-numero-tito");
-    numeroTito++;
-    if(numeroTito > 2) {
-    numeroTito = 1;
+  x[slideIndexTito - 1].style.display = "block";
+  clearTimeout(timerTito);
+  timerTito = setTimeout(function() {
+    slideIndexTito++;
+    if (slideIndexTito > x.length) {
+      slideIndexTito = 1;
     }
-    numeroDivTito.innerHTML = numeroTito.toString();
+    showDivsTito(slideIndexTito);
+  }, 2000);
 }
-function decrementaNumeroTito() {
-    var numeroDivTito = document.getElementById("cambia-numero-tito");
-    numeroTito--;
-    if(numeroTito < 1) {
-    numeroTito = 2;
+function handleDivVisibilityTito(entries, observerTito) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div TT1 è visibile!");
+      showDivsTito(slideIndexTito);
     }
-    numeroDivTito.innerHTML = numeroTito.toString();
+  });
 }
+const divToObserveTito = document.querySelector("#TT1");
+const observerTito = new IntersectionObserver(handleDivVisibilityTito);
+observerTito.observe(divToObserveTito);
 
-
-// zahir //
+// ZAHIR
 var slideIndexZahir = 1;
-showDivsZahir(slideIndexZahir);
-
+var timerZahir;
 function plusDivsZahir(n) {
   showDivsZahir(slideIndexZahir += n);
 }
-
 function showDivsZahir(n) {
   var i;
   var x = document.getElementsByClassName("slide-zahir");
-  if (n > x.length) {slideIndexZahir = 1}
-  if (n < 1) {slideIndexZahir = x.length} ;
+  if (n > x.length) { slideIndexZahir = 1; }
+  if (n < 1) { slideIndexZahir = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexZahir-1].style.display = "block";
-}
-
-let numeroZahir = 1;
-function aggiungiNumeroZahir() {
-    var numeroDivZahir = document.getElementById("cambia-numero-zahir");
-    numeroZahir++;
-    if(numeroZahir > 2) {
-    numeroZahir = 1;
+  x[slideIndexZahir - 1].style.display = "block";
+  clearTimeout(timerZahir);
+  timerZahir = setTimeout(function() {
+    slideIndexZahir++;
+    if (slideIndexZahir > x.length) {
+      slideIndexZahir = 1;
     }
-    numeroDivZahir.innerHTML = numeroZahir.toString();
+    showDivsZahir(slideIndexZahir);
+  }, 2000);
 }
-function decrementaNumeroZahir() {
-    var numeroDivZahir = document.getElementById("cambia-numero-zahir");
-    numeroZahir--;
-    if(numeroZahir< 1) {
-    numeroZahir = 2;
+function handleDivVisibilityZahir(entries, observerZahir) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div ZH1 è visibile!");
+      showDivsZahir(slideIndexZahir);
     }
-    numeroDivZahir.innerHTML = numeroZahir.toString();
+  });
 }
+const divToObserveZahir = document.querySelector("#ZH1");
+const observerZahir = new IntersectionObserver(handleDivVisibilityZahir);
+observerZahir.observe(divToObserveZahir);
 
-// marea //
+// MAREA
 var slideIndexMarea = 1;
-showDivsMarea(slideIndexMarea);
-
+var timerMarea;
 function plusDivsMarea(n) {
   showDivsMarea(slideIndexMarea += n);
 }
-
 function showDivsMarea(n) {
   var i;
   var x = document.getElementsByClassName("slide-marea");
-  if (n > x.length) {slideIndexMarea = 1}
-  if (n < 1) {slideIndexMarea = x.length} ;
+  if (n > x.length) { slideIndexMarea = 1; }
+  if (n < 1) { slideIndexMarea = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexMarea-1].style.display = "block";
-}
-
-let numeroMarea = 1;
-function aggiungiNumeroMarea() {
-    var numeroDivMarea = document.getElementById("cambia-numero-marea");
-    numeroMarea++;
-    if(numeroMarea > 3) {
-    numeroMarea = 1;
+  x[slideIndexMarea - 1].style.display = "block";
+  clearTimeout(timerMarea);
+  timerMarea = setTimeout(function() {
+    slideIndexMarea++;
+    if (slideIndexMarea > x.length) {
+      slideIndexMarea = 1;
     }
-    numeroDivMarea.innerHTML = numeroMarea.toString();
+    showDivsMarea(slideIndexMarea);
+  }, 2000);
 }
-function decrementaNumeroMarea() {
-    var numeroDivMarea = document.getElementById("cambia-numero-marea");
-    numeroMarea--;
-    if(numeroMarea< 1) {
-    numeroMarea = 3;
+function handleDivVisibilityMarea(entries, observerMarea) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div MR1 è visibile!");
+      showDivsMarea(slideIndexMarea);
     }
-    numeroDivMarea.innerHTML = numeroMarea.toString();
+  });
 }
+const divToObserveMarea = document.querySelector("#MR1");
+const observerMarea = new IntersectionObserver(handleDivVisibilityMarea);
+observerMarea.observe(divToObserveMarea);
 
-
-// mustique //
+// MUSTIQUE
 var slideIndexMustique = 1;
-showDivsMustique(slideIndexMustique);
-
+var timerMustique;
 function plusDivsMustique(n) {
   showDivsMustique(slideIndexMustique += n);
 }
-
 function showDivsMustique(n) {
   var i;
   var x = document.getElementsByClassName("slide-mustique");
-  if (n > x.length) {slideIndexMustique = 1}
-  if (n < 1) {slideIndexMustique = x.length} ;
+  if (n > x.length) { slideIndexMustique = 1; }
+  if (n < 1) { slideIndexMustique = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexMustique-1].style.display = "block";
-}
-
-let numeroMustique = 1;
-function aggiungiNumeroMustique() {
-    var numeroDivMustique = document.getElementById("cambia-numero-mustique");
-    numeroMustique++;
-    if(numeroMustique > 2) {
-    numeroMustique = 1;
+  x[slideIndexMustique - 1].style.display = "block";
+  clearTimeout(timerMustique);
+  timerMustique = setTimeout(function() {
+    slideIndexMustique++;
+    if (slideIndexMustique > x.length) {
+      slideIndexMustique = 1;
     }
-    numeroDivMustique.innerHTML = numeroMustique.toString();
+    showDivsMustique(slideIndexMustique);
+  }, 2000);
 }
-function decrementaNumeroMustique() {
-    var numeroDivMustique = document.getElementById("cambia-numero-mustique");
-    numeroMustique--;
-    if(numeroMustique< 1) {
-    numeroMustique = 2;
+function handleDivVisibilityMustique(entries, observerMustique) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div MQ1 è visibile!");
+      showDivsMustique(slideIndexMustique);
     }
-    numeroDivMustique.innerHTML = numeroMustique.toString();
+  });
 }
+const divToObserveMustique = document.querySelector("#MQ1");
+const observerMustique = new IntersectionObserver(handleDivVisibilityMustique);
+observerMustique.observe(divToObserveMustique);
 
-
-
-// kouyou //
+// KOUYOU
 var slideIndexKouyou = 1;
-showDivsKouyou(slideIndexKouyou);
-
+var timerKouyou;
 function plusDivsKouyou(n) {
   showDivsKouyou(slideIndexKouyou += n);
 }
-
 function showDivsKouyou(n) {
   var i;
   var x = document.getElementsByClassName("slide-kouyou");
-  if (n > x.length) {slideIndexKouyou = 1}
-  if (n < 1) {slideIndexKouyou = x.length} ;
+  if (n > x.length) { slideIndexKouyou = 1; }
+  if (n < 1) { slideIndexKouyou = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexKouyou-1].style.display = "block";
-}
-let numeroKouyou = 1;
-function aggiungiNumeroKouyou() {
-    var numeroDivKouyou = document.getElementById("cambia-numero-kouyou");
-    numeroKouyou++;
-    if(numeroKouyou > 2) {
-    numeroKouyou = 1;
+  x[slideIndexKouyou - 1].style.display = "block";
+  clearTimeout(timerKouyou);
+  timerKouyou = setTimeout(function() {
+    slideIndexKouyou++;
+    if (slideIndexKouyou > x.length) {
+      slideIndexKouyou = 1;
     }
-    numeroDivKouyou.innerHTML = numeroKouyou.toString();
+    showDivsKouyou(slideIndexKouyou);
+  }, 2000);
 }
-function decrementaNumeroKouyou() {
-    var numeroDivKouyou = document.getElementById("cambia-numero-kouyou");
-    numeroKouyou--;
-    if(numeroKouyou < 1) {
-    numeroKouyou = 2;
+function handleDivVisibilityKouyou(entries, observerKouyou) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div KY1 è visibile!");
+      showDivsKouyou(slideIndexKouyou);
     }
-    numeroDivKouyou.innerHTML = numeroKouyou.toString();
+  });
 }
+const divToObserveKouyou = document.querySelector("#KY1");
+const observerKouyou = new IntersectionObserver(handleDivVisibilityKouyou);
+observerKouyou.observe(divToObserveKouyou);
 
-
-// lola //
+// LOLA
 var slideIndexLola = 1;
-showDivsLola(slideIndexLola);
-
+var timerLola;
 function plusDivsLola(n) {
   showDivsLola(slideIndexLola += n);
 }
-
 function showDivsLola(n) {
   var i;
   var x = document.getElementsByClassName("slide-lola");
-  if (n > x.length) {slideIndexLola = 1}
-  if (n < 1) {slideIndexLola = x.length} ;
+  if (n > x.length) { slideIndexLola = 1; }
+  if (n < 1) { slideIndexLola = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexLola-1].style.display = "block";
-}
-let numeroLola = 1;
-function aggiungiNumeroLola() {
-    var numeroDivLola = document.getElementById("cambia-numero-lola");
-    numeroLola++;
-    if(numeroLola > 2) {
-    numeroLola = 1;
+  x[slideIndexLola - 1].style.display = "block";
+  clearTimeout(timerLola);
+  timerLola = setTimeout(function() {
+    slideIndexLola++;
+    if (slideIndexLola > x.length) {
+      slideIndexLola = 1;
     }
-    numeroDivLola.innerHTML = numeroLola.toString();
+    showDivsLola(slideIndexLola);
+  }, 2000);
 }
-function decrementaNumeroLola() {
-    var numeroDivLola = document.getElementById("cambia-numero-lola");
-    numeroLola--;
-    if(numeroLola < 1) {
-    numeroLola = 2;
+function handleDivVisibilityLola(entries, observerLola) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div LL1 è visibile!");
+      showDivsLola(slideIndexLola);
     }
-    numeroDivLola.innerHTML = numeroLola.toString();
+  });
 }
+const divToObserveLola = document.querySelector("#LL1");
+const observerLola = new IntersectionObserver(handleDivVisibilityLola);
+observerLola.observe(divToObserveLola);
 
-
-// zahirmoka //
+// ZAHIR MOKA
 var slideIndexMoka = 1;
-showDivsMoka(slideIndexMoka);
-
+var timerMoka;
 function plusDivsMoka(n) {
   showDivsMoka(slideIndexMoka += n);
 }
-
 function showDivsMoka(n) {
   var i;
   var x = document.getElementsByClassName("slide-moka");
-  if (n > x.length) {slideIndexMoka = 1}
-  if (n < 1) {slideIndexMoka = x.length} ;
+  if (n > x.length) { slideIndexMoka = 1; }
+  if (n < 1) { slideIndexMoka = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexMoka-1].style.display = "block";
-}
-let numeroMoka = 1;
-function aggiungiNumeroMoka() {
-    var numeroDivMoka = document.getElementById("cambia-numero-moka");
-    numeroMoka++;
-    if(numeroMoka > 2) {
-    numeroMoka = 1;
+  x[slideIndexMoka - 1].style.display = "block";
+  clearTimeout(timerMoka);
+  timerMoka = setTimeout(function() {
+    slideIndexMoka++;
+    if (slideIndexMoka > x.length) {
+      slideIndexMoka = 1;
     }
-    numeroDivMoka.innerHTML = numeroMoka.toString();
+    showDivsMoka(slideIndexMoka);
+  }, 2000);
 }
-function decrementaNumeroMoka() {
-    var numeroDivMoka = document.getElementById("cambia-numero-moka");
-    numeroMoka--;
-    if(numeroMoka < 1) {
-    numeroMoka = 2;
+function handleDivVisibilityMoka(entries, observerMoka) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div ZH2 è visibile!");
+      showDivsMoka(slideIndexMoka);
     }
-    numeroDivMoka.innerHTML = numeroMoka.toString();
+  });
 }
+const divToObserveMoka = document.querySelector("#ZH2");
+const observerMoka = new IntersectionObserver(handleDivVisibilityMoka);
+observerMoka.observe(divToObserveMoka);
 
-
-// mesanpar //
+// MESANPAR
 var slideIndexMesanpar = 1;
-showDivsMesanpar(slideIndexMesanpar);
-
+var timerMesanpar;
 function plusDivsMesanpar(n) {
   showDivsMesanpar(slideIndexMesanpar += n);
 }
-
 function showDivsMesanpar(n) {
   var i;
   var x = document.getElementsByClassName("slide-mesanpar");
-  if (n > x.length) {slideIndexMesanpar = 1}
-  if (n < 1) {slideIndexMesanpar = x.length} ;
+  if (n > x.length) { slideIndexMesanpar = 1; }
+  if (n < 1) { slideIndexMesanpar = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexMesanpar-1].style.display = "block";
-}
-let numeroMesanpar = 1;
-function aggiungiNumeroMesanpar() {
-    var numeroDivMesanpar = document.getElementById("cambia-numero-mesanpar");
-    numeroMesanpar++;
-    if(numeroMesanpar > 2) {
-    numeroMesanpar = 1;
+  x[slideIndexMesanpar - 1].style.display = "block";
+  clearTimeout(timerMesanpar);
+  timerMesanpar = setTimeout(function() {
+    slideIndexMesanpar++;
+    if (slideIndexMesanpar > x.length) {
+      slideIndexMesanpar = 1;
     }
-    numeroDivMesanpar.innerHTML = numeroMesanpar.toString();
+    showDivsMesanpar(slideIndexMesanpar);
+  }, 2000);
 }
-function decrementaNumeroMesanpar() {
-    var numeroDivMesanpar = document.getElementById("cambia-numero-mesanpar");
-    numeroMesanpar--;
-    if(numeroMesanpar < 1) {
-    numeroMesanpar = 2;
+function handleDivVisibilityMesanpar(entries, observerMesanpar) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div MS1 è visibile!");
+      showDivsMesanpar(slideIndexMesanpar);
     }
-    numeroDivMesanpar.innerHTML = numeroMesanpar.toString();
+  });
 }
+const divToObserveMesanpar = document.querySelector("#MS1");
+const observerMesanpar = new IntersectionObserver(handleDivVisibilityMesanpar);
+observerMesanpar.observe(divToObserveMesanpar);
 
-
-// maze sapphire //
+// MAZE SAPPHIRE
 var slideIndexSapphire = 1;
-showDivsSapphire(slideIndexSapphire);
-
+var timerSapphire;
 function plusDivsSapphire(n) {
   showDivsSapphire(slideIndexSapphire += n);
 }
-
 function showDivsSapphire(n) {
   var i;
   var x = document.getElementsByClassName("slide-sapphire");
-  if (n > x.length) {slideIndexSapphire = 1}
-  if (n < 1) {slideIndexSapphire = x.length} ;
+  if (n > x.length) { slideIndexSapphire = 1; }
+  if (n < 1) { slideIndexSapphire = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexSapphire-1].style.display = "block";
-}
-let numeroSapphire = 1;
-function aggiungiNumeroSapphire() {
-    var numeroDivSapphire = document.getElementById("cambia-numero-sapphire");
-    numeroSapphire++;
-    if(numeroSapphire > 2) {
-    numeroSapphire = 1;
+  x[slideIndexSapphire - 1].style.display = "block";
+  clearTimeout(timerSapphire);
+  timerSapphire = setTimeout(function() {
+    slideIndexSapphire++;
+    if (slideIndexSapphire > x.length) {
+      slideIndexSapphire = 1;
     }
-    numeroDivSapphire.innerHTML = numeroSapphire.toString();
+    showDivsSapphire(slideIndexSapphire);
+  }, 2000);
 }
-function decrementaNumeroSapphire() {
-    var numeroDivSapphire = document.getElementById("cambia-numero-sapphire");
-    numeroSapphire--;
-    if(numeroSapphire < 1) {
-    numeroSapphire = 2;
+function handleDivVisibilitySapphire(entries, observerSapphire) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div MZ2 è visibile!");
+      showDivsSapphire(slideIndexSapphire);
     }
-    numeroDivSapphire.innerHTML = numeroSapphire.toString();
+  });
 }
+const divToObserveSapphire = document.querySelector("#MZ2");
+const observerSapphire = new IntersectionObserver(handleDivVisibilitySapphire);
+observerSapphire.observe(divToObserveSapphire);
 
-
-// mustique coral //
+// MUSTIQUE CORAL
 var slideIndexCoral = 1;
-showDivsCoral(slideIndexCoral);
-
+var timerCoral;
 function plusDivsCoral(n) {
   showDivsCoral(slideIndexCoral += n);
 }
-
 function showDivsCoral(n) {
   var i;
   var x = document.getElementsByClassName("slide-coral");
-  if (n > x.length) {slideIndexCoral = 1}
-  if (n < 1) {slideIndexCoral = x.length} ;
+  if (n > x.length) { slideIndexCoral = 1; }
+  if (n < 1) { slideIndexCoral = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexCoral-1].style.display = "block";
-}
-let numeroCoral = 1;
-function aggiungiNumeroCoral() {
-    var numeroDivCoral = document.getElementById("cambia-numero-coral");
-    numeroCoral++;
-    if(numeroCoral > 2) {
-    numeroCoral = 1;
+  x[slideIndexCoral - 1].style.display = "block";
+  clearTimeout(timerCoral);
+  timerCoral = setTimeout(function() {
+    slideIndexCoral++;
+    if (slideIndexCoral > x.length) {
+      slideIndexCoral = 1;
     }
-    numeroDivCoral.innerHTML = numeroCoral.toString();
+    showDivsCoral(slideIndexCoral);
+  }, 2000);
 }
-function decrementaNumeroCoral() {
-    var numeroDivCoral = document.getElementById("cambia-numero-coral");
-    numeroCoral--;
-    if(numeroCoral < 1) {
-    numeroCoral = 2;
+function handleDivVisibilityCoral(entries, observerCoral) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div MQ2 è visibile!");
+      showDivsCoral(slideIndexCoral);
     }
-    numeroDivCoral.innerHTML = numeroCoral.toString();
+  });
 }
+const divToObserveCoral = document.querySelector("#MQ2");
+const observerCoral = new IntersectionObserver(handleDivVisibilityCoral);
+observerCoral.observe(divToObserveCoral);
 
-
-// almadra //
+// ALMADRA
 var slideIndexAlmadra = 1;
-showDivsAlmadra(slideIndexAlmadra);
-
+var timerAlmadra;
 function plusDivsAlmadra(n) {
   showDivsAlmadra(slideIndexAlmadra += n);
 }
-
 function showDivsAlmadra(n) {
   var i;
   var x = document.getElementsByClassName("slide-almadra");
-  if (n > x.length) {slideIndexAlmadra = 1}
-  if (n < 1) {slideIndexAlmadra = x.length} ;
+  if (n > x.length) { slideIndexAlmadra = 1; }
+  if (n < 1) { slideIndexAlmadra = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexAlmadra-1].style.display = "block";
-}
-let numeroAlmadra = 1;
-function aggiungiNumeroAlmadra() {
-    var numeroDivAlmadra = document.getElementById("cambia-numero-almadra");
-    numeroAlmadra++;
-    if(numeroAlmadra > 2) {
-    numeroAlmadra = 1;
+  x[slideIndexAlmadra - 1].style.display = "block";
+  clearTimeout(timerAlmadra);
+  timerAlmadra = setTimeout(function() {
+    slideIndexAlmadra++;
+    if (slideIndexAlmadra > x.length) {
+      slideIndexAlmadra = 1;
     }
-    numeroDivAlmadra.innerHTML = numeroAlmadra.toString();
+    showDivsAlmadra(slideIndexAlmadra);
+  }, 2000);
 }
-function decrementaNumeroAlmadra() {
-    var numeroDivAlmadra = document.getElementById("cambia-numero-almadra");
-    numeroAlmadra--;
-    if(numeroAlmadra < 1) {
-    numeroAlmadra = 2;
+function handleDivVisibilityAlmadra(entries, observerAlmadra) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div AL1 è visibile!");
+      showDivsAlmadra(slideIndexAlmadra);
     }
-    numeroDivAlmadra.innerHTML = numeroAlmadra.toString();
+  });
 }
+const divToObserveAlmadra = document.querySelector("#AL1");
+const observerAlmadra = new IntersectionObserver(handleDivVisibilityAlmadra);
+observerAlmadra.observe(divToObserveAlmadra);
 
-
-// lola pine //
+// LOLA PINE
 var slideIndexPine = 1;
-showDivsPine(slideIndexPine);
-
+var timerPine;
 function plusDivsPine(n) {
   showDivsPine(slideIndexPine += n);
 }
-
 function showDivsPine(n) {
   var i;
   var x = document.getElementsByClassName("slide-pine");
-  if (n > x.length) {slideIndexPine = 1}
-  if (n < 1) {slideIndexPine = x.length} ;
+  if (n > x.length) { slideIndexPine = 1; }
+  if (n < 1) { slideIndexPine = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexPine-1].style.display = "block";
-}
-let numeroPine = 1;
-function aggiungiNumeroPine() {
-    var numeroDivPine = document.getElementById("cambia-numero-pine");
-    numeroPine++;
-    if(numeroPine > 2) {
-    numeroPine = 1;
+  x[slideIndexPine - 1].style.display = "block";
+  clearTimeout(timerPine);
+  timerPine = setTimeout(function() {
+    slideIndexPine++;
+    if (slideIndexPine > x.length) {
+      slideIndexPine = 1;
     }
-    numeroDivPine.innerHTML = numeroPine.toString();
+    showDivsPine(slideIndexPine);
+  }, 2000);
 }
-function decrementaNumeroPine() {
-    var numeroDivPine = document.getElementById("cambia-numero-pine");
-    numeroPine--;
-    if(numeroPine < 1) {
-    numeroPine = 2;
+function handleDivVisibilityPine(entries, observerPine) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div LL2 è visibile!");
+      showDivsPine(slideIndexPine);
     }
-    numeroDivPine.innerHTML = numeroPine.toString();
+  });
 }
+const divToObservePine = document.querySelector("#LL2");
+const observerPine = new IntersectionObserver(handleDivVisibilityPine);
+observerPine.observe(divToObservePine);
 
-
-// nomansland //
+// NOMANSLAND
 var slideIndexNomansland = 1;
-showDivsNomansland(slideIndexNomansland);
-
+var timerNomansland;
 function plusDivsNomansland(n) {
   showDivsNomansland(slideIndexNomansland += n);
 }
-
 function showDivsNomansland(n) {
   var i;
   var x = document.getElementsByClassName("slide-nomansland");
-  if (n > x.length) {slideIndexNomansland = 1}
-  if (n < 1) {slideIndexNomansland = x.length} ;
+  if (n > x.length) { slideIndexNomansland = 1; }
+  if (n < 1) { slideIndexNomansland = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexNomansland-1].style.display = "block";
-}
-let numeroNomansland = 1;
-function aggiungiNumeroNomansland() {
-    var numeroDivNomansland = document.getElementById("cambia-numero-nomansland");
-    numeroNomansland++;
-    if(numeroNomansland > 2) {
-    numeroNomansland = 1;
+  x[slideIndexNomansland - 1].style.display = "block";
+  clearTimeout(timerNomansland);
+  timerNomansland = setTimeout(function() {
+    slideIndexNomansland++;
+    if (slideIndexNomansland > x.length) {
+      slideIndexNomansland = 1;
     }
-    numeroDivNomansland.innerHTML = numeroNomansland.toString();
+    showDivsNomansland(slideIndexNomansland);
+  }, 2000);
 }
-function decrementaNumeroNomansland() {
-    var numeroDivNomansland = document.getElementById("cambia-numero-nomansland");
-    numeroNomansland--;
-    if(numeroNomansland < 1) {
-    numeroNomansland = 2;
+function handleDivVisibilityNomansland(entries, observerNomansland) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div NS1 è visibile!");
+      showDivsNomansland(slideIndexNomansland);
     }
-    numeroDivNomansland.innerHTML = numeroNomansland.toString();
+  });
 }
+const divToObserveNomansland = document.querySelector("#NS1");
+const observerNomansland = new IntersectionObserver(handleDivVisibilityNomansland);
+observerNomansland.observe(divToObserveNomansland);
 
-
-// komorebi //
+// KOMOREBI
 var slideIndexKomorebi = 1;
-showDivsKomorebi(slideIndexKomorebi);
-
+var timerKomorebi;
 function plusDivsKomorebi(n) {
   showDivsKomorebi(slideIndexKomorebi += n);
 }
-
 function showDivsKomorebi(n) {
   var i;
   var x = document.getElementsByClassName("slide-komorebi");
-  if (n > x.length) {slideIndexKomorebi = 1}
-  if (n < 1) {slideIndexKomorebi = x.length} ;
+  if (n > x.length) { slideIndexKomorebi = 1; }
+  if (n < 1) { slideIndexKomorebi = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexKomorebi-1].style.display = "block";
-}
-let numeroKomorebi = 1;
-function aggiungiNumeroKomorebi() {
-    var numeroDivKomorebi = document.getElementById("cambia-numero-komorebi");
-    numeroKomorebi++;
-    if(numeroKomorebi > 2) {
-    numeroKomorebi = 1;
+  x[slideIndexKomorebi - 1].style.display = "block";
+  clearTimeout(timerKomorebi);
+  timerKomorebi = setTimeout(function() {
+    slideIndexKomorebi++;
+    if (slideIndexKomorebi > x.length) {
+      slideIndexKomorebi = 1;
     }
-    numeroDivKomorebi.innerHTML = numeroKomorebi.toString();
+    showDivsKomorebi(slideIndexKomorebi);
+  }, 2000);
 }
-function decrementaNumeroKomorebi() {
-    var numeroDivKomorebi = document.getElementById("cambia-numero-komorebi");
-    numeroKomorebi--;
-    if(numeroKomorebi < 1) {
-    numeroKomorebi = 2;
+function handleDivVisibilityKomorebi(entries, observerKomorebi) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div KR1 è visibile!");
+      showDivsKomorebi(slideIndexKomorebi);
     }
-    numeroDivKomorebi.innerHTML = numeroKomorebi.toString();
+  });
 }
+const divToObserveKomorebi = document.querySelector("#KR1");
+const observerKomorebi = new IntersectionObserver(handleDivVisibilityKomorebi);
+observerKomorebi.observe(divToObserveKomorebi);
 
-
-// flamingo //
+// FLAMINGO
 var slideIndexFlamingo = 1;
-showDivsFlamingo(slideIndexFlamingo);
-
+var timerFlamingo;
 function plusDivsFlamingo(n) {
   showDivsFlamingo(slideIndexFlamingo += n);
 }
-
 function showDivsFlamingo(n) {
   var i;
   var x = document.getElementsByClassName("slide-flamingo");
-  if (n > x.length) {slideIndexFlamingo = 1}
-  if (n < 1) {slideIndexFlamingo = x.length} ;
+  if (n > x.length) { slideIndexFlamingo = 1; }
+  if (n < 1) { slideIndexFlamingo = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexFlamingo-1].style.display = "block";
-}
-let numeroFlamingo = 1;
-function aggiungiNumeroFlamingo() {
-    var numeroDivFlamingo = document.getElementById("cambia-numero-flamingo");
-    numeroFlamingo++;
-    if(numeroFlamingo > 3) {
-    numeroFlamingo = 1;
+  x[slideIndexFlamingo - 1].style.display = "block";
+  clearTimeout(timerFlamingo);
+  timerFlamingo = setTimeout(function() {
+    slideIndexFlamingo++;
+    if (slideIndexFlamingo > x.length) {
+      slideIndexFlamingo = 1;
     }
-    numeroDivFlamingo.innerHTML = numeroFlamingo.toString();
+    showDivsFlamingo(slideIndexFlamingo);
+  }, 2000);
 }
-function decrementaNumeroFlamingo() {
-    var numeroDivFlamingo = document.getElementById("cambia-numero-flamingo");
-    numeroFlamingo--;
-    if(numeroFlamingo < 1) {
-    numeroFlamingo = 3;
+function handleDivVisibilityFlamingo(entries, observerFlamingo) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div MR2 è visibile!");
+      showDivsFlamingo(slideIndexFlamingo);
     }
-    numeroDivFlamingo.innerHTML = numeroFlamingo.toString();
+  });
 }
+const divToObserveFlamingo = document.querySelector("#MR2");
+const observerFlamingo = new IntersectionObserver(handleDivVisibilityFlamingo);
+observerFlamingo.observe(divToObserveFlamingo);
 
-
-// arashi //
+// ARASHI
 var slideIndexArashi = 1;
-showDivsArashi(slideIndexArashi);
-
+var timerArashi;
 function plusDivsArashi(n) {
   showDivsArashi(slideIndexArashi += n);
 }
-
 function showDivsArashi(n) {
   var i;
   var x = document.getElementsByClassName("slide-arashi");
-  if (n > x.length) {slideIndexArashi = 1}
-  if (n < 1) {slideIndexArashi = x.length} ;
+  if (n > x.length) { slideIndexArashi = 1; }
+  if (n < 1) { slideIndexArashi = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexArashi-1].style.display = "block";
-}
-let numeroArashi = 1;
-function aggiungiNumeroArashi() {
-    var numeroDivArashi = document.getElementById("cambia-numero-arashi");
-    numeroArashi++;
-    if(numeroArashi > 2) {
-    numeroArashi = 1;
+  x[slideIndexArashi - 1].style.display = "block";
+  clearTimeout(timerArashi);
+  timerArashi = setTimeout(function() {
+    slideIndexArashi++;
+    if (slideIndexArashi > x.length) {
+      slideIndexArashi = 1;
     }
-    numeroDivArashi.innerHTML = numeroArashi.toString();
+    showDivsArashi(slideIndexArashi);
+  }, 2000);
 }
-function decrementaNumeroArashi() {
-    var numeroDivArashi = document.getElementById("cambia-numero-arashi");
-    numeroArashi--;
-    if(numeroArashi < 1) {
-    numeroArashi = 2;
+function handleDivVisibilityArashi(entries, observerArashi) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div AR1 è visibile!");
+      showDivsArashi(slideIndexArashi);
     }
-    numeroDivArashi.innerHTML = numeroArashi.toString();
+  });
 }
+const divToObserveArashi = document.querySelector("#AR1");
+const observerArashi = new IntersectionObserver(handleDivVisibilityArashi);
+observerArashi.observe(divToObserveArashi);
 
-
-// kouyou graphite //
+// GRAPHITE
 var slideIndexGraphite = 1;
-showDivsGraphite(slideIndexGraphite);
-
+var timerGraphite;
 function plusDivsGraphite(n) {
   showDivsGraphite(slideIndexGraphite += n);
 }
-
 function showDivsGraphite(n) {
   var i;
   var x = document.getElementsByClassName("slide-graphite");
-  if (n > x.length) {slideIndexGraphite = 1}
-  if (n < 1) {slideIndexGraphite = x.length} ;
+  if (n > x.length) { slideIndexGraphite = 1; }
+  if (n < 1) { slideIndexGraphite = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexGraphite-1].style.display = "block";
-}
-let numeroGraphite = 1;
-function aggiungiNumeroGraphite() {
-    var numeroDivGraphite = document.getElementById("cambia-numero-graphite");
-    numeroGraphite++;
-    if(numeroGraphite > 2) {
-    numeroGraphite = 1;
+  x[slideIndexGraphite - 1].style.display = "block";
+  clearTimeout(timerGraphite);
+  timerGraphite = setTimeout(function() {
+    slideIndexGraphite++;
+    if (slideIndexGraphite > x.length) {
+      slideIndexGraphite = 1;
     }
-    numeroDivGraphite.innerHTML = numeroGraphite.toString();
+    showDivsGraphite(slideIndexGraphite);
+  }, 2000);
 }
-function decrementaNumeroGraphite() {
-    var numeroDivGraphite = document.getElementById("cambia-numero-graphite");
-    numeroGraphite--;
-    if(numeroGraphite < 1) {
-    numeroGraphite = 2;
+function handleDivVisibilityGraphite(entries, observerGraphite) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div KY2 è visibile!");
+      showDivsGraphite(slideIndexGraphite);
     }
-    numeroDivGraphite.innerHTML = numeroGraphite.toString();
+  });
 }
+const divToObserveGraphite = document.querySelector("#KY2");
+const observerGraphite = new IntersectionObserver(handleDivVisibilityGraphite);
+observerGraphite.observe(divToObserveGraphite);
 
-
-// casablanca burgundy //
+// BURGUNDY
 var slideIndexBurgundy = 1;
-showDivsBurgundy(slideIndexBurgundy);
-
+var timerBurgundy;
 function plusDivsBurgundy(n) {
   showDivsBurgundy(slideIndexBurgundy += n);
 }
-
 function showDivsBurgundy(n) {
   var i;
   var x = document.getElementsByClassName("slide-burgundy");
-  if (n > x.length) {slideIndexBurgundy = 1}
-  if (n < 1) {slideIndexBurgundy = x.length} ;
+  if (n > x.length) { slideIndexBurgundy = 1; }
+  if (n < 1) { slideIndexBurgundy = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexBurgundy-1].style.display = "block";
-}
-let numeroBurgundy = 1;
-function aggiungiNumeroBurgundy() {
-    var numeroDivBurgundy = document.getElementById("cambia-numero-burgundy");
-    numeroBurgundy++;
-    if(numeroBurgundy > 2) {
-    numeroBurgundy = 1;
+  x[slideIndexBurgundy - 1].style.display = "block";
+  clearTimeout(timerBurgundy);
+  timerBurgundy = setTimeout(function() {
+    slideIndexBurgundy++;
+    if (slideIndexBurgundy > x.length) {
+      slideIndexBurgundy = 1;
     }
-    numeroDivBurgundy.innerHTML = numeroBurgundy.toString();
+    showDivsBurgundy(slideIndexBurgundy);
+  }, 2000);
 }
-function decrementaNumeroBurgundy() {
-    var numeroDivBurgundy = document.getElementById("cambia-numero-burgundy");
-    numeroBurgundy--;
-    if(numeroBurgundy < 1) {
-    numeroBurgundy = 2;
+function handleDivVisibilityBurgundy(entries, observerBurgundy) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div CB2 è visibile!");
+      showDivsBurgundy(slideIndexBurgundy);
     }
-    numeroDivBurgundy.innerHTML = numeroBurgundy.toString();
+  });
 }
+const divToObserveBurgundy = document.querySelector("#CB2");
+const observerBurgundy = new IntersectionObserver(handleDivVisibilityBurgundy);
+observerBurgundy.observe(divToObserveBurgundy);
 
-
-// komorebi pine //
+// PINE
 var slideIndexKpine = 1;
-showDivsKpine(slideIndexKpine);
-
+var timerKpine;
 function plusDivsKpine(n) {
   showDivsKpine(slideIndexKpine += n);
 }
-
 function showDivsKpine(n) {
   var i;
   var x = document.getElementsByClassName("slide-kpine");
-  if (n > x.length) {slideIndexKpine = 1}
-  if (n < 1) {slideIndexKpine = x.length} ;
+  if (n > x.length) { slideIndexKpine = 1; }
+  if (n < 1) { slideIndexKpine = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexKpine-1].style.display = "block";
-}
-let numeroKpine = 1;
-function aggiungiNumeroKpine() {
-    var numeroDivKpine = document.getElementById("cambia-numero-kpine");
-    numeroKpine++;
-    if(numeroKpine > 2) {
-    numeroKpine = 1;
+  x[slideIndexKpine - 1].style.display = "block";
+  clearTimeout(timerKpine);
+  timerKpine = setTimeout(function() {
+    slideIndexKpine++;
+    if (slideIndexKpine > x.length) {
+      slideIndexKpine = 1;
     }
-    numeroDivKpine.innerHTML = numeroKpine.toString();
+    showDivsKpine(slideIndexKpine);
+  }, 2000);
 }
-function decrementaNumeroKpine() {
-    var numeroDivKpine = document.getElementById("cambia-numero-kpine");
-    numeroKpine--;
-    if(numeroKpine < 1) {
-    numeroKpine = 2;
+function handleDivVisibilityKpine(entries, observerKpine) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div KR2 è visibile!");
+      showDivsKpine(slideIndexKpine);
     }
-    numeroDivKpine.innerHTML = numeroKpine.toString();
+  });
 }
+const divToObserveKpine = document.querySelector("#KR2");
+const observerKpine = new IntersectionObserver(handleDivVisibilityKpine);
+observerKpine.observe(divToObserveKpine);
 
-
-// almadra aquamarine //
+// AQUAMARINE
 var slideIndexAquamarine = 1;
-showDivsAquamarine(slideIndexAquamarine);
-
+var timerAquamarine;
 function plusDivsAquamarine(n) {
   showDivsAquamarine(slideIndexAquamarine += n);
 }
-
 function showDivsAquamarine(n) {
   var i;
   var x = document.getElementsByClassName("slide-aquamarine");
-  if (n > x.length) {slideIndexAquamarine = 1}
-  if (n < 1) {slideIndexAquamarine = x.length} ;
+  if (n > x.length) { slideIndexAquamarine = 1; }
+  if (n < 1) { slideIndexAquamarine = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexAquamarine-1].style.display = "block";
-}
-let numeroAquamarine = 1;
-function aggiungiNumeroAquamarine() {
-    var numeroDivAquamarine = document.getElementById("cambia-numero-aquamarine");
-    numeroAquamarine++;
-    if(numeroAquamarine > 2) {
-    numeroAquamarine = 1;
+  x[slideIndexAquamarine - 1].style.display = "block";
+  clearTimeout(timerAquamarine);
+  timerAquamarine = setTimeout(function() {
+    slideIndexAquamarine++;
+    if (slideIndexAquamarine > x.length) {
+      slideIndexAquamarine = 1;
     }
-    numeroDivAquamarine.innerHTML = numeroAquamarine.toString();
+    showDivsAquamarine(slideIndexAquamarine);
+  }, 2000);
 }
-function decrementaNumeroAquamarine() {
-    var numeroDivAquamarine = document.getElementById("cambia-numero-aquamarine");
-    numeroAquamarine--;
-    if(numeroAquamarine < 1) {
-    numeroAquamarine = 2;
+function handleDivVisibilityAquamarine(entries, observerAquamarine) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div AL2 è visibile!");
+      showDivsAquamarine(slideIndexAquamarine);
     }
-    numeroDivAquamarine.innerHTML = numeroAquamarine.toString();
+  });
 }
-
-
-// nomansland denim //
+const divToObserveAquamarine = document.querySelector("#AL2");
+const observerAquamarine = new IntersectionObserver(handleDivVisibilityAquamarine);
+observerAquamarine.observe(divToObserveAquamarine);
+  
+// DENIM
 var slideIndexDenim = 1;
-showDivsDenim(slideIndexDenim);
-
+var timerDenim;
 function plusDivsDenim(n) {
   showDivsDenim(slideIndexDenim += n);
 }
-
 function showDivsDenim(n) {
   var i;
   var x = document.getElementsByClassName("slide-denim");
-  if (n > x.length) {slideIndexDenim = 1}
-  if (n < 1) {slideIndexDenim = x.length} ;
+  if (n > x.length) { slideIndexDenim = 1; }
+  if (n < 1) { slideIndexDenim = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexDenim-1].style.display = "block";
-}
-let numeroDenim = 1;
-function aggiungiNumeroDenim() {
-    var numeroDivDenim = document.getElementById("cambia-numero-denim");
-    numeroDenim++;
-    if(numeroDenim > 2) {
-    numeroDenim = 1;
+  x[slideIndexDenim - 1].style.display = "block";
+  clearTimeout(timerDenim);
+  timerDenim = setTimeout(function() {
+    slideIndexDenim++;
+    if (slideIndexDenim > x.length) {
+      slideIndexDenim = 1;
     }
-    numeroDivDenim.innerHTML = numeroDenim.toString();
+    showDivsDenim(slideIndexDenim);
+  }, 2000);
 }
-function decrementaNumeroDenim() {
-    var numeroDivDenim = document.getElementById("cambia-numero-denim");
-    numeroDenim--;
-    if(numeroDenim < 1) {
-    numeroDenim = 2;
+function handleDivVisibilityDenim(entries, observerDenim) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div NS2 è visibile!");
+      showDivsDenim(slideIndexDenim);
     }
-    numeroDivDenim.innerHTML = numeroDenim.toString();
+  });
 }
-
-
-// tito ruby //
+const divToObserveDenim = document.querySelector("#NS2");
+const observerDenim = new IntersectionObserver(handleDivVisibilityDenim);
+observerDenim.observe(divToObserveDenim);
+  
+// RUBY
 var slideIndexRuby = 1;
-showDivsRuby(slideIndexRuby);
-
+var timerRuby;
 function plusDivsRuby(n) {
   showDivsRuby(slideIndexRuby += n);
 }
-
 function showDivsRuby(n) {
   var i;
   var x = document.getElementsByClassName("slide-ruby");
-  if (n > x.length) {slideIndexRuby = 1}
-  if (n < 1) {slideIndexRuby = x.length} ;
+  if (n > x.length) { slideIndexRuby = 1; }
+  if (n < 1) { slideIndexRuby = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexRuby-1].style.display = "block";
-}
-let numeroRuby = 1;
-function aggiungiNumeroRuby() {
-    var numeroDivRuby = document.getElementById("cambia-numero-ruby");
-    numeroRuby++;
-    if(numeroRuby > 2) {
-    numeroRuby = 1;
+  x[slideIndexRuby - 1].style.display = "block";
+  clearTimeout(timerRuby);
+  timerRuby = setTimeout(function() {
+    slideIndexRuby++;
+    if (slideIndexRuby > x.length) {
+      slideIndexRuby = 1;
     }
-    numeroDivRuby.innerHTML = numeroRuby.toString();
+    showDivsRuby(slideIndexRuby);
+  }, 2000);
 }
-function decrementaNumeroRuby() {
-    var numeroDivRuby = document.getElementById("cambia-numero-ruby");
-    numeroRuby--;
-    if(numeroRuby < 1) {
-    numeroRuby = 2;
+function handleDivVisibilityRuby(entries, observerRuby) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div TT2 è visibile!");
+      showDivsRuby(slideIndexRuby);
     }
-    numeroDivRuby.innerHTML = numeroRuby.toString();
+  });
 }
+const divToObserveRuby = document.querySelector("#TT2");
+const observerRuby = new IntersectionObserver(handleDivVisibilityRuby);
+observerRuby.observe(divToObserveRuby);
 
-
-// arashi turq //
+// TURQUOISE
 var slideIndexTurq = 1;
-showDivsTurq(slideIndexTurq);
-
+var timerTurq;
 function plusDivsTurq(n) {
   showDivsTurq(slideIndexTurq += n);
 }
-
 function showDivsTurq(n) {
   var i;
   var x = document.getElementsByClassName("slide-turq");
-  if (n > x.length) {slideIndexTurq = 1}
-  if (n < 1) {slideIndexTurq = x.length} ;
+  if (n > x.length) { slideIndexTurq = 1; }
+  if (n < 1) { slideIndexTurq = x.length; }
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";
   }
-  x[slideIndexTurq-1].style.display = "block";
-}
-let numeroTurq = 1;
-function aggiungiNumeroTurq() {
-    var numeroDivTurq = document.getElementById("cambia-numero-turq");
-    numeroTurq++;
-    if(numeroTurq > 2) {
-    numeroTurq = 1;
+  x[slideIndexTurq - 1].style.display = "block";
+  clearTimeout(timerTurq);
+  timerTurq = setTimeout(function() {
+    slideIndexTurq++;
+    if (slideIndexTurq > x.length) {
+      slideIndexTurq = 1;
     }
-    numeroDivTurq.innerHTML = numeroTurq.toString();
+    showDivsTurq(slideIndexTurq);
+  }, 2000);
 }
-function decrementaNumeroTurq() {
-    var numeroDivTurq = document.getElementById("cambia-numero-turq");
-    numeroTurq--;
-    if(numeroTurq < 1) {
-    numeroTurq = 2;
+function handleDivVisibilityTurq(entries, observerTurq) {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      console.log("Il div AR2 è visibile!");
+      showDivsTurq(slideIndexTurq);
     }
-    numeroDivTurq.innerHTML = numeroTurq.toString();
+  });
 }
+const divToObserveTurq = document.querySelector("#AR2");
+const observerTurq = new IntersectionObserver(handleDivVisibilityTurq);
+observerTurq.observe(divToObserveTurq);
