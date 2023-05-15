@@ -67,7 +67,7 @@ function showDivsCasa(n) {
       slideIndexCasablanca = 1;
     }
     showDivsCasa(slideIndexCasablanca);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibility(entries, observer) {
   entries.forEach(entry => {
@@ -103,7 +103,7 @@ function showDivsTito(n) {
       slideIndexTito = 1;
     }
     showDivsTito(slideIndexTito);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityTito(entries, observerTito) {
   entries.forEach(entry => {
@@ -139,7 +139,7 @@ function showDivsZahir(n) {
       slideIndexZahir = 1;
     }
     showDivsZahir(slideIndexZahir);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityZahir(entries, observerZahir) {
   entries.forEach(entry => {
@@ -175,7 +175,7 @@ function showDivsMarea(n) {
       slideIndexMarea = 1;
     }
     showDivsMarea(slideIndexMarea);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityMarea(entries, observerMarea) {
   entries.forEach(entry => {
@@ -211,7 +211,7 @@ function showDivsMustique(n) {
       slideIndexMustique = 1;
     }
     showDivsMustique(slideIndexMustique);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityMustique(entries, observerMustique) {
   entries.forEach(entry => {
@@ -247,7 +247,7 @@ function showDivsKouyou(n) {
       slideIndexKouyou = 1;
     }
     showDivsKouyou(slideIndexKouyou);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityKouyou(entries, observerKouyou) {
   entries.forEach(entry => {
@@ -283,7 +283,7 @@ function showDivsLola(n) {
       slideIndexLola = 1;
     }
     showDivsLola(slideIndexLola);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityLola(entries, observerLola) {
   entries.forEach(entry => {
@@ -319,7 +319,7 @@ function showDivsMoka(n) {
       slideIndexMoka = 1;
     }
     showDivsMoka(slideIndexMoka);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityMoka(entries, observerMoka) {
   entries.forEach(entry => {
@@ -355,7 +355,7 @@ function showDivsMesanpar(n) {
       slideIndexMesanpar = 1;
     }
     showDivsMesanpar(slideIndexMesanpar);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityMesanpar(entries, observerMesanpar) {
   entries.forEach(entry => {
@@ -391,7 +391,7 @@ function showDivsSapphire(n) {
       slideIndexSapphire = 1;
     }
     showDivsSapphire(slideIndexSapphire);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilitySapphire(entries, observerSapphire) {
   entries.forEach(entry => {
@@ -427,7 +427,7 @@ function showDivsCoral(n) {
       slideIndexCoral = 1;
     }
     showDivsCoral(slideIndexCoral);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityCoral(entries, observerCoral) {
   entries.forEach(entry => {
@@ -463,7 +463,7 @@ function showDivsAlmadra(n) {
       slideIndexAlmadra = 1;
     }
     showDivsAlmadra(slideIndexAlmadra);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityAlmadra(entries, observerAlmadra) {
   entries.forEach(entry => {
@@ -499,7 +499,7 @@ function showDivsPine(n) {
       slideIndexPine = 1;
     }
     showDivsPine(slideIndexPine);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityPine(entries, observerPine) {
   entries.forEach(entry => {
@@ -535,7 +535,7 @@ function showDivsNomansland(n) {
       slideIndexNomansland = 1;
     }
     showDivsNomansland(slideIndexNomansland);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityNomansland(entries, observerNomansland) {
   entries.forEach(entry => {
@@ -571,7 +571,7 @@ function showDivsKomorebi(n) {
       slideIndexKomorebi = 1;
     }
     showDivsKomorebi(slideIndexKomorebi);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityKomorebi(entries, observerKomorebi) {
   entries.forEach(entry => {
@@ -607,7 +607,7 @@ function showDivsFlamingo(n) {
       slideIndexFlamingo = 1;
     }
     showDivsFlamingo(slideIndexFlamingo);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityFlamingo(entries, observerFlamingo) {
   entries.forEach(entry => {
@@ -643,7 +643,7 @@ function showDivsArashi(n) {
       slideIndexArashi = 1;
     }
     showDivsArashi(slideIndexArashi);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityArashi(entries, observerArashi) {
   entries.forEach(entry => {
@@ -679,7 +679,7 @@ function showDivsGraphite(n) {
       slideIndexGraphite = 1;
     }
     showDivsGraphite(slideIndexGraphite);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityGraphite(entries, observerGraphite) {
   entries.forEach(entry => {
@@ -715,7 +715,7 @@ function showDivsBurgundy(n) {
       slideIndexBurgundy = 1;
     }
     showDivsBurgundy(slideIndexBurgundy);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityBurgundy(entries, observerBurgundy) {
   entries.forEach(entry => {
@@ -751,7 +751,7 @@ function showDivsKpine(n) {
       slideIndexKpine = 1;
     }
     showDivsKpine(slideIndexKpine);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityKpine(entries, observerKpine) {
   entries.forEach(entry => {
@@ -787,7 +787,7 @@ function showDivsAquamarine(n) {
       slideIndexAquamarine = 1;
     }
     showDivsAquamarine(slideIndexAquamarine);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityAquamarine(entries, observerAquamarine) {
   entries.forEach(entry => {
@@ -823,7 +823,7 @@ function showDivsDenim(n) {
       slideIndexDenim = 1;
     }
     showDivsDenim(slideIndexDenim);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityDenim(entries, observerDenim) {
   entries.forEach(entry => {
@@ -859,7 +859,7 @@ function showDivsRuby(n) {
       slideIndexRuby = 1;
     }
     showDivsRuby(slideIndexRuby);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityRuby(entries, observerRuby) {
   entries.forEach(entry => {
@@ -895,7 +895,7 @@ function showDivsTurq(n) {
       slideIndexTurq = 1;
     }
     showDivsTurq(slideIndexTurq);
-  }, 2000);
+  }, 5000);
 }
 function handleDivVisibilityTurq(entries, observerTurq) {
   entries.forEach(entry => {
