@@ -15,7 +15,7 @@ main{
     color: black;
 }
 .navbar{
-    padding: 2.8rem 5rem 3rem 5rem;
+    padding: 2.8rem 5rem 2rem 5rem;
     z-index: 2;
 }
 main .header h1{
@@ -43,8 +43,9 @@ main h2 {
 }
 .riga{
     display: grid;
-    height: calc(100vh - 10rem);
+    min-height: calc(100vh - 10rem);
     place-items: center;
+    padding-bottom:10rem;
 }
 .riga .container{
     display: grid;
@@ -223,6 +224,7 @@ main h2 {
         max-width: 70%;
         max-height: 80%;
     }
+    .riga{padding-bottom: 0;}
     .riga .colonna-sx{
         padding-right: 0;
     }
