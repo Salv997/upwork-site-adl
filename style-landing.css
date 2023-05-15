@@ -1,112 +1,22 @@
-/* FONT */
-@font-face {
-    font-family: "couture";
-    src: url("font/couture-bld.otf") format("opentype");
-    font-weight: 400;
+main{
+    overflow:hidden;
 }
-@font-face {
-    font-family: "minion";
-    src: url("font/Minion-Regular.woff") format("woff");
+.grid{
+    display: grid;
+    grid-template-columns: 1fr auto;
 }
-@font-face {
-    font-family: "Minion-Variable";
-    src: url("font/Minion-Variable-Concept.otf") format("opentype");
+.grid .immagine {
+    height: 100vh;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.grid .immagine img{
+    height: 100%;
 }
-html{
-    color: #40413D;
-}
-#desktop{
-    width: 100vw;
-    min-height: 100dvh;
-    background-image: url(./img/bg.webp);
-    background-size: cover;
-    background-position: center 40%;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: space-between;
+.grid .logo{
+    display:flex;
     align-items: center;
-    padding: 3.9vh 4.5vw;
+    justify-content: center;
 }
-#desktop h1{
-    font-family: 'couture';
-    font-size: 2.4rem;
-    margin-bottom: 5rem;
+.grid .logo h1{
+    font-family: 'Couture';
+    font-size: 3rem;
 }
-a{
-    text-decoration: none;
-    color: #DDDAD5;
-}
-#desktop nav{
-    align-self: flex-end;
-    padding-bottom: 7vh;
-}
-#desktop nav ul{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.1rem;
-}
-#desktop nav ul li{
-    font-family: 'Minion-Variable';
-    font-weight: 600;
-    font-size: 1.2rem;
-    line-height: 1.1;
-}
-#desktop nav ul li:hover{
-    transition: 0.2s ease-in-out;
-}
-#mobile{
-    display: none;
-}
-
-@media (max-width: 60rem){
-    #desktop{
-        display: none;
-    }
-    #mobile{
-        display: block;
-        width: 100vw;
-        min-height: 100dvh;
-        background-image: url(./img/bg-mob.webp);
-        background-size: cover;
-        background-position: 100% center;
-        background-repeat: no-repeat;
-    }
-    #title{
-        position: absolute;
-        top: 45vh;
-        right: 1.5rem;
-        font-family: 'couture';
-        font-size: 2.5vh;
-    }
-    #mobile-nav{
-        font-family: 'minion';
-        position: absolute;
-        bottom: 3rem;
-        right: 1.5rem;
-        text-align: right;
-        font-size: 1.05rem;
-        font-weight: 600;
-        line-height: 1.3;
-    }
-    #mobile-nav ul{
-        list-style: none;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
