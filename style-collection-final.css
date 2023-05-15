@@ -43,8 +43,12 @@ main h2 {
 }
 .riga{
     display: grid;
+    height: calc(100vh - 10rem);
+    place-items: center;
+}
+.riga .container{
+    display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: calc(100vh - 10rem);
 }
 .navigator{
     display: flex;
@@ -143,12 +147,6 @@ main h2 {
 .top-btn a:hover svg{
     margin-left: 0.6rem;
 }
-.img-slide{
-    width: 100%;
-}
-.img-slide.right{
-    float: right;
-}
 #topbtn{
     visibility: hidden;
     opacity: 0;
@@ -172,7 +170,8 @@ main h2 {
 }
 .img-slide{
     width:100%;
-    height: 100%;
+    height: 75vh;
+    max-height: 40rem;
     display: flex;
     align-items: center;
     position: relative;
@@ -245,7 +244,7 @@ main h2 {
     main .header h1{
         font-size: 1.35rem;
     }
-    .riga{
+    .riga .container{
         grid-template-columns: 100%;
         grid-template-rows: 1fr auto;
         row-gap: 2rem;
