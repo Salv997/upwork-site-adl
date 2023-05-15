@@ -35,7 +35,13 @@ footer{
 .email a{
     color: black;
 }
-
+.title h1{
+    font-family: 'Elephant';
+    text-transform: uppercase;
+    font-weight: 200;
+    font-size: 1.75rem;
+    padding-bottom: 4rem;
+}
 
 
 @media (max-width: 70rem){
