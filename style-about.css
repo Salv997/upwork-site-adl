@@ -177,6 +177,9 @@ span{color:black}
     main .sec-1 .description{
         padding-left: 0;
     }
+    main .sec-1 .portrait img{
+        max-height: 100rem;
+    }
     main .sec-2{
         padding-top:8rem;
         min-height: 100vh;
