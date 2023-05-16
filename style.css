@@ -32,8 +32,8 @@
 ::-webkit-scrollbar-thumb {
   background-color: #cccccc;
 }
-html{
-    color: #40413D;
+.gray-text {
+    color: rgb(93, 93, 90);
 }
 .navbar{
     display: flex;
