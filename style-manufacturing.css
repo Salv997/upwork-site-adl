@@ -95,3 +95,80 @@ main img{
     grid-template-columns: 38.7% 50%;
     column-gap: 11.3%;
 }
+
+
+
+
+@media (max-width: 75rem){
+    main{
+        padding: 0 2rem;
+    }
+}
+@media (max-width: 60rem){
+    main{
+        padding: 0 1rem;
+        padding-bottom: 5rem;
+    }
+    main .header h1{
+        padding-top: 7rem;
+        font-size: 1.35rem;
+    }
+    .manufacturing{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        padding-bottom: 7rem;
+    }
+    .materials{
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .manufacturing .grid .hand{
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 2rem;
+    }
+    .manufacturing .grid .dyeing{
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 2rem;
+    }
+    .manufacturing .grid .graph{
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 2rem;
+    }
+    .manufacturing .grid .tufting{
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 2rem;
+    }
+    .manufacturing .grid .carving{
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 2rem;
+    }
+    .materials .grid .wool{
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 2rem;
+    }
+    .materials .grid .silk{
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 2rem;
+    }
+    .materials .grid .plastic{
+        display: grid;
+        grid-template-columns: 100%;
+        row-gap: 2rem;
+    }
+    .reverse .dx{
+        order: 1;
+    }
+    .reverse .sx{
+        order: 2;
+    }
+}
