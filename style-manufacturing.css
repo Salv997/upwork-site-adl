@@ -6,9 +6,6 @@ main{
     color: black;
     padding-top: 10rem;
 }
-.navbar{
-    padding: 2.8rem 5rem 6rem 5rem;
-}
 .manufacturing{
     display: flex;
     flex-direction: column;
@@ -29,19 +26,12 @@ main .header h1{
     text-align: justify;
 }
 main h2{
+    font-family: 'Elephant';
     text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: 100;
     padding-bottom: 1rem;
     padding-top: 3rem;
-}
-main .grid .riga{
-    display: flex;
-    height: 30rem;
-    gap: 5rem;
-}
-main .grid img{
-    height: 100%;
 }
 main h3{
     font-family: 'Elephant';
@@ -53,10 +43,55 @@ main h3{
 main h4{
     font-family: 'Minion-Variable';
     text-transform: uppercase;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     font-weight: 100;
     padding-bottom: 1.2rem;
 }
 main p{
     text-align: justify;
+    font-size: 1rem;
+}
+main img{
+    width: 100%;
+}
+
+.manufacturing .grid .hand{
+    display: grid;
+    grid-template-columns: 56% 36%;
+    column-gap: 8%;
+}
+.manufacturing .grid .dyeing{
+    display: grid;
+    grid-template-columns: 41.5% 50%;
+    column-gap: 8.5%;
+}
+.manufacturing .grid .graph{
+    display: grid;
+    grid-template-columns: 50% 42%;
+    column-gap: 8%;
+}
+.manufacturing .grid .tufting{
+    display: grid;
+    grid-template-columns: 43.3% 50%;
+    column-gap: 6.7%;
+}
+.manufacturing .grid .carving{
+    display: grid;
+    grid-template-columns: 48% 41.4%;
+    column-gap: 10.6%;
+}
+.materials .grid .wool{
+    display: grid;
+    grid-template-columns: 38.8% 41.2%;
+    column-gap: 20%;
+}
+.materials .grid .silk{
+    display: grid;
+    grid-template-columns: 41.2% 49.8%;
+    column-gap: 9%;
+}
+.materials .grid .plastic{
+    display: grid;
+    grid-template-columns: 38.7% 50%;
+    column-gap: 11.3%;
 }
