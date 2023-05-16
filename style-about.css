@@ -16,11 +16,15 @@ main {
 /* SEZIONE 1 */
 img{width: 5rem;}
 main .sec-1{
-    margin-top: 6.4rem;
-    min-height: 100vh;
     display: grid;
+    place-items: center;
+    min-height: 100vh;
+}
+main .sec-1 .grid{
+    display:grid;
     grid-template-columns: 40.5% 50%;
     column-gap: 9.5%;
+    margin-top: 6.4rem;
     place-items: center;
 }
 main .sec-1 .portrait{
@@ -167,7 +171,6 @@ span{color:black}
         padding-bottom: 10rem;
     }
     main .sec-1{
-        padding-top: 6.5rem;
         min-height: 100vh;
         display: grid;
         grid-template-columns: 100%;

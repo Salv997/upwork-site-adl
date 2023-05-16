@@ -32,9 +32,6 @@
 ::-webkit-scrollbar-thumb {
   background-color: #cccccc;
 }
-.gray-text {
-    color: rgb(93, 93, 90);
-}
 .navbar{
     display: flex;
     align-items: center;
@@ -190,9 +187,9 @@ ul li .gray-text:hover{
 }
 #menuToggle span{
     display: block;
-    border-radius: 0.5px;
-    width: 2.1rem;
-    height: 3px;
+    border-radius: 2px;
+    width: 2.5rem;
+    height: 4px;
     margin-bottom: 6px;
     position: relative;
     background: #40413D;

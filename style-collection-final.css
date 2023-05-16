@@ -7,16 +7,16 @@ html{
 footer{
     scroll-snap-align: start;
 }
+.navbar{
+    padding: 2.8rem 5rem 2rem 5rem;
+    z-index: 2;
+}
 main{
     max-width: 90rem;
     margin: 0 auto;
     padding: 12rem 5rem 6rem 5rem;
     font-family: 'Minion-Variable';
     color: black;
-}
-.navbar{
-    padding: 2.8rem 5rem 2rem 5rem;
-    z-index: 2;
 }
 main .header h1{
     color: black;
@@ -45,7 +45,6 @@ main h2 {
     display: grid;
     min-height: calc(100vh - 10rem);
     place-items: center;
-    padding-bottom:10rem;
 }
 .riga .container{
     display: grid;
@@ -162,12 +161,18 @@ main h2 {
 }
 .riga .colonna-sx{
     padding-right: 5rem;
+    padding-top: 2rem;
 }
 .riga.reverse .colonna-dx{
     padding-left: 5rem;
+    padding-top: 2rem;
 }
 .riga.reverse .colonna-sx{
     padding-right: 0;
+    padding-top: 0;
+}
+.riga .colonna-dx{
+    padding-top: 0;
 }
 .img-slide{
     width:100%;

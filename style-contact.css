@@ -18,7 +18,7 @@ section{
 }
 section img{
     padding-top: 2rem;
-    width: clamp(15rem, 30vw, 35rem);
+    width: clamp(15rem, 30vw, 43rem);
 }
 section .left-col > div{
     display: flex;
@@ -36,11 +36,10 @@ footer{
     color: black;
 }
 .title h1{
-    font-family: 'Elephant';
     text-transform: uppercase;
-    font-weight: 200;
-    font-size: 1.75rem;
-    padding-bottom: 4rem;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
 }
 
 
