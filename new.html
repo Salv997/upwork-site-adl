@@ -54,33 +54,57 @@
             });
           </script>
           <script>
-                $(document).ready(function() {
-                $('#checkbox').change(function() {
-                    var isChecked = $(this).prop('checked');
-                    if (isChecked) {
-                    $('#navtitle').css('color', '#dddad5');
-                    $('#lineone, #linetwo').css('background-color', '#dddad5');
-                    } else {
-                    $('#navtitle').css('color', 'black');
-                    $('#lineone, #linetwo').css('background-color', 'black');
-                    }
+          $(document).ready(function() {
+            $('#checkbox').change(function() {
+              var isChecked = $(this).prop('checked');
+              if (isChecked) {
+                $('#navtitle').css({
+                  'color': '#dddad5',
+                  'transition': 'color 0.3s'
                 });
-
-                $('.menu-a').click(function() {
-                    $('#checkbox').prop('checked', false);
-                    $('#navtitle').css('color', 'black');
-                    $('#lineone, #linetwo').css('background-color', 'black');
+                $('#lineone, #linetwo').css({
+                  'background-color': '#dddad5',
+                  'transition': 'background-color 0.3s'
                 });
-
-                $(window).scroll(function() {
-                    var isChecked = $('#checkbox').prop('checked');
-                    if (isChecked) {
-                    $('#checkbox').prop('checked', false);
-                    $('#navtitle').css('color', 'black');
-                    $('#lineone, #linetwo').css('background-color', 'black');
-                    }
+              } else {
+                $('#navtitle').css({
+                  'color': 'black',
+                  'transition': 'color 0.3s'
                 });
+                $('#lineone, #linetwo').css({
+                  'background-color': 'black',
+                  'transition': 'background-color 0.3s'
                 });
+              }
+            });
+          
+            $('.menu-a').click(function() {
+              $('#checkbox').prop('checked', false);
+              $('#navtitle').css({
+                'color': 'black',
+                'transition': 'color 0.3s'
+              });
+              $('#lineone, #linetwo').css({
+                'background-color': 'black',
+                'transition': 'background-color 0.3s'
+              });
+            });
+          
+            $(window).scroll(function() {
+              var isChecked = $('#checkbox').prop('checked');
+              if (isChecked) {
+                $('#checkbox').prop('checked', false);
+                $('#navtitle').css({
+                  'color': 'black',
+                  'transition': 'color 0.3s'
+                });
+                $('#lineone, #linetwo').css({
+                  'background-color': 'black',
+                  'transition': 'background-color 0.3s'
+                });
+              }
+            });
+          });
           </script>
         </div>
     </div>
@@ -94,7 +118,7 @@
         </div>
     </div>
    </main>
-   <main class="about" id="about">
+   <main class="about section" id="about">
        <section class="sec-1">
            <div class="grid">
                <div class="portrait">
@@ -179,7 +203,7 @@
            </footer>
        </section>-->
    </main>
-   <main class="collection" id="collection">
+   <main class="collection section" id="collection">
        <section class="header">
            <h1>
                The world is your kaleidoscope, and the varying combinations of colors, 
@@ -2791,21 +2815,7 @@
            <script src="script-collection-finale.js"></script>
        </section>
    </main>
-   <div class="top-btn">
-       <a href="#top" id="topbtn">
-           Back to top
-           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.421px" height="9.492px" viewBox="0 0 12.421 9.492" xml:space="preserve">
-               <g>
-               <path fill="#40413D" d="M12.188,5.244L8.115,9.316C7.998,9.434,7.852,9.492,7.676,9.492S7.343,9.434,7.207,9.316
-                                               c-0.313-0.313-0.313-0.625,0-0.938l2.959-2.959H0.645c-0.176,0-0.328-0.063-0.455-0.19S0,4.951,0,4.775
-                                               C0,4.6,0.063,4.448,0.189,4.321s0.279-0.19,0.455-0.19h9.521L7.207,1.143c-0.313-0.293-0.313-0.596,0-0.908
-                                               c0.293-0.313,0.596-0.313,0.908,0l4.072,4.072C12.499,4.619,12.499,4.932,12.188,5.244z">
-               </path>
-               </g>
-           </svg>
-       </a>
-   </div>
-   <main class="manufact" id="manufact">
+   <main class="manufact section" id="manufact">
        <section class="header" id="name">
            <h1>
                We strive to create meaningful <b>handmade</b> pieces where <b>design</b> blends with <b>art</b> and <b>craftmanship</b> using 
@@ -3005,7 +3015,7 @@
            </div>
        </section>
    </main>
-   <main class="contact" id="contact">
+   <main class="contact section" id="contact">
        <section>
            <div class="left-col">
                <div class="title">
@@ -3026,6 +3036,53 @@
            </div>
        </section>
    </main>
+   <div class="top-btn">
+       <a id="topbtn">
+           Back to top
+           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.421px" height="9.492px" viewBox="0 0 12.421 9.492" xml:space="preserve">
+               <g>
+               <path fill="#40413D" d="M12.188,5.244L8.115,9.316C7.998,9.434,7.852,9.492,7.676,9.492S7.343,9.434,7.207,9.316
+                                               c-0.313-0.313-0.313-0.625,0-0.938l2.959-2.959H0.645c-0.176,0-0.328-0.063-0.455-0.19S0,4.951,0,4.775
+                                               C0,4.6,0.063,4.448,0.189,4.321s0.279-0.19,0.455-0.19h9.521L7.207,1.143c-0.313-0.293-0.313-0.596,0-0.908
+                                               c0.293-0.313,0.596-0.313,0.908,0l4.072,4.072C12.499,4.619,12.499,4.932,12.188,5.244z">
+               </path>
+               </g>
+           </svg>
+       </a>
+       <script>
+        $(document).ready(function() {
+        var sections = $('.section');
+        var scrollTopButton = $('#topbtn');
+
+        $(window).scroll(function() {
+            var scrollTop = $(window).scrollTop();
+            var windowHeight = $(window).height();
+
+            sections.each(function() {
+            var sectionTop = $(this).offset().top;
+            if (scrollTop >= sectionTop - (windowHeight / 2)) {
+                var sectionId = $(this).attr('id');
+                scrollTopButton.attr('data-section', sectionId);
+            }
+            });
+
+            if (scrollTop >= windowHeight) {
+            scrollTopButton.show();
+            } else {
+            scrollTopButton.hide();
+            }
+        });
+
+        scrollTopButton.click(function() {
+            var sectionId = $(this).attr('data-section');
+            var sectionTop = $('#' + sectionId).offset().top;
+            $('html, body').animate({
+            scrollTop: sectionTop
+            }, 500);
+        });
+        });
+       </script>
+   </div>
    <footer class="gray-text">
        © 2023 Antilla Di Lauro all rights reserved
    </footer>
