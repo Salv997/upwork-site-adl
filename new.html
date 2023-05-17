@@ -16,11 +16,75 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Antilla Di Lauro">
     <link rel="icon" href="./img/favicon.ico">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/238170af42.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="line-up" id="lineone"></div>
     <div class="line-down" id="linetwo"></div>
-   <main class="landing">
+    <div class="navbar">
+        <div class="logo">
+            <a href="#landing" id="navtitle">ANTILLA DI LAURO</a>
+        </div>
+        <div class="menu">
+        <div id="menuToggle">
+            <input title="menu" id="checkbox" class="toggler" type="checkbox"/>
+            <span></span>
+            <span></span>
+            <span></span>
+                <ul id="menu">
+                    <li><a href="#about" class="menu-a">About</a></li>
+                    <li><a href="#collection" class="menu-a">Collection</a></li>
+                    <li><a href="#manufact" class="menu-a">Manufacturing</a></li>
+                    <li><a href="#contact" class="menu-a">Contact</a></li>
+                </ul>
+          </div>
+          <script>
+            $(document).ready(function() {
+                $(window).scroll(function() {
+                var contentTop = $('#about').offset().top;
+                var scrollTop = $(window).scrollTop(); 
+            
+                if (scrollTop >= contentTop) {
+                    $('.navbar').addClass('show-nav');
+                } else {
+                    $('.navbar').removeClass('show-nav');
+                }
+                });
+            });
+          </script>
+          <script>
+                $(document).ready(function() {
+                $('#checkbox').change(function() {
+                    var isChecked = $(this).prop('checked');
+                    if (isChecked) {
+                    $('#navtitle').css('color', '#dddad5');
+                    $('#lineone, #linetwo').css('background-color', '#dddad5');
+                    } else {
+                    $('#navtitle').css('color', 'black');
+                    $('#lineone, #linetwo').css('background-color', 'black');
+                    }
+                });
+
+                $('.menu-a').click(function() {
+                    $('#checkbox').prop('checked', false);
+                    $('#navtitle').css('color', 'black');
+                    $('#lineone, #linetwo').css('background-color', 'black');
+                });
+
+                $(window).scroll(function() {
+                    var isChecked = $('#checkbox').prop('checked');
+                    if (isChecked) {
+                    $('#checkbox').prop('checked', false);
+                    $('#navtitle').css('color', 'black');
+                    $('#lineone, #linetwo').css('background-color', 'black');
+                    }
+                });
+                });
+          </script>
+        </div>
+    </div>
+   <main class="landing" id="landing">
     <div class="grid">
         <div class="logo">
             <h1 class="gray-text">Antilla Di Lauro</h1>
@@ -30,33 +94,35 @@
         </div>
     </div>
    </main>
-   <main class="about">
+   <main class="about" id="about">
        <section class="sec-1">
-           <div class="portrait">
-               <img src="img/portrait.webp" alt="portrait">
-           </div>
-           <div class="description">
-               <h1>The Founder</h1>
-               <p>
-                   Born and raised in Milan, Antilla is an architect and designer. After obtaining 
-                   a Master’s degree with honors in Sustainable Architecture from Politecnico di 
-                   Milano, she started her career at Patricia Urquiola Studio in Milan. Driven by 
-                   a deep-rooted passion for travelling and for luxury design, she then relocated 
-                   to Dubai to work for HBA/Hirsch Bedner Associates, the world’s leading 
-                   hospitality interior design firm. Antilla has designed some of the world’s most 
-                   prestigious hotels for operators such as Four Seasons, Langham, St. Regis and 
-                   was awarded HBA Dubai Designer of The Year in 2018. Fascinated by learning from 
-                   new challenges and crossing design and cultural boundaries she then 
-                   moved to Saudi Arabia to work for the Crown Prince Private Affairs where she 
-                   managed the design of His Royal Highness private palaces. Building on these 
-                   remarkable experiences, Antilla decided to start developing her own designs 
-                   and focusing on creating intriguing and refined rugs for today’s lifestyle. Her 
-                   experimental approach celebrates the juxtaposition between sophistication and 
-                   comfort, multi-layered and contemporary, poetry and geometry, avoiding style 
-                   constraints and thinking out of the box. Nourished by tireless attention to detail 
-                   and engaging color palettes, vibrant yet welcoming, her unconventional creations 
-                   not only capture the eye but foster an emotive connection.
-               </p>
+           <div class="grid">
+               <div class="portrait">
+                   <img src="img/portrait.webp" alt="portrait">
+               </div>
+               <div class="description">
+                   <h1>The Founder</h1>
+                   <p>
+                       Born and raised in Milan, Antilla is an architect and designer. After obtaining 
+                       a Master’s degree with honors in Sustainable Architecture from Politecnico di 
+                       Milano, she started her career at Patricia Urquiola Studio in Milan. Driven by 
+                       a deep-rooted passion for travelling and for luxury design, she then relocated 
+                       to Dubai to work for HBA/Hirsch Bedner Associates, the world’s leading 
+                       hospitality interior design firm. Antilla has designed some of the world’s most 
+                       prestigious hotels for operators such as Four Seasons, Langham, St. Regis and 
+                       was awarded HBA Dubai Designer of The Year in 2018. Fascinated by learning from 
+                       new challenges and crossing design and cultural boundaries she then 
+                       moved to Saudi Arabia to work for the Crown Prince Private Affairs where she 
+                       managed the design of His Royal Highness private palaces. Building on these 
+                       remarkable experiences, Antilla decided to start developing her own designs 
+                       and focusing on creating intriguing and refined rugs for today’s lifestyle. Her 
+                       experimental approach celebrates the juxtaposition between sophistication and 
+                       comfort, multi-layered and contemporary, poetry and geometry, avoiding style 
+                       constraints and thinking out of the box. Nourished by tireless attention to detail 
+                       and engaging color palettes, vibrant yet welcoming, her unconventional creations 
+                       not only capture the eye but foster an emotive connection.
+                   </p>
+               </div>
            </div>
        </section>
        <section class="sec-2">
@@ -106,8 +172,14 @@
                </div>
            </div>
        </section>
+       
+       <!---
+           <footer class="gray-text">
+               © 2023 Antilla Di Lauro all rights reserved
+           </footer>
+       </section>-->
    </main>
-   <main class="collection">
+   <main class="collection" id="collection">
        <section class="header">
            <h1>
                The world is your kaleidoscope, and the varying combinations of colors, 
@@ -270,7 +342,7 @@
                    <div class="colonna-dx">
                        <div class="img-slide right">
                            <img class="slide-casablanca" src="./img/Casablanca_Terracotta.webp" alt="Casablanca Terracotta">
-                           <img class="slide-casablanca" src="./img/Casablanca__Terracotta_Sample.webp" alt="Casablanca Terracotta Sample">
+                           <img class="slide-casablanca" src="./img/Casablanca_Terracotta_Sample.webp" alt="Casablanca Terracotta Sample">
                            <div class="navigator">
                                <i class="fa-solid fa-chevron-left" onclick="plusDivsCasablanca(-1)"></i>
                                <i class="fa-solid fa-chevron-right" onclick="plusDivsCasablanca(+1)"></i>
@@ -1366,7 +1438,7 @@
                <div class="container">
                <div class="colonna-sx">
                    <div class="img-slide">
-                       <img class="slide-almadra" src="./img/Almadra_Peach 1.jpg" alt="Almadra Peach ">
+                       <img class="slide-almadra" src="./img/Almadra_Peach.webp" alt="Almadra Peach ">
                        <img class="slide-almadra" src="./img/Almadra_Peach_Sample.webp" alt="Almadra Peach Sample">
                        <img class="slide-almadra" src="./img/Almadra_Peach_Render.webp" alt="Almadra Peach Render">
                        <div class="navigator">
@@ -2716,9 +2788,24 @@
                    </div> 
                </div>
            </div></div>
+           <script src="script-collection-finale.js"></script>
        </section>
    </main>
-   <main class="manufact">
+   <div class="top-btn">
+       <a href="#top" id="topbtn">
+           Back to top
+           <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="12.421px" height="9.492px" viewBox="0 0 12.421 9.492" xml:space="preserve">
+               <g>
+               <path fill="#40413D" d="M12.188,5.244L8.115,9.316C7.998,9.434,7.852,9.492,7.676,9.492S7.343,9.434,7.207,9.316
+                                               c-0.313-0.313-0.313-0.625,0-0.938l2.959-2.959H0.645c-0.176,0-0.328-0.063-0.455-0.19S0,4.951,0,4.775
+                                               C0,4.6,0.063,4.448,0.189,4.321s0.279-0.19,0.455-0.19h9.521L7.207,1.143c-0.313-0.293-0.313-0.596,0-0.908
+                                               c0.293-0.313,0.596-0.313,0.908,0l4.072,4.072C12.499,4.619,12.499,4.932,12.188,5.244z">
+               </path>
+               </g>
+           </svg>
+       </a>
+   </div>
+   <main class="manufact" id="manufact">
        <section class="header" id="name">
            <h1>
                We strive to create meaningful <b>handmade</b> pieces where <b>design</b> blends with <b>art</b> and <b>craftmanship</b> using 
@@ -2918,7 +3005,7 @@
            </div>
        </section>
    </main>
-   <main class="contact">
+   <main class="contact" id="contact">
        <section>
            <div class="left-col">
                <div class="title">
