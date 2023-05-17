@@ -663,7 +663,7 @@ ul li .gray-text:hover{
     display: grid;
     min-height: calc(100vh - 10rem);
     place-items: center;
-    padding-top: 20vh;
+    padding-top: 19vh;
     padding-bottom: 10rem;
 }
 .collection .riga .container{
