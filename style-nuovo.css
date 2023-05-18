@@ -413,7 +413,8 @@ ul li .gray-text:hover{
     }
 }
 @media (max-width: 60rem){
-    .landing .grid{grid-template-rows: 100vh; position:relative;}
+    .landing{overflow:hidden;}
+    .landing .grid{ grid-template-rows: 100vh; position:relative;}
     .landing .logo{
         position:absolute;
         top:50%;
