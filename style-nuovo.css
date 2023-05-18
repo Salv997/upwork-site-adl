@@ -38,6 +38,10 @@ footer
 {
     scroll-snap-align: start;
 }
+footer.aboutsec,
+footer.collectionsec{
+    scroll-snap-align: none;
+}
 ::-webkit-scrollbar {
     width: 0.5em;
     height: 0.5rem;
@@ -540,6 +544,7 @@ ul li .gray-text:hover{
     min-height: 100vh;
     display: grid;
     place-content: center;
+    position: relative;
 }
 .about  .sec-3 .grid-2{
     display: grid;
@@ -667,7 +672,14 @@ ul li .gray-text:hover{
     }
 }
 
-
+.aboutsec,
+.collectionsec{
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
 
 
 
@@ -879,7 +891,9 @@ ul li .gray-text:hover{
 .ruby .colonna-sx{
     padding-top:2.2rem;
 }
-
+#AR2{
+    position:relative;
+}
 
 
 
@@ -959,6 +973,7 @@ ul li .gray-text:hover{
         bottom: 6rem;
         right: -2.9rem;
     }
+    .collectionsec{bottom:3rem;}
 }
 
 
@@ -984,6 +999,7 @@ ul li .gray-text:hover{
     font-family: 'Minion-Variable';
     color: black;
     padding-top: 10rem;
+    position: relative;
 }
 .manufact .manufacturing{
     display: flex;
