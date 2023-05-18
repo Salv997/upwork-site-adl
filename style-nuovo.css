@@ -1242,3 +1242,32 @@ footer{
         right: -2.9rem;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 40rem){
+    .about p,
+    .collection p,
+    .manufact p{
+        hyphens: auto;
+        -ms-hyphens: auto;
+        -webkit-hyphens: auto;
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
