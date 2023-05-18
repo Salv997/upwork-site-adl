@@ -203,23 +203,43 @@ ul li .gray-text:hover{
     height: 2rem;
     position: absolute;
     opacity: 0;
-    z-index: 1000;
+    z-index: 99999999;
     -webkit-touch-callout: none;
 }
-#menuToggle span{
-    display: block;
-    border-radius: 2px;
+#menuToggle svg{
     width: 2.4rem;
-    height: 3px;
-    margin-bottom: 6px;
+    height: 1.7rem;
     position: relative;
-    background: #40413D;
-    z-index: 1;
-    transform-origin: 9px -3px;
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-                opacity 0.55s ease;
+    z-index: 9999999;
 }
+#menuIcon line{
+    transition: stroke 0.3s;
+}
+#menuIcon .linea1{
+    transition: rotate 0.3s ;
+}
+#menuIcon .linea3{
+    transition: rotate 0.3s ;
+}
+#menuIcon.active line{
+    stroke: #DDDAD5;
+} 
+#menuIcon.active .linea1{
+    transform-origin: 3% 5%;
+    rotate:45deg;
+}
+#menuIcon.active .linea2{
+    display: none;
+}
+#menuIcon.active .linea3{
+    transform-origin: 15% 80%;
+    rotate:-45deg;
+}
+
+
+
+
+
 #menuToggle span:first-child{
     transform-origin: 0% 0%;
 }
@@ -269,10 +289,10 @@ ul li .gray-text:hover{
     font-family: 'couture';
 }
 #menu li{
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
 }
 #menu li a{
-    font-size: 4rem;
+    font-size: 4.5rem;
     color: #DDDAD5;
     text-transform: capitalize;
     font-weight: 400;
@@ -349,6 +369,8 @@ ul li .gray-text:hover{
 }
 .landing .grid .immagine {
     height: 100vh;
+    position:relative;
+    z-index: 99;
 }
 .landing .grid .immagine img{
     height: 100%;
@@ -484,6 +506,7 @@ ul li .gray-text:hover{
 }
 .about  .sec-3 .grid-2 .image{
     padding-right: 18%;
+    display:flex;
 }
 .about  .sec-3 .grid-2 .image img{
     width: 100%;
@@ -495,6 +518,7 @@ ul li .gray-text:hover{
     font-weight: 100;
     text-transform: uppercase;
     padding-bottom: 2.6rem;
+    line-height: 1;
 }
 .about  .sec-3 p{
     font-family: 'Minion-Variable';
@@ -529,7 +553,6 @@ ul li .gray-text:hover{
     .about {
         padding: 0 1rem;
         padding-bottom: 10rem;
-        padding-right: 2.5rem;
     }
     .about .sec-1{
         min-height: 100vh;
@@ -858,7 +881,7 @@ ul li .gray-text:hover{
         padding: 2.2rem 1rem 1rem 1rem;
     }
     .collection {
-        padding: 7rem 2.5rem 6rem 1rem;
+        padding: 7rem 1rem 6rem 1rem;
     }
     .collection  .header h1{
         font-size: 1.35rem;
@@ -912,14 +935,14 @@ ul li .gray-text:hover{
     display: flex;
     flex-direction: column;
     gap: 5rem;
-    padding-bottom: 8rem;
+    padding-bottom: 2rem;
 }
 .manufact .materials{
     display: flex;
     flex-direction: column;
     gap: 5rem;
 }
-.manufact  .header h1{
+.manufact .header h1{
     color: black;
     font-size: 2rem;
     font-weight: 400;
@@ -927,22 +950,22 @@ ul li .gray-text:hover{
     padding-bottom: 5rem;
     text-align: justify;
 }
-.manufact  h2{
+.manufact h2{
     font-family: 'Elephant';
     text-transform: uppercase;
     font-size: 1.5rem;
     font-weight: 100;
-    padding-bottom: 1rem;
+    line-height: 1.1;
     padding-top: 3rem;
 }
-.manufact  h3{
+.manufact h3{
     font-family: 'Elephant';
     text-transform: uppercase;
     font-size: 1.4rem;
     font-weight: 100;
     padding-bottom: 1.2rem;
 }
-.manufact  h4{
+.manufact h4{
     font-family: 'Minion-Variable';
     text-transform: uppercase;
     font-size: 1.5rem;
@@ -999,6 +1022,17 @@ ul li .gray-text:hover{
 }
 
 
+.hand .sx,
+.dyeing .dx,
+.graph .sx,
+.tufting .dx,
+.carving .sx,
+.wool .sx,
+.silk .dx,
+.plastic .sx{
+    display: flex;
+}
+
 
 
 @media (max-width: 75rem){
@@ -1010,11 +1044,10 @@ ul li .gray-text:hover{
     .manufact {
         padding: 0 1rem;
         padding-bottom: 5rem;
-        padding-right: 2.5rem;
     }
-    .manufact  .header h1{
+    .manufact .header h1{
         padding-top: 7rem;
-        font-size: 1.35rem;
+        font-size: 1.07rem;
     }
     .manufact .manufacturing{
         display: flex;
@@ -1135,8 +1168,8 @@ footer{
 .contact .title h1{
     text-transform: uppercase;
     font-weight: 600;
-    font-size: 1.2rem;
-    padding-bottom: 2rem;
+    font-size: 1rem;
+    padding-bottom: 1.2rem;
 }
 
 
@@ -1211,6 +1244,7 @@ footer{
     bottom: 5rem;
     right: -2rem;
     cursor:pointer;
+    z-index: 5;
 }
 .top-btn a{
     font-family: 'Minion-Variable';
@@ -1235,11 +1269,7 @@ footer{
 }
 @media (max-width:60rem){
     .top-btn{
-        width: 8rem;
-        rotate: -90deg;
-        position: fixed;
-        bottom: 6rem;
-        right: -2.9rem;
+        display: none;
     }
 }
 
@@ -1263,6 +1293,7 @@ footer{
 @media (max-width: 40rem){
     .about p,
     .collection p,
+    .manufact .header h1,
     .manufact p{
         hyphens: auto;
         -ms-hyphens: auto;
