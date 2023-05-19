@@ -22,6 +22,77 @@
 <body>
     <div class="line-up" id="lineone"></div>
     <div class="line-down" id="linetwo"></div>
+
+    
+    <div class="transition transition-1">
+        <h2 data-text="ABOUT">ABOUT</h2>
+        <div class="line-up-transition"></div>
+        <div class="line-down-transition"></div>
+    </div>
+    
+    <div class="transition transition-2">
+        <h2 data-text="COLLECTION">COLLECTION</h2>
+        <div class="line-up-transition"></div>
+        <div class="line-down-transition"></div>
+    </div>
+    
+    <div class="transition transition-3">
+        <h2 data-text="MANUFACTURING">MANUFACTURING</h2>
+        <div class="line-up-transition"></div>
+        <div class="line-down-transition"></div>
+    </div>
+    
+    <div class="transition transition-4">
+        <h2 data-text="CONTACT">CONTACT</h2>
+        <div class="line-up-transition"></div>
+        <div class="line-down-transition"></div>
+    </div>
+   
+    <script>
+        $(document).ready(function() {
+          $('.aboutmenu').click(function() {
+            $('.transition').removeClass('is-active');
+            $('.transition-1').addClass('is-active');
+            setTimeout(() => {
+                $('.transition-1').removeClass('is-active');
+            }, 2000);
+          });
+        });
+        
+        $(document).ready(function() {
+          $('.collectionmenu').click(function() {
+            $('.transition').removeClass('is-active');
+            $('.transition-2').addClass('is-active');
+            setTimeout(() => {
+                $('.transition-2').removeClass('is-active');
+            }, 2000);
+          });
+        });
+        
+        $(document).ready(function() {
+          $('.manufacturingmenu').click(function() {
+            $('.transition').removeClass('is-active');
+            $('.transition-3').addClass('is-active');
+            setTimeout(() => {
+                $('.transition-3').removeClass('is-active');
+            }, 2000);
+          });
+        });
+        
+        $(document).ready(function() {
+          $('.contactmenu').click(function() {
+            $('.transition').removeClass('is-active');
+            $('.transition-4').addClass('is-active');
+            setTimeout(() => {
+                $('.transition-4').removeClass('is-active');
+            }, 2000);
+          });
+        });
+    </script>
+
+
+
+
     <div class="navbar">
         <div class="logo">
             <a href="#landing" id="navtitle">ANTILLA DI LAURO</a>
@@ -35,24 +106,12 @@
                 <line class="linea2" y1="11" x2="36" y2="11" stroke="black" stroke-width="3"/>
                 <line class="linea3" y1="21" x2="36" y2="21" stroke="black" stroke-width="3"/>
             </svg>
-                <script>
-                    document.getElementById('checkbox').addEventListener('change', function() {
-                    var menuIcon = document.getElementById('menuIcon');
-                    if (this.checked) {
-                        menuIcon.classList.add('active');
-                    } else {
-                        menuIcon.classList.remove('active');
-                    }
-                    });
-                </script>
-
-
-
+                
                 <ul id="menu">
-                    <li><a href="#about" class="menu-a">About</a></li>
-                    <li><a href="#collection" class="menu-a">Collection</a></li>
-                    <li><a href="#manufact" class="menu-a">Manufacturing</a></li>
-                    <li><a href="#contact" class="menu-a">Contact</a></li>
+                    <li><a href="#about" class="menu-a aboutmenu">About</a></li>
+                    <li><a href="#collection" class="menu-a collectionmenu">Collection</a></li>
+                    <li><a href="#manufact" class="menu-a manufacturingmenu">Manufacturing</a></li>
+                    <li><a href="#contact" class="menu-a contactmenu">Contact</a></li>
                 </ul>
           </div>
           <script>
@@ -82,6 +141,7 @@
                   'background-color': '#dddad5',
                   'transition': 'background-color 0.3s'
                 });
+                menuIcon.classList.add('active');
               } else {
                 $('#navtitle').css({
                   'color': 'black',
@@ -91,6 +151,7 @@
                   'background-color': 'black',
                   'transition': 'background-color 0.3s'
                 });
+                menuIcon.classList.remove('active');
               }
             });
           
@@ -104,6 +165,7 @@
                 'background-color': 'black',
                 'transition': 'background-color 0.3s'
               });
+                menuIcon.classList.remove('active');
             });
           
             $(window).scroll(function() {
@@ -118,6 +180,7 @@
                   'background-color': 'black',
                   'transition': 'background-color 0.3s'
                 });
+                menuIcon.classList.remove('active');
               }
             });
           });
@@ -127,7 +190,9 @@
    <main class="landing" id="landing">
     <div class="grid">
         <div class="logo">
-            <h1 class="gray-text">Antilla Di Lauro</h1>
+            <div class="container">
+                <h1 class="gray-text">Antilla Di Lauro</h1>
+            </div>
         </div>
         <div class="immagine">
             <div class="quadrato-sopra"></div>
