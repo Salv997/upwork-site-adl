@@ -913,7 +913,9 @@ ul li .gray-text:hover{
 .collection .img-slide:hover > .navigator{
     opacity: 1;
 }
-
+#MZ1 .container{
+    width:100%!important;
+}
 #AR2{
     position:relative;
 }
