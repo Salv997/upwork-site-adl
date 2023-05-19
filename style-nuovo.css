@@ -24,7 +24,6 @@
 }
 
 
-
 html{
     scroll-snap-type: y mandatory;
 }
@@ -257,6 +256,9 @@ ul li .gray-text:hover{
 
 
 
+.navbar{
+    display: none;
+}
 
 #menuToggle span:first-child{
     transform-origin: 0% 0%;
