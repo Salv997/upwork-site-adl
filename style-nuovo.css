@@ -526,6 +526,7 @@ ul li .gray-text:hover{
     display: grid;
     place-items: center;
     min-height: 100vh;
+    position:relative;
 }
 .about .sec-1 .grid{
     display:grid;
@@ -563,6 +564,7 @@ ul li .gray-text:hover{
     min-height: 100vh;
     display: grid;
     place-content: center;
+    position:relative;
 }
 .about  .sec-2 .grid{
     display: grid;
@@ -815,7 +817,7 @@ ul li .gray-text:hover{
     gap: 0.8rem;
     padding-top: 2rem;
 }
-.collection .navigator i{
+.collection .navigator svg{
     cursor: pointer;
 }
 .collection .slide-nav{
@@ -984,10 +986,12 @@ ul li .gray-text:hover{
     .collection .navigator{opacity: 100%}
     .collection .img-slide{
         height: 24rem;
+        margin-top: 0.3rem;
+        margin-bottom: 1rem;
     }
     .collection .img-slide img{
-        width: 75%;
-        max-width: 15rem;
+        width: 80%;
+        max-width: 16rem;
         height: auto;
     }
     .collection .riga{
