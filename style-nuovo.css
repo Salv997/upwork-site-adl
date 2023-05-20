@@ -803,6 +803,7 @@ ul li .gray-text:hover{
     display: grid;
     min-height: 100vh;
     place-items: center;
+    position: relative;
 }
 .collection .riga .container{
     display: grid;
@@ -815,10 +816,11 @@ ul li .gray-text:hover{
     width: 100%;
     justify-content: center;
     gap: 0.8rem;
-    padding-top: 2rem;
+    padding: 0 11%;
 }
 .collection .navigator svg{
     cursor: pointer;
+    scale:0.7;
 }
 .collection .slide-nav{
     display: flex;
