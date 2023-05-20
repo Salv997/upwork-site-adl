@@ -925,7 +925,8 @@ ul li .gray-text:hover{
 #AR2{
     position:relative;
 }
-.colonna-dx.desc{display:grid;}
+.riga .colonna-sx.desc{display:grid;}
+.riga.reverse .colonna-dx.desc{display:grid;}
 .descrizione-tappeto{
     height:90%;
     max-height:40rem;
@@ -935,6 +936,14 @@ ul li .gray-text:hover{
 
 .collection{max-width: 100%!important; padding:0!important;}
 .collection .riga .container{
+    margin-top: 0!important;
+    grid-template-columns: 35% auto;
+    column-gap: 5%;
+    height:100%;
+    padding: 3%;
+    padding-left: 10%;
+}
+.collection .riga.reverse .container{
     margin-top: 0!important;
     grid-template-columns: 35% auto;
     column-gap: 5%;
