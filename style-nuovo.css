@@ -820,7 +820,7 @@ ul li .gray-text:hover{
 }
 .collection .navigator svg{
     cursor: pointer;
-    scale:0.7;
+    scale:0.5;
 }
 .collection .slide-nav{
     display: flex;
@@ -940,6 +940,7 @@ ul li .gray-text:hover{
     column-gap: 5%;
     height:100%;
     padding: 3%;
+    padding-right: 10%;
 }
 .collection .riga.reverse .container{
     grid-template-columns: auto 35%;
