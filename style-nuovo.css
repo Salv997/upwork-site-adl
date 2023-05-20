@@ -877,7 +877,7 @@ ul li .gray-text:hover{
     color: black;
 }
 .collection .description.active .list-desc{
-    max-height: 30rem;
+    max-height: 32rem;
 }
 .collection .description .togg{
     cursor: pointer;
