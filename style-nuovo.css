@@ -374,9 +374,9 @@ ul li .gray-text:hover{
 
 nav{
     position: fixed;
-    bottom: 5%;
+    bottom: 3.5%;
     left: 5%;
-    width: 32%;
+    width: 29%;
     font-family: 'Minion-Variable';
     border-top: 0.1rem solid #ddd;
     z-index: 5;
@@ -384,12 +384,12 @@ nav{
 }
 nav ul li a{
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
-    padding: 0.82rem 0.3rem;
+    padding: 0.3rem 0.3rem;
 }
 nav ul li a:hover,
-.active{
+.active-voice{
     border-top: 0.12rem solid black;
     padding-bottom: 0;
 }
@@ -397,7 +397,7 @@ nav ul{
     list-style: none;
     display: flex;
     justify-content: space-between;
-    padding: 0.7rem 0.7rem;
+    padding: 0.2rem 0.7rem;
 }
 footer{display:none;}
 @media (max-width: 60rem){
@@ -830,7 +830,7 @@ footer{display:none;}
     padding-top: 3rem;
 }
 .collection  h2 {
-    font-size:1.3rem;
+    font-size:1.1rem;
     font-weight: 100;
     padding-bottom: 1rem;
     font-family: 'elephant';
@@ -838,6 +838,8 @@ footer{display:none;}
 }
 .collection .riga p{
     text-align: justify;
+    line-height: 1.15;
+    font-size: 0.95rem;
 }
 .collection .grid{
     display: grid;
@@ -861,7 +863,7 @@ footer{display:none;}
     width: 100%;
     justify-content: center;
     gap: 0.8rem;
-    padding: 0 11%;
+    padding-left: 40%;
 }
 .collection .navigator svg{
     cursor: pointer;
@@ -916,12 +918,12 @@ footer{display:none;}
     z-index:10;
 }
 .collection .list-desc h4{
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight:400;
 }
 .collection .list-desc p{
     font-weight: 400;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     padding-bottom: 0.2rem;
     line-height: 1.3;
 }
@@ -955,10 +957,10 @@ footer{display:none;}
 .collection .navigator p{cursor: pointer}
 .collection .img-slide img{
     height: 90%;
-    max-height: 40rem;
+    max-height: 48rem;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 70%;
     transform: translate(-50%,-50%);
 }
 .collection .navigator{
@@ -980,10 +982,10 @@ footer{display:none;}
 .collection{max-width: 100%!important; padding:0!important;}
 .collection .riga .container{
     margin-top: 0!important;
-    grid-template-columns: 35% auto;
+    grid-template-columns: 29% auto;
     column-gap: 5%;
     height:100%;
-    padding: 5%;
+    padding: 4.5%;
 }
 .collection .riga.reverse .container{
     margin-top: 0!important;
@@ -1127,7 +1129,7 @@ footer{display:none;}
 
 
 .manufact {
-    padding: 0 3%;
+    padding: 0 5%;
     padding-top: 3rem;
     font-family: 'Minion-Variable';
     color: black;

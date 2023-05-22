@@ -192,10 +192,10 @@
 
     <nav class="navigazione">
         <ul>
-            <li><a href="#about" class="aboutmenu dot active" data-scroll="about">About</a></li>
-            <li><a href="#collection" class="collectionmenu dot" data-scroll="collection">Collection</a></li>
-            <li><a href="#manufact" class="manufacturingmenu dot" data-scroll="manufact">Manufacturing</a></li>
-            <li><a href="#contact" class="contactmenu dot" data-scroll="contact">Contact</a></li>
+            <li><a href="#about" class="dot active" data-scroll="about">About</a></li>
+            <li><a href="#collection" class="dot" data-scroll="collection">Collection</a></li>
+            <li><a href="#manufact" class="dot" data-scroll="manufact">Manufacturing</a></li>
+            <li><a href="#contact" class="dot" data-scroll="contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -211,8 +211,8 @@
             var height = $(this).height();
             var offset = $(this).offset().top - 200;
             if(top >= offset && top < offset + height){
-            link.removeClass('active');
-            $('.navigazione').find('[data-scroll="' + id + '"]').addClass('active');
+            link.removeClass('active-voice');
+            $('.navigazione').find('[data-scroll="' + id + '"]').addClass('active-voice');
             }
         });
         });
