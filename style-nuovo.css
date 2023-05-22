@@ -908,6 +908,9 @@ footer{display:none;}
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
+    position:relative;
+    background-color: white;
+    z-index:10;
 }
 .collection .list-desc h4{
     font-size: 1rem;
@@ -939,6 +942,7 @@ footer{display:none;}
     display: flex;
     align-items: center;
     position: relative;
+    user-select: none;
 }
 .collection .navigator{
     width: 100%;
