@@ -190,18 +190,34 @@
     </div>-->
 
 
-    <nav>
+    <nav class="navigazione">
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#collection">Collection</a></li>
-            <li><a href="#manufact">Manufacturing</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about" class="aboutmenu dot active" data-scroll="about">About</a></li>
+            <li><a href="#collection" class="collectionmenu dot" data-scroll="collection">Collection</a></li>
+            <li><a href="#manufact" class="manufacturingmenu dot" data-scroll="manufact">Manufacturing</a></li>
+            <li><a href="#contact" class="contactmenu dot" data-scroll="contact">Contact</a></li>
         </ul>
     </nav>
 
 
 
-
+    <script>
+        $(document).ready(function(){
+        $(window).on('scroll',function(){
+        var link = $('.navigazione a.dot');
+        var top = $(window).scrollTop();
+        $('.sec').each(function(){
+            var id = $(this).attr('id');
+            var height = $(this).height();
+            var offset = $(this).offset().top - 200;
+            if(top >= offset && top < offset + height){
+            link.removeClass('active');
+            $('.navigazione').find('[data-scroll="' + id + '"]').addClass('active');
+            }
+        });
+        });
+        });
+    </script>
 
 
 
@@ -231,7 +247,7 @@
         </div>
     </div>
    </main>
-   <main class="about section" id="about">
+   <main class="about section sec" id="about">
        <section class="sec-1">
            <div class="grid">
                <div class="portrait">
@@ -310,7 +326,7 @@
            </div>
        </section>
    </main>
-   <main class="collection section" id="collection">
+   <main class="collection section sec" id="collection">
        <section class="header">
            <h1>
                The world is your kaleidoscope, and the varying combinations of colors, 
@@ -2992,7 +3008,7 @@
            <script src="script-collection-finale.js"></script>
        </section>
    </main>
-   <main class="manufact section" id="manufact">
+   <main class="manufact section sec" id="manufact">
        <section class="header" id="name">
            <h1>
                We strive to create meaningful <b>handmade</b> pieces where <b>design</b> blends with <b>art</b> and <b>craftmanship</b> using 
@@ -3194,7 +3210,7 @@
            </div>
        </section>
    </main>
-   <main class="contact section" id="contact">
+   <main class="contact section sec" id="contact">
         <div class="wrap">
         <section>
             <div class="left-col">

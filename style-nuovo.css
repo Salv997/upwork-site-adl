@@ -388,7 +388,8 @@ nav ul li a{
     text-transform: uppercase;
     padding: 0.82rem 0.3rem;
 }
-nav ul li a:hover{
+nav ul li a:hover,
+.active{
     border-top: 0.12rem solid black;
     padding-bottom: 0;
 }
@@ -399,7 +400,9 @@ nav ul{
     padding: 0.7rem 0.7rem;
 }
 footer{display:none;}
-
+@media (max-width: 60rem){
+    nav{display: none;}
+}
 
 
 
