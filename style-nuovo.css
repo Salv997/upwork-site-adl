@@ -676,10 +676,6 @@ footer{display:none;}
     .about .sec-1{
         height: 100vh;
     }
-    .about .sec-1,
-    .about .sec-2,
-    .about .sec-3{
-    }
 }
 
 @media (max-width: 75rem){
@@ -708,18 +704,23 @@ footer{display:none;}
         row-gap: 2rem;
         margin-top: 6.4rem;
         padding-bottom: 5rem;
+        padding:0;
     }
     .about .sec-1 .description{
         padding-left: 0;
+    }
+    .about .description p{
+        padding-right: 0;
     }
     .about .sec-1 .portrait img{
         max-height: 100rem;
     }
     .about .sec-2{
-        padding-top:0;
         min-height: 100vh;
         display: grid;
         place-content:center;
+        padding:0;
+        padding-top:5rem;
         padding-bottom: 5rem;
     }
     .about .sec-2 .grid{
@@ -755,6 +756,7 @@ footer{display:none;}
         display: grid;
         grid-template-columns: 100%;
         place-items: center;
+        padding: 0;
         row-gap: 2rem;
     }
     .about .sec-3 .grid-2 .image{
@@ -1035,6 +1037,9 @@ footer{display:none;}
 }
 
 @media (max-width: 60rem){
+    .collection  .header{
+        height:auto;
+    }
     .collection .navigator{opacity: 100%}
     .collection .img-slide{
         height: 24rem;
@@ -1045,6 +1050,7 @@ footer{display:none;}
         width: 80%;
         max-width: 16rem;
         height: auto;
+        left: 50%;
     }
     .collection .riga{
         padding-top: 0;
@@ -1186,11 +1192,11 @@ footer{display:none;}
 }
 .manufact .manufacturing .grid {
     min-height: 100vh;
-    padding: 5%;
+    padding: 4.5%;
 }
 .manufact .materials .grid {
     min-height: 100vh;
-    padding: 5%;
+    padding: 4.5%;
 }
 
 .manufact .manufacturing .grid .hand{
@@ -1268,6 +1274,14 @@ footer{display:none;}
         flex-direction: column;
         gap: 2rem;
         padding-bottom: 2rem;
+    }
+    .manufact .manufacturing .grid {
+        min-height: auto;
+        padding: 0;
+    }
+    .manufact .materials .grid {
+        min-height: auto;
+        padding: 0;
     }
     .manufact .materials{
         display: flex;
