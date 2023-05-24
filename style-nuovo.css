@@ -882,7 +882,7 @@ footer{display:none;}
     width: 100%;
     justify-content: center;
     gap: 0.8rem;
-    padding-left: 40%;
+    padding-left: 35%;
 }
 .collection .navigator svg{
     cursor: pointer;
@@ -976,16 +976,19 @@ footer{display:none;}
 }
 .collection .navigator p{cursor: pointer}
 .collection .img-slide img{
-    height: 90%;
-    max-height: 48rem;
+    max-height: 77vh;
+    max-width: 33vw;
     position: absolute;
-    top: 50%;
+    top: 53%;
     left: 70%;
     transform: translate(-50%,-50%);
 }
 .collection .navigator{
-    opacity: 0;
+    opacity: 1;
     transition: 0.3s;
+    position: relative;
+    left: 1.2rem;
+    top: 3%;
 }
 .collection .img-slide:hover > .navigator{
     opacity: 1;
