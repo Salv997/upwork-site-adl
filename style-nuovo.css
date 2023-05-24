@@ -653,8 +653,12 @@ footer{display:none;}
     min-height: 100vh;
     padding-bottom: 9%;
 }
+.about .sec-3 .grid-2 .description{
+    padding-right: 5%;
+}
 .about  .sec-3 .grid-2 .image{
-    padding-right: 18%;
+    padding-right: 10%;
+    padding-left: 6%;
     display:flex;
 }
 .about  .sec-3 .grid-2 .image img{
@@ -666,16 +670,16 @@ footer{display:none;}
     font-size: 2rem;
     font-weight: 100;
     text-transform: uppercase;
-    padding-bottom: 2.6rem;
-    line-height: 1;
+    padding-bottom: 3.3rem;
+    line-height: 1.4;
 }
 .about  .sec-3 p{
     font-family: 'Minion-Variable';
     text-align: justify;
     color: black;
     font-weight: 400;
-    line-height: 1.3;
-    font-size: 1.27rem;
+    line-height: 1.57;
+    font-size: 1.05rem;
 }
 @media(min-width:100rem){
     .about .sec-1{
