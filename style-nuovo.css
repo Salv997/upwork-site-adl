@@ -1071,9 +1071,8 @@ footer{display:none;}
         margin-bottom: 1rem;
     }
     .collection .img-slide img{
-        width: 80%;
-        max-width: 16rem;
-        height: auto;
+        max-width: 100%;
+        max-height: 20rem;
         left: 50%;
     }
     .collection .riga{
@@ -1137,10 +1136,16 @@ footer{display:none;}
     .collection .navigator{
         padding: 0 0;
     }
-
-    #MS1 img{
-        height: 10rem;
-        width: auto;
+    #AL1 img.larga,
+    #AL2 img.larga{
+        max-height: 15rem;
+    }
+    .collection .navigator{
+        opacity: 1;
+        transition: 0.3s;
+        position: relative;
+        left: 0;
+        top: 0;
     }
 }
 
