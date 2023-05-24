@@ -372,15 +372,15 @@ ul li .gray-text:hover{
 
 */
 
+body{overflow-x:hidden;}
 nav{
     position: fixed;
     bottom: 3.5%;
     left: 4.5%;
     width: 27.5%;
     font-family: 'Minion-Variable';
-    border-top: 0.1rem solid #ddd;
+    border-top: 0.1rem solid rgba(221,218,213);
     z-index: 5;
-    background-color: white;
 }
 nav ul li a{
     text-decoration: none;
@@ -926,14 +926,14 @@ footer{display:none;}
     z-index:10;
 }
 .collection .list-desc h4{
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight:400;
 }
 .collection .list-desc p{
     font-weight: 400;
     font-size: 0.85rem;
     padding-bottom: 0.2rem;
-    line-height: 1.3;
+    line-height: 1.1;
 }
 .collection .list-desc a{
     color: black;
@@ -944,6 +944,7 @@ footer{display:none;}
 .collection .description .togg{
     cursor: pointer;
     padding: 1rem 0;
+    padding-bottom: 1.1rem;
 }
 .collection .slide-nav{display: none; gap: 0.2rem;}
 .collection .mobile{
@@ -1376,25 +1377,24 @@ footer{display:none;}
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    max-width: 90rem;
-    margin: 0 auto;
-    padding: 0 5rem;
+    padding: 4.5%;
     font-family: 'Minion-Variable';
     color: black;
     position: relative;
     background-color: white;
     z-index: 4;
 }
-.wrap{display:grid; place-items:center;}
+.wrap{height: 100%;}
 .contact section{
     display: flex;
     align-items: flex-end;
     gap: 2rem;
     justify-content: flex-end;
+    height: 100%;
 }
+.contact .right-col{height: 100%;}
 .contact section img{
-    padding-top: 2rem;
-    width: clamp(15rem, 30vw, 43rem);
+    height: 100%;
 }
 .contact section .left-col > div{
     display: flex;
@@ -1550,6 +1550,14 @@ footer{display:none;}
 
 
 
+.about p,
+.collection p{
+    hyphens: auto;
+    -ms-hyphens: auto;
+    -webkit-hyphens: auto;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
 
 
 
