@@ -387,10 +387,11 @@ nav ul li a{
     font-size: 0.8rem;
     text-transform: uppercase;
     padding: 0.4rem 0.3rem;
+    color: rgba(93,93,89);
 }
 nav ul li a:hover,
 .active-voice{
-    border-top: 0.12rem solid black;
+    border-top: 0.12rem solid rgba(93,93,89);
     padding-bottom: 0;
 }
 nav ul{
@@ -776,7 +777,17 @@ footer{display:none;}
         font-size: 1rem;
     }
     .aboutsec,
-    .collectionsec{display:none}
+    .collectionsec{display:none;}
+    .about .sec-3 .grid-2 .description{
+        padding-right: 0;
+        order: 2;
+    }
+    .about  .sec-3 .grid-2 .image{
+        padding-right: 0;
+        padding-left: 0;
+        display:flex;
+        order:1;
+    }
 }
 
 .aboutsec{
