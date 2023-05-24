@@ -1074,6 +1074,7 @@ footer{display:none;}
         max-width: 100%;
         max-height: 20rem;
         left: 50%;
+        top: 50%;
     }
     .collection .riga{
         padding-top: 0;
@@ -1166,7 +1167,7 @@ footer{display:none;}
 
 
 .manufact {
-    padding: 0 5%;
+    padding: 0 4.5%;
     padding-top: 3rem;
     font-family: 'Minion-Variable';
     color: black;
@@ -1226,11 +1227,11 @@ footer{display:none;}
 }
 .manufact .manufacturing .grid {
     min-height: 100vh;
-    padding: 4.5%;
+    padding-top: 4.5%;
 }
 .manufact .materials .grid {
     min-height: 100vh;
-    padding: 4.5%;
+    padding-top: 4.5%;
 }
 
 .manufact .manufacturing .grid .hand{
