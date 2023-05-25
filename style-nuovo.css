@@ -1097,8 +1097,6 @@ footer{display:none;}
         padding-left: 0;
     }
     .collection .riga.reverse .container {grid-template-columns: 100%;}
-    .collection .desktop{display: none}
-    .collection .mobile{display: inline-block;}
     .collection p.mobile{
         padding-top: 0;
     }
@@ -1117,10 +1115,10 @@ footer{display:none;}
         grid-template-columns: 100%;
         grid-template-rows: 1fr auto;
     }
-    .collection .reverse .colonna-dx{
+    .collection .colonna-dx{
         order: 1;
     }
-    .collection .reverse .colonna-sx{
+    .collection .colonna-sx{
         order: 2;
     }
     .collection .top-btn{
