@@ -86,14 +86,6 @@ a{
 }
 .navbar a {
     color: black;
-}
-footer{
-    padding-top: 2.5rem;
-    text-align: center;
-    color: rgb(63, 63, 63);
-    padding-top: 4rem;
-    padding-bottom: 1rem;
-    font-size: 0.9rem;
 } /*
 .navbar a.gray-text {
     color: rgb(93, 93, 90);
@@ -400,7 +392,6 @@ nav ul{
     justify-content: space-between;
     padding: 0.2rem 0.7rem;
 }
-footer{display:none;}
 @media (max-width: 60rem){
     nav{display: none;}
 }
@@ -1381,7 +1372,18 @@ footer{display:none;}
 
 
 
-
+footer{
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    font-family: 'Minion-Variable';
+    padding-top: 2.5rem;
+    text-align: center;
+    color: rgb(93, 93, 90);
+    padding-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
 
 
 
@@ -1461,14 +1463,6 @@ footer{display:none;}
         width: 100%;
         padding: 0 1rem;
     }
-    footer{
-        position:relative;
-        padding-top: 2.5rem;
-        text-align: center;
-        color: rgb(63, 63, 63);
-        padding-bottom: 2rem;
-        font-size: 0.9rem;
-    }
 }
 @media (max-width: 40rem){
     .contact section img{
@@ -1480,15 +1474,21 @@ footer{display:none;}
         padding-top: 2rem;
         justify-content: center;
         width: 100%;
+        height: auto;
     }
     .contact .left-col{
         padding-right: 1rem;
         padding-right: 1rem;
     }
+    footer{
+        position:relative;
+        padding-top: 2.5rem;
+        text-align: center;
+        color: rgb(93, 93, 90);
+        padding-bottom: 1rem;
+        font-size: 0.9rem;
+    }
 }
-
-
-
 
 
 
@@ -1578,16 +1578,3 @@ footer{display:none;}
 }
 
 
-
-
-footer{
-    position:fixed;
-    width:100%;
-    bottom:0;
-    left: 0;
-    text-align: center;
-    color: rgb(63, 63, 63);
-    padding-bottom: 1rem;
-    font-size: 0.9rem;
-    z-index:3;
-}
