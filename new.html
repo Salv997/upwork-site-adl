@@ -21,10 +21,6 @@
 </head>
 <body>
     <!--
-    <div class="line-up" id="lineone"></div>
-    <div class="line-down" id="linetwo"></div>
--->
-    
     <div class="transition transition-1">
         <h2 data-text="ABOUT">ABOUT</h2>
         <div class="line-up-transition"></div>
@@ -90,7 +86,7 @@
           });
         });
     </script>
-
+    -->
 
 
     <!--
@@ -198,41 +194,23 @@
             <li><a href="#contact" class="dot" data-scroll="contact">Contact</a></li>
         </ul>
     </nav>
-
-
-
     <script>
         $(document).ready(function(){
-        $(window).on('scroll',function(){
-        var link = $('.navigazione a.dot');
-        var top = $(window).scrollTop();
-        $('.sec').each(function(){
-            var id = $(this).attr('id');
-            var height = $(this).height();
-            var offset = $(this).offset().top - 200;
-            if(top >= offset && top < offset + height){
-            link.removeClass('active-voice');
-            $('.navigazione').find('[data-scroll="' + id + '"]').addClass('active-voice');
-            }
-        });
-        });
+            $(window).on('scroll',function(){
+                var link = $('.navigazione a.dot');
+                var top = $(window).scrollTop();
+                $('.sec').each(function(){
+                    var id = $(this).attr('id');
+                    var height = $(this).height();
+                    var offset = $(this).offset().top - 200;
+                    if(top >= offset && top < offset + height){
+                    link.removeClass('active-voice');
+                    $('.navigazione').find('[data-scroll="' + id + '"]').addClass('active-voice');
+                    }
+                });
+            });
         });
     </script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
    <main class="landing" id="landing">
     <div class="grid">
         <div class="logo">
@@ -2683,7 +2661,7 @@
            </div></div>
            <div class="riga denim"id="NS2">
                <div class="container">
-               <div class="colonna-dx">
+               <div class="colonna-sx">
                    <h2>NOMANSLAND /</h2>
                    <p class="desktop">
                        Uninhabited, undeveloped and accessible only by boat, No Man's Land is a secluded 
