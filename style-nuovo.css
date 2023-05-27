@@ -236,7 +236,7 @@ nav ul{
     display: flex;
 }
 .about .sec-1 h1{
-    font-size: 1.9rem;
+    font-size: 2.4rem;
     font-family: 'Elephant';
     line-height: 1;
     padding-bottom: 2.6rem;
@@ -250,7 +250,7 @@ nav ul{
     color: black;
     font-weight: 400;
     line-height: 1.57;
-    font-size: 1.05rem;
+    font-size: 1.25rem;
     padding-right: 11%;
 }
 /* SECTION 2 */
@@ -631,17 +631,6 @@ nav ul{
     }
     .container{
         grid-template-columns: 22% auto;
-    }
-}
-@media (max-width: 75rem){
-    .collection.navbar{
-        padding: 2.2rem 2rem 1rem 2rem;
-    }
-    .collection{
-        padding: 7rem 2rem 6rem 2rem;
-    }
-    .collection .header{
-        padding-top: 2.6rem;
     }
 }
 @media (max-width: 60rem){
