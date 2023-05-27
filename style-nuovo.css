@@ -74,23 +74,31 @@ nav{
     border-top: 0.1rem solid rgba(221,218,213);
     z-index: 5;
 }
+nav ul li{
+    flex-grow: 1;
+    text-align: center;
+    display: flex;
+}
 nav ul li a{
+    flex-grow: 1;
+    flex-basis: 0;
     text-decoration: none;
     font-size: 0.8rem;
     text-transform: uppercase;
-    padding: 0.4rem 0.3rem;
+    padding: 0.5rem 0;
+    width: 100% !important;
     color: rgba(93,93,89);
 }
 nav ul li a:hover,
 .active-voice{
     border-top: 0.12rem solid rgba(93,93,89);
+    transform: translateY(-0.12rem);
     padding-bottom: 0;
 }
 nav ul{
     list-style: none;
     display: flex;
     justify-content: space-between;
-    padding: 0.2rem 0.7rem;
 }
 @media (max-width: 60rem){
     nav{display: none;}
@@ -211,6 +219,9 @@ nav ul{
     font-family: 'Minion-Variable';
     margin: 0 auto;
     padding-bottom: 10rem;
+    position: relative;
+    background-color: white;
+    z-index: 4;
 }
 .about .sec-1{
     display: grid;
@@ -236,7 +247,7 @@ nav ul{
     display: flex;
 }
 .about .sec-1 h1{
-    font-size: 2.4rem;
+    font-size: 2.4vw;
     font-family: 'Elephant';
     line-height: 1;
     padding-bottom: 2.6rem;
@@ -250,7 +261,7 @@ nav ul{
     color: black;
     font-weight: 400;
     line-height: 1.57;
-    font-size: 1.25rem;
+    font-size: 1.17vw;
     padding-right: 11%;
 }
 /* SECTION 2 */
@@ -728,6 +739,8 @@ nav ul{
     font-family: 'Minion-Variable';
     color: black;
     position: relative;
+    background-color: white;
+    z-index: 4;
 }
 .manufact .manufacturing{
     display: flex;
