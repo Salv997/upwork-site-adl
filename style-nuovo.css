@@ -69,7 +69,7 @@ nav{
     position: fixed;
     bottom: 3.5%;
     left: 4.5%;
-    width: 27.5%;
+    width: 26.5%;
     font-family: 'Minion-Variable';
     border-top: 0.1rem solid rgba(221,218,213);
     z-index: 5;
@@ -478,7 +478,7 @@ nav ul{
 .collection .riga p{
     text-align: justify;
     line-height: 1.15;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
 }
 .collection .grid{
     display: grid;
@@ -557,12 +557,12 @@ nav ul{
     z-index:10;
 }
 .collection .list-desc h4{
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     font-weight:400;
 }
 .collection .list-desc p{
     font-weight: 400;
-    font-size: 0.85rem;
+    font-size: 0.95rem;
     padding-bottom: 0.2rem;
     line-height: 1.1;
 }
@@ -635,6 +635,9 @@ nav ul{
 }
 .img-slide img{
     max-height: 60rem;
+}
+.collection .bespoke p{
+    text-align: left;
 }
 @media(min-width:100rem){
     .container{
