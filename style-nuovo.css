@@ -89,7 +89,6 @@ nav ul li a{
     width: 100% !important;
     color: rgba(93,93,89);
 }
-nav ul li a:hover,
 .active-voice{
     border-top: 0.12rem solid rgba(93,93,89);
     transform: translateY(-0.12rem);
@@ -458,6 +457,9 @@ nav ul{
 }
 .collection .header{
     height:100vh;
+    position: relative;
+    z-index: 4;
+    background-color: white;
 }
 .collection .header h1{
     color: black;
