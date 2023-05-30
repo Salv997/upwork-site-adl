@@ -505,6 +505,11 @@ nav ul{
 .collection svg{
     cursor: pointer;
     scale:0.5;
+    opacity: 0;
+    transition: 300ms;
+}
+.collection .colonna-dx .img-slide:hover svg{
+    opacity: 1;
 }
 .collection .slide-nav{
     display: flex;
@@ -684,86 +689,6 @@ nav ul{
     .collection .riga .colonna-sx{
         order:2;
     }
-    /*
-    .collection .header{
-        height:auto;
-    }
-    .collection .navigator{opacity: 100%}
-    .collection .img-slide{
-        height: 24rem;
-        margin-top: 0.3rem;
-        margin-bottom: 1rem;
-    }
-    .collection .img-slide img{
-        max-width: 100%;
-        max-height: 20rem;
-        left: 50%;
-        top: 50%;
-    }
-    .collection .riga{
-        padding-top: 0;
-    }
-    .collection .riga{
-        display: grid;
-        min-height: calc(100vh - 10rem);
-        place-items: center;
-    }
-    .collection .riga .container{
-        display: grid;
-        grid-template-columns: 100%;
-        margin-top: 0;
-    }
-    .collection .riga{padding-bottom: 0; padding-top: 0;}
-    .collection .riga .colonna-sx{
-        padding-right: 0;
-    }
-    .collection .riga.reverse .colonna-dx{
-        padding-left: 0;
-    }
-    .collection .riga.reverse .container {grid-template-columns: 100%;}
-    .collection p.mobile{
-        padding-top: 0;
-    }
-    .collection .navbar{
-        padding: 2.2rem 1rem 1rem 1rem;
-    }
-    .collection {
-        padding: 7rem 1rem 6rem 1rem;
-    }
-    .collection .riga .container{
-        grid-template-columns: 100%;
-        grid-template-rows: 1fr auto;
-    }
-    .collection .colonna-dx{
-        order: 1;
-    }
-    .collection .colonna-sx{
-        order: 2;
-    }
-    .collection .top-btn{
-        width: 8rem;
-        rotate: -90deg;
-        position: fixed;
-        bottom: 6rem;
-        right: -2.9rem;
-    }
-    .collectionsec{bottom:3rem;}
-    .colonna-dx{
-        max-height:none;
-    }
-    .collection .navigator{
-        padding: 0 0;
-    }
-    #AL1 img.larga,
-    #AL2 img.larga{
-    }
-    .collection .navigator{
-        opacity: 1;
-        transition: 0.3s;
-        position: relative;
-        left: 0;
-        top: 0;
-    } */
 }
 
 /* MANUFACTURING */
@@ -1434,6 +1359,7 @@ nav ul li{
     bottom: -12px;
     right: -12px;
 }
+
 @media (max-width: 60rem){
     .cursor{
         display:none;
