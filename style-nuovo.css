@@ -210,6 +210,8 @@ nav ul{
     }
     .landing .grid .logo h1{
         font-size: 2rem;
+        font-family: 'Couture';
+        font-weight: 200;
     }
 }
 
@@ -1357,8 +1359,22 @@ nav ul li{
 }
 .cursor svg{
     position: absolute;
-    bottom: -12px;
-    right: -12px;
+    bottom: -50%;
+    right: -50%;
+    transform: translate(50%, 50%);
+    transition-duration: 500ms;
+}
+.cursor svg circle{
+    transition-duration: 500ms;
+}
+.attivato svg{
+    width: 96px;
+    height: 96px;
+}
+.attivato svg circle{
+    cx: 48;
+    cy: 48;
+    r: 20;
 }
 
 @media (max-width: 60rem){
