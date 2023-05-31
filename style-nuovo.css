@@ -588,7 +588,7 @@ nav ul{
 }
 .collection .img-slide{
     max-height:100%;
-    width: 60%;
+    width: 100%;
     display: flex;
     position: relative;
     user-select: none;
@@ -623,7 +623,7 @@ nav ul{
     width: 100%;
     max-height: 100vh;
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: flex-start;
     padding-top: 2.1rem;
 }
