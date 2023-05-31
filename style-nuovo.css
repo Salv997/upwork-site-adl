@@ -625,6 +625,7 @@ nav ul{
     display: flex;
     justify-content: flex-end;
     align-items: flex-start;
+    padding-top: 2.1rem;
 }
 .img-slide img{
     max-height: 60rem;
