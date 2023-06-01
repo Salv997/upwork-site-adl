@@ -486,7 +486,7 @@ nav ul{
 .collection .riga p{
     text-align: justify;
     line-height: 1.15;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
 }
 .collection .grid{
     display: grid;
@@ -562,12 +562,12 @@ nav ul{
     z-index:10;
 }
 .collection .list-desc h4{
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     font-weight:400;
 }
 .collection .list-desc p{
     font-weight: 400;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     padding-bottom: 0.2rem;
     line-height: 1.1;
 }
@@ -611,7 +611,7 @@ nav ul{
 .collection{max-width: 100%!important; padding:0!important;}
 .collection .riga .container{
     margin-top: 0!important;
-    grid-template-columns: 30% 65%;
+    grid-template-columns: 33% 62%;
     column-gap: 5%;
     height:100%;
     padding: 4.5%;
