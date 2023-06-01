@@ -288,7 +288,7 @@ nav ul{
     color: black;
     text-align: center;
     text-transform: uppercase;
-    font-size: 2.3vw;
+    font-size: 2.2vw;
     font-weight: 200;
     padding-bottom: 3rem;
 }
@@ -298,8 +298,9 @@ nav ul{
     display: flex;
     flex-direction: column;
     text-align: center;
-    font-size: 2.8vw;
-    gap: 0.3rem;
+    font-size: 2.76vw;
+    font-weight: 500;
+    line-height: 1.32;
 }
 .about  .sec-2 .column-one{
     justify-self: center;
@@ -1384,6 +1385,7 @@ nav ul li{
     cy: 48;
     r: 20;
 }
+.hover-effect{cursor:pointer;}
 
 @media (max-width: 60rem){
     .cursor{
