@@ -1009,6 +1009,7 @@ img.larga{max-height:70vh;}
     cursor:pointer;
     z-index: 5;
     color:rgb(93, 93, 90);
+    display:none;
 }
 .top-btn a{
     font-family: 'Minion-Variable';
