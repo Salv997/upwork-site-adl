@@ -1383,6 +1383,7 @@ nav ul li{
     cx: 48;
     cy: 48;
     r: 20;
+    fill: rgba(255,255,255,0.2);
 }
 
 @media (max-width: 60rem){
