@@ -598,7 +598,7 @@ nav ul{
 .collection .navigator p{cursor: pointer}
 .collection .img-slide img{
     max-height: 77vh;
-    max-width: 33vw;
+    max-width: 45vw;
 }
 .collection .img-slide:hover > .navigator{
     opacity: 1;
@@ -685,6 +685,11 @@ nav ul{
         height: 15rem;
         position: relative;
         top: 2.5rem;
+    }
+    #AR1 img.larga{
+        height: 10rem;
+        position: relative;
+        top: 4rem;
     }
     .collection .riga .colonna-dx{
         order:1;
