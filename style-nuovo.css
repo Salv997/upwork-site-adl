@@ -1038,18 +1038,31 @@ img.larga{max-height:70vh;}
     }
 }
 
-/* FOOTER */
+/* FOOTER 
 footer{
     position: fixed;
-    width: 100%;
+    background-color: red;
     bottom: 0;
-    left: 0;
+    right: 0;
     font-family: 'Minion-Variable';
     padding-top: 2.5rem;
-    text-align: center;
     color: rgb(93, 93, 90);
     padding-bottom: 1.5rem;
     font-size: 0.9rem;
+    rotate:-90deg;
+    transform-origin: bottom;
+}*/
+footer{
+    position: fixed;
+    width: 100vh;
+    text-align:center;
+    top: -1.5rem;
+    right:0.5rem;
+    transform-origin: bottom right;
+    color: rgb(93, 93, 90);
+    font-family: 'Minion-Variable';
+    rotate:-90deg;
+    z-index: 3;
 }
 @media (max-width: 40rem){
     footer{
