@@ -35,9 +35,7 @@ html{
 .collection .riga,
 .about section,
 .manufact .header,
-.manufacturing h2,
 .manufacturing .grid,
-.materials h2,
 .materials .grid,
 .contact
 {
@@ -741,7 +739,7 @@ img.larga{max-height:70vh;}
     font-size: 1.5rem;
     font-weight: 100;
     line-height: 1.1;
-    padding-top: 3rem;
+    padding-bottom: 2rem;
 }
 .manufact h3{
     font-family: 'Elephant';
@@ -774,7 +772,7 @@ img.larga{max-height:70vh;}
     padding-top: 4.5%;
 }
 
-.manufact .manufacturing .grid .hand{
+.manufact .manufacturing .grid .hand .container{
     display: grid;
     grid-template-columns: 56% 36%;
     column-gap: 8%;
@@ -799,7 +797,7 @@ img.larga{max-height:70vh;}
     grid-template-columns: 48% 41.4%;
     column-gap: 10.6%;
 }
-.manufact .materials .grid .wool{
+.manufact .materials .grid .wool .container{
     display: grid;
     grid-template-columns: 38.8% 41.2%;
     column-gap: 20%;
@@ -1040,23 +1038,23 @@ img.larga{max-height:70vh;}
 
 /* FOOTER 
 footer{
+}
+footer {
     position: fixed;
-    background-color: red;
     bottom: 0;
-    right: 0;
+    left: 59%;
     font-family: 'Minion-Variable';
     padding-top: 2.5rem;
     color: rgb(93, 93, 90);
     padding-bottom: 1.5rem;
     font-size: 0.9rem;
-    rotate:-90deg;
-    transform-origin: bottom;
+
 }*/
 footer{
     position: fixed;
     width: 100vh;
     text-align:center;
-    top: -1.5rem;
+    top: -1.4rem;
     right:0.5rem;
     transform-origin: bottom right;
     color: rgb(93, 93, 90);
