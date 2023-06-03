@@ -107,24 +107,24 @@ nav ul{
     background-color: white;
     z-index:6;
 }
-.landing .grid{
+.landing .grid.desktop{
     display: grid;
     grid-template-columns: 1fr auto;
 }
-.landing .grid .immagine {
+.landing .grid.desktop .immagine {
     height: 100vh;
     position:relative;
     z-index: 99;
 }
-.landing .grid .immagine img{
+.landing .grid.desktop .immagine img{
     height: 100%;
 }
-.landing .grid .logo{
+.landing .grid.desktop .logo{
     display:flex;
     align-items: center;
     justify-content: center;
 }
-.landing .grid .logo h1{
+.landing .grid.desktop .logo h1{
     font-family: 'Couture', sans-serif;
     text-transform: uppercase;
     font-size: 3rem;
@@ -156,6 +156,7 @@ nav ul{
     animation: disappear 2.5s ease-in-out;
     animation-fill-mode: forwards;
 }
+.landing .grid.mobile{ display:none;}
 @-webkit-keyframes blurFadeInOut {
 	0% {
 		opacity: 0;
@@ -195,21 +196,27 @@ nav ul{
     }
 }
 @media (max-width: 60rem){
-    .landing{overflow:hidden;}
-    .landing .grid{ grid-template-rows: 100vh; position:relative;}
-    .landing .logo{
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform: translate(-50%, -50%);
-        z-index:9999999999;
-        text-align: center;
-        width: 100%;
-    }
+    .landing{overflow:hidden; height:100dvh;}
+    .landing .grid.desktop{ display:none;}
+    .landing .grid.mobile{ display:block;}
     .landing .grid .logo h1{
-        font-size: 2rem;
+        font-size: 1.2rem;
         font-family: 'Couture';
         font-weight: 200;
+    }
+    .landing .grid.mobile{
+        height: 100%;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content:center;
+    }
+    .landing .grid.mobile .immagine{
+        padding: 0 2rem;
+        padding-bottom: 1.5rem;
+    }
+    .landing .grid.mobile .immagine img{
+        width:100%;
     }
 }
 
