@@ -651,9 +651,8 @@ img.larga{max-height:70vh;}
     }
 }
 @media (max-width: 60rem){
-    .collection-grid{
-        row-gap: 1rem;
-    }
+    .collection .desktop{display: none}
+    .collection .mobile{display: block;}
     .collection .header{
         height: auto;
     }
@@ -662,19 +661,28 @@ img.larga{max-height:70vh;}
         padding-top: 5rem;
         padding-bottom: 3rem;
     }
+    .collection-grid{
+        row-gap: 0;
+    }
     .collection .riga{
         min-height: auto;
     }
+    .collection .colonna-dx{
+        display: grid;
+        grid-auto-flow: row;
+        max-height:200vh;
+    }
     .collection .riga .container{
-        grid-template-columns: 100%;
-        grid-template-rows: 20rem auto;
-        row-gap: 2rem;
+        display: flex;
+        flex-direction:column;
+        row-gap: 0;
         padding: 0 1rem;
     }
     .collection .riga .container .img-slide{
         width: 100%;
         height: 100%;
         height: 20rem;
+        padding-bottom:1rem;
     }
     .collection .img-slide img{
         max-height:100%;
@@ -692,12 +700,6 @@ img.larga{max-height:70vh;}
         height: 10rem;
         position: relative;
         top: 4rem;
-    }
-    .collection .riga .colonna-dx{
-        order:1;
-    }
-    .collection .riga .colonna-sx{
-        order:2;
     }
 }
 
@@ -1254,33 +1256,37 @@ nav ul li{
     transition: stroke 0.3s;
 }
 #menuIcon .linea1{
-    transition: rotate 0.3s ;
+    transition: transform 0.3s ;
 }
 #menuIcon .linea3{
-    transition: rotate 0.3s ;
+    transition: transform 0.3s ;
 }
 #menuIcon.active line{
     stroke: #DDDAD5;
 } 
 #menuIcon.active .linea1{
     transform-origin: 3% 5%;
-    rotate:45deg;
+    transform: rotate(45deg);
 }
 #menuIcon.active .linea2{
     display: none;
 }
 #menuIcon.active .linea3{
     transform-origin: 15% 80%;
-    rotate:-45deg;
+    transform:rotate(-45deg);
 } 
 #menuToggle span:first-child{
+    -webkit-transform-origin: 0% 0%;
     transform-origin: 0% 0%;
 }
 #menuToggle span:nth-last-child(2){
+    -webkit-transform-origin: 0% 100%;
     transform-origin: 0% 100%;
 }
 #menuToggle input:checked ~ span {
     opacity: 1;
+    -webkit-transform: rotate(45deg) translate(-2px, -1px);
+    -moz-transform: rotate(45deg) translate(-2px, -1px);
     transform: rotate(45deg) translate(-2px, -1px);
     background: #DDDAD5;
     position: relative;
@@ -1294,7 +1300,7 @@ nav ul li{
     transform: rotate(-45deg) translate(0, -1px);
 }
 #menu{
-    background-color: #10261E;
+    background-color: black;
     position: absolute;
     max-width: 90rem;
     width: 100vw;
@@ -1306,7 +1312,10 @@ nav ul li{
     padding-left: 5rem;
     list-style-type: none;
     -webkit-font-smoothing: antialiased;
+    -webkit-transform-origin: 50% 50%;
     transform-origin: 50% 50%;
+    -webkit-transform: translate(300%, 0);
+    -moz-transform: translate(300%, 0);
     transform: translate(300%, 0);
     transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
     z-index: 999;
