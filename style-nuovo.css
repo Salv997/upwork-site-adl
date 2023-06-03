@@ -196,7 +196,7 @@ nav ul{
     }
 }
 @media (max-width: 60rem){
-    .landing{overflow:hidden; height:100dvh;}
+    .landing{overflow:hidden; height:100svh;}
     .landing .grid.desktop{ display:none;}
     .landing .grid.mobile{ display:block;}
     .landing .grid .logo h1{
@@ -382,7 +382,7 @@ nav ul{
         display:grid;
         grid-template-columns: 100%;
         row-gap: 2rem;
-        margin-top: 6.4rem;
+        margin-top: 0;
         padding-bottom: 5rem;
         padding:0;
     }
@@ -1240,7 +1240,6 @@ nav ul li{
 }
 #menuToggle a{
     text-decoration: none;
-    color: blue;
     transition: color 0.3s ease;
 }
 #menuToggle input{
@@ -1269,7 +1268,7 @@ nav ul li{
     transition: transform 0.3s ;
 }
 #menuIcon.active line{
-    stroke: #DDDAD5;
+    stroke: #FFFFFF;
 } 
 #menuIcon.active .linea1{
     transform-origin: 3% 5%;
@@ -1332,7 +1331,7 @@ nav ul li{
     position: absolute;
     top: 3rem;
     left: 3rem;
-    color: #DDDAD5;
+    color: #FFFFFF;
     text-transform: uppercase;
     font-size: 1.2rem;
     font-family: 'couture';
@@ -1342,7 +1341,7 @@ nav ul li{
 }
 #menu li a{
     font-size: 4.5rem;
-    color: #DDDAD5;
+    color: #FFFFFF;
     text-transform: capitalize;
     font-weight: 400;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
