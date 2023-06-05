@@ -709,6 +709,13 @@ img.larga{max-height:70vh;}
         position: relative;
         top: 4rem;
     }
+    .collection p.mobile{
+        font-size: 1rem;
+    }
+    .collection .list-desc h4,
+    .collection .list-desc p{
+        font-size: 1rem;
+    }
 }
 
 /* MANUFACTURING */
@@ -844,10 +851,14 @@ img.larga{max-height:70vh;}
         padding: 0 1rem;
         padding-bottom: 5rem;
     }
+    .manufact p{
+        font-size: 1rem;
+    }
     .manufact .header h1{
         padding-top: 7rem;
         font-size: 1.1rem;
         padding-bottom:3rem;
+        line-height: 1.2;
     }
     .manufact .manufacturing{
         display: flex;
@@ -1075,17 +1086,13 @@ footer.desktop{
     rotate:-90deg;
     z-index: 3;
 }
+footer.mobile{display:none;}
 @media (max-width: 40rem){
     footer.desktop{
         display: none;
-        position:relative;
-        padding-top: 2.5rem;
-        text-align: center;
-        color: rgb(93, 93, 90);
-        padding-bottom: 1rem;
-        font-size: 0.9rem;
     }
     footer.mobile{
+        display: block;
         position:relative;
         padding-top: 2.5rem;
         text-align: center;
