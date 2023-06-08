@@ -209,7 +209,7 @@ nav ul{
     }
     .landing .grid.mobile .immagine{
         padding: 0 2rem;
-        padding-bottom: 1.5rem;
+        padding-bottom: 0.75rem;
     }
     .landing .grid.mobile .immagine img{
         width:100%;
@@ -388,7 +388,8 @@ nav ul{
     .about .sec-1 h1,
     .about .sec-2 h2,
     .about .sec-3 h2{
-        font-size: 1.8rem;
+        font-size: 1.1rem;
+        text-align: center;
     }
     .about .description p{
         padding-right: 0;
@@ -637,15 +638,7 @@ nav ul{
 .collection .bespoke p{
     text-align: left;
 }
-
 img.larga{max-height:70vh;}
-
-
-
-
-
-
-
 @media(min-width:100rem){
     .container{
         grid-template-columns: 22% auto;
@@ -711,6 +704,9 @@ img.larga{max-height:70vh;}
     }
     .collection p.mobile{
         font-size: 1rem;
+    }
+    .collection h2{
+        text-align: center;
     }
     .collection .list-desc h4,
     .collection .list-desc p{
@@ -1084,6 +1080,7 @@ footer.desktop{
     font-family: 'Minion-Variable';
     rotate:-90deg;
     z-index: 3;
+    font-size: 0.9rem;
 }
 footer.mobile{display:none;}
 @media (max-width: 40rem){
