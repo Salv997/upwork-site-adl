@@ -6,16 +6,12 @@
     font-display: swap;
 }
 @font-face {
-    font-family: "minion";
-    src: url("font/Minion-Regular.woff") format("woff");
+    font-family: "elephant";
+    src: url("font/Elephant.ttf") format("truetype");
 }
 @font-face {
     font-family: "Minion-Variable";
     src: url("font/Minion-Variable-Concept.otf") format("opentype");
-}
-@font-face {
-    font-family: "elephant";
-    src: url("font/Elephant.ttf") format("truetype");
 }
 *{
     margin: 0;
@@ -365,7 +361,7 @@ nav ul{
 }
 @media (max-width: 60rem){
     .about {
-        padding: 0 1rem;
+        padding: 0 3rem;
     }
     .about .portrait img{
         width: 100%;
@@ -633,6 +629,7 @@ nav ul{
     justify-content: center;
     align-items: flex-start;
     padding-top: 2.1rem;
+    padding-left: 8rem;
 }
 .img-slide img{
     max-height: 60rem;
@@ -662,9 +659,11 @@ img.larga{max-height:70vh;}
     .collection .mobile{display: block;}
     .collection .header{
         height: auto;
+        padding: 0 3rem;
     }
     .collection .header h1{
         font-size: 1.35rem;
+        padding: 0 0;
         padding-top: 5rem;
         padding-bottom: 3rem;
     }
@@ -679,12 +678,13 @@ img.larga{max-height:70vh;}
         grid-auto-flow: row;
         max-height:200vh;
         padding-top: 0.7rem;
+        padding-left:0;
     }
     .collection .riga .container{
         display: flex;
         flex-direction:column;
         row-gap: 0;
-        padding: 0 1rem;
+        padding: 0 3rem;
     }
     .collection .riga .container .img-slide{
         width: 100%;
@@ -848,7 +848,7 @@ img.larga{max-height:70vh;}
 }
 @media (max-width: 60rem){
     .manufact {
-        padding: 0 1rem;
+        padding: 0 3rem;
         padding-bottom: 5rem;
     }
     .manufact p{
@@ -1000,7 +1000,7 @@ img.larga{max-height:70vh;}
     .contact section img{
         max-width: 25rem;
         width: 100%;
-        padding: 0 1rem;
+        padding: 0 3rem;
     }
 }
 @media (max-width: 40rem){
@@ -1016,8 +1016,7 @@ img.larga{max-height:70vh;}
         height: auto;
     }
     .contact .left-col{
-        padding-right: 1rem;
-        padding-right: 1rem;
+        padding-right: 3rem;
     }
 }
 
