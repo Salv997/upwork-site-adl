@@ -114,6 +114,7 @@ nav ul{
 }
 .landing .grid.desktop .immagine img{
     height: 100%;
+    padding: 4rem;
 }
 .landing .grid.desktop .logo{
     display:flex;
@@ -361,7 +362,7 @@ nav ul{
 }
 @media (max-width: 60rem){
     .about {
-        padding: 0 3rem;
+        padding: 0 2.5rem;
     }
     .about .portrait img{
         width: 100%;
@@ -390,6 +391,7 @@ nav ul{
     .about .sec-3 h2{
         font-size: 1.1rem;
         text-align: center;
+        padding-bottom: 2.6rem;
     }
     .about .description p{
         padding-right: 0;
@@ -652,7 +654,7 @@ img.larga{max-height:70vh;}
     .collection .mobile{display: block;}
     .collection .header{
         height: auto;
-        padding: 0 3rem;
+        padding: 0 2.5rem;
     }
     .collection .header h1{
         font-size: 1.35rem;
@@ -677,7 +679,7 @@ img.larga{max-height:70vh;}
         display: flex;
         flex-direction:column;
         row-gap: 0;
-        padding: 0 3rem;
+        padding: 0 2.5rem;
     }
     .collection .riga .container .img-slide{
         width: 100%;
@@ -844,7 +846,7 @@ img.larga{max-height:70vh;}
 }
 @media (max-width: 60rem){
     .manufact {
-        padding: 0 3rem;
+        padding: 0 2.5rem;
         padding-bottom: 5rem;
     }
     .manufact p{
@@ -875,7 +877,16 @@ img.larga{max-height:70vh;}
         flex-direction: column;
         gap: 2rem;
     }
-    .manufact h2{text-align:center; padding-top:0;}
+    .manufact h2{
+        text-align:center; 
+        padding-top:0;
+        font-size: 1.1rem;
+    }
+    .manufact h3,
+    .manufact h4{
+        text-align: center;
+        font-size: 1.1rem;
+    }
     .manufact .manufacturing .grid .hand .container{
         display: grid;
         grid-template-columns: 100%;
