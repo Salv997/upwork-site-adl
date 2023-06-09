@@ -660,7 +660,7 @@ img.larga{max-height:70vh;}
         padding: 0 2.5rem;
     }
     .collection .header h1{
-        font-size: 1.35rem;
+        font-size: 1.3rem;
         padding: 0 0;
         padding-top: 5rem;
         padding-bottom: 3rem;
@@ -1134,6 +1134,7 @@ footer.mobile{display:none;}
 /* SILLABAZIONE TESTO */
 @media (max-width: 40rem){
     .about p,
+    .collection h1,
     .collection p,
     .manufact .header h1,
     .manufact p{
