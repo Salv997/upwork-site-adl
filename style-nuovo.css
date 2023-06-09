@@ -384,6 +384,7 @@ nav ul{
     }
     .about .sec-0{
         min-height: auto;
+        padding:0;
         padding-top:6rem;
     }
     .about .sec-0 h2{
@@ -683,8 +684,8 @@ img.larga{max-height:70vh;}
     .collection .header h1{
         font-size: 1.3rem;
         padding: 0 0;
-        padding-top: 5rem;
-        padding-bottom: 5rem;
+        padding-top: 3rem;
+        padding-bottom: 3rem;
     }
     .collection-grid{
         row-gap: 0;
@@ -897,8 +898,8 @@ img.larga{max-height:70vh;}
     .manufact p{
         font-size: 1rem;
     }
+    .manufact .header{min-height:auto;}
     .manufact .header h1{
-        padding-top: 7rem;
         font-size: 1.1rem;
         padding-bottom:3rem;
         line-height: 1.2;
