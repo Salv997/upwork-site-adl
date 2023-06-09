@@ -901,7 +901,7 @@ img.larga{max-height:70vh;}
     }
     .manufact .header{min-height:auto;}
     .manufact .header h1{
-        font-size: 1.4rem;
+        font-size: 1.5rem;
         padding-bottom:3rem;
         line-height: 1.2;
     }
@@ -1163,6 +1163,7 @@ footer.mobile{display:none;}
     .about .sec-0 h2,
     .collection h1,
     .collection p,
+    .manufact h1,
     .manufact p{ 
         hyphens: auto;
         -ms-hyphens: auto;
