@@ -1172,6 +1172,7 @@ footer.mobile{display:none;}
         overflow-wrap: break-word;
     }
 }
+.about .sec-0 h2,
 .about p,
 .collection p{
     hyphens: auto;
