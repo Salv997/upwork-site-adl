@@ -860,7 +860,8 @@ img.larga{max-height:70vh;}
 @media (max-width: 60rem){
     .manufact .mobile{
         display: block;
-        padding-bottom: 1.2rem;
+        padding-bottom: 2.5rem;
+        padding-top: 1.3rem;
     }
     .manufact .desktop{
         display: none;
@@ -1132,6 +1133,7 @@ footer.mobile{display:none;}
 /* SILLABAZIONE TESTO */
 @media (max-width: 40rem){
     .about p,
+    .collection h1,
     .collection p,
     .manufact .header h1,
     .manufact p{
