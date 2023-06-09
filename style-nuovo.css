@@ -750,6 +750,9 @@ img.larga{max-height:70vh;}
     .collection .list-desc p {
         padding-bottom: 0;
     }
+    .collection .list-desc a{
+        font-family: 'Minion-Variable', serif;
+    }
 }
 
 /* MANUFACTURING */
