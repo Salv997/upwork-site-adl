@@ -659,7 +659,6 @@ img.larga{max-height:70vh;}
     }
 }
 @media (max-width: 60rem){
-    .collection{overflow-x:hidden;}
     .collection .desktop{display: none}
     .collection .mobile{display: block;}
     .collection .header{
