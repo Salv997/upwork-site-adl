@@ -879,6 +879,7 @@ img.larga{max-height:70vh;}
         padding-bottom:3rem;
         line-height: 1.2;
     }
+    .manufact .header h1 .bold{font-weight: 400;}
     .manufact .manufacturing{
         display: flex;
         flex-direction: column;
