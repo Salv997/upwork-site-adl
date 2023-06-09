@@ -1163,8 +1163,7 @@ footer.mobile{display:none;}
     .about .sec-0 h2,
     .collection h1,
     .collection p,
-    .manufact .header h1,
-    .manufact p{
+    .manufact p{ 
         hyphens: auto;
         -ms-hyphens: auto;
         -webkit-hyphens: auto;
