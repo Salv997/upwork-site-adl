@@ -123,11 +123,7 @@ nav ul{
     align-items: center;
     justify-content: center;
 }
-.landing .grid.desktop .logo h1{
-    font-family: 'Couture', sans-serif;
-    text-transform: uppercase;
-    font-size: 3rem;
-    color: black;
+.landing .grid.desktop .logo svg{
 	-webkit-animation: blurFadeInOut 2s ease-in-out forwards;
 	-moz-animation: blurFadeInOut 2s ease-in-out forwards;
 	-ms-animation: blurFadeInOut 2s ease-in-out forwards;
@@ -198,11 +194,6 @@ nav ul{
     .landing{overflow:hidden; height:100svh;}
     .landing .grid.desktop{ display:none;}
     .landing .grid.mobile{ display:block;}
-    .landing .grid .logo h1{
-        font-size: 1.2rem;
-        font-family: 'Couture';
-        font-weight: 200;
-    }
     .landing .grid.mobile{
         height: 100%;
         display: flex;
