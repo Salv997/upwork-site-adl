@@ -1491,3 +1491,13 @@ nav ul li{
         display:none;
     }
 }
+
+.about .sec-2,
+.about .sec-3{
+    display: none;
+}
+.collection .bespoke,
+.collection .lead{
+    display: none;
+}
+.manufact{max-height:0; overflow:hidden;}
