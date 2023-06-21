@@ -1497,7 +1497,8 @@ nav ul li{
     display: none;
 }
 .collection .bespoke,
-.collection .lead{
+.collection .lead,
+.collection .ship{
     display: none;
 }
 .manufact{max-height:0; overflow:hidden;}
