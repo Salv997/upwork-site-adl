@@ -544,7 +544,7 @@ nav ul{
     z-index:-1;
 }
 .collection .plus-minus-toggle::before{
-    height: 0.1em;
+    height: 0.085em;
     width: 12px;
     background-color: black;
     content: '';
@@ -554,7 +554,7 @@ nav ul{
     transition: transform 500ms ease;
 }
 .collection .plus-minus-toggle::after{
-    height: 0.1em;
+    height: 0.085em;
     width: 12px;
     background-color: black;
     content: '';
