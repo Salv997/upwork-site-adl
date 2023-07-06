@@ -1503,9 +1503,10 @@ nav ul li{
 }
 .manufact{max-height:0; overflow:hidden;}
 .inquire{
-    padding: 0.3rem 0.5rem;
+    padding: 0.35rem 0.55rem;
     text-transform: uppercase;
     border: 0.1rem solid black; 
     margin-bottom: 2rem!important;
+    font-size: 0.9rem;
 }
 .cont{margin-bottom: 2rem;}
