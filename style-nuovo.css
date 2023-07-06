@@ -1503,10 +1503,15 @@ nav ul li{
 }
 .manufact{max-height:0; overflow:hidden;}
 .inquire{
-    padding: 0.35rem 0.55rem;
+    padding: 0.25rem 0.45rem;
     text-transform: uppercase;
     border: 0.1rem solid black; 
     margin-bottom: 2rem!important;
     font-size: 0.9rem;
+    transition: 0.3s ease-in-out;
+}
+.inquire:hover{
+    background-color: black;
+    color: white!important;
 }
 .cont{margin-bottom: 2rem;}
