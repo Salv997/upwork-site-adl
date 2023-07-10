@@ -255,10 +255,10 @@ nav ul{
     display: flex;
 }
 .about .sec-1 h1{
-    font-size: 2.4vw;
+    font-size: 1.38vw;
     font-family: 'Elephant';
     line-height: 1;
-    padding-bottom: 2.6rem;
+    padding-bottom: 2.3rem;
     font-weight: 200;
     color: black;
     text-transform: uppercase;
