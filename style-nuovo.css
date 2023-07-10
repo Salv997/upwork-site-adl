@@ -755,6 +755,7 @@ img.larga{max-height:70vh;}
     position: relative;
     background-color: white;
     z-index: 4;
+    opacity: 0;
 }
 .manufact .manufacturing{
     display: flex;
