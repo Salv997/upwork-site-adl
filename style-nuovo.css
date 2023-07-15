@@ -607,7 +607,7 @@ img.larga{max-height:70vh;}
     .collection .header h1{
         font-size: 1.5rem;
         padding: 0 0;
-        padding-top: 3rem;
+        padding-top: 5rem;
         padding-bottom: 3rem;
         font-weight:200;
     }
@@ -616,6 +616,7 @@ img.larga{max-height:70vh;}
     }
     .collection .riga{
         min-height: auto;
+        scroll-margin: 6rem;
     }
     .collection .colonna-dx{
         display: grid;
