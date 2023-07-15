@@ -396,13 +396,13 @@ nav ul{
     padding: 4.5%;
 }
 .collection .navigation-page .row{
-    padding-bottom: 0.7rem;
+    padding-bottom: 0.9rem;
 }
 .collection .navigation-page .title{
     font-family: 'Elephant';
     text-transform: uppercase;
-    font-size: 1.25rem;
-    padding-right: 0.75rem;
+    font-size: 1.1rem;
+    padding-right: 0.2rem;
 }
 .collection .navigation-page a{
     color: black;
@@ -649,16 +649,11 @@ img.larga{max-height:70vh;}
         width: auto;
         max-width: 100%;
     }
-    #AL1 img.larga,
-    #AL2 img.larga{
+    #Almadra-Peach img.larga,
+    #Almadra-Aquamarine img.larga{
         height: 15rem;
         position: relative;
         top: 0.8rem;
-    }
-    #AR1 img.larga{
-        height: 10rem;
-        position: relative;
-        top: 4rem;
     }
     .collection p.mobile{
         font-size: 1rem;
