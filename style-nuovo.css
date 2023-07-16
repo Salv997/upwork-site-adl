@@ -25,6 +25,7 @@ body{overflow-x:hidden;}
 html{
     scroll-snap-type: y mandatory;
     font-family: 'Minion-Variable';
+    user-select: none;
 }
 .landing,
 .about section,
@@ -394,15 +395,18 @@ nav ul{
 .collection .navigation-page{
     height: 100vh;
     padding: 4.5%;
+    position: relative;
+    z-index: 4;
+    background-color: white;
 }
 .collection .navigation-page .row{
-    padding-bottom: 0.9rem;
+    padding-bottom: 2.6vh;
 }
 .collection .navigation-page .title{
     font-family: 'Elephant';
     text-transform: uppercase;
     font-size: 1.1rem;
-    padding-right: 0.2rem;
+    padding-right: 0.5rem;
 }
 .collection .navigation-page a{
     color: black;
