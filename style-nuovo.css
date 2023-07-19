@@ -17,7 +17,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 body{overflow-x:hidden;}
 
@@ -36,6 +35,7 @@ html{
 {
     scroll-snap-align: start;
 }
+  
 @media (max-width:60rem){  
     html{
         scroll-snap-type: none;
@@ -62,14 +62,13 @@ nav{
     position: fixed;
     bottom: 3.5%;
     left: 4.5%;
-    width: 26.2rem;
+    width: 26.6rem;
     font-family: 'Minion-Variable';
     border-top: 0.1rem solid rgba(221,218,213);
     z-index: 90;
     background-color: white;
-    -moz-box-shadow: 30px 30px 0px 0px #FFFFFF;
-    -webkit-box-shadow: 30px 30px 0px 0px #FFFFFF;
-    box-shadow: 30px 30px 0px 0px #FFFFFF;
+    -webkit-box-shadow: -50px 50px 0px 50px #FFFFFF; 
+    box-shadow: -50px 50px 0px 50px #FFFFFF;
 }
 nav ul li{
     flex-grow: 1;
@@ -570,7 +569,7 @@ nav ul{
 .collection{max-width: 100%!important; padding:0!important;}
 .collection .riga .container{
     margin-top: 0!important;
-    grid-template-columns: 26rem auto;
+    grid-template-columns: 26.5rem auto;
     column-gap: 5%;
     height:100%;
     width:100%;
