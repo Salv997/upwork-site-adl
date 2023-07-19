@@ -282,6 +282,7 @@ nav ul{
 @media (max-width: 60rem){
     .about {
         padding: 0 2.5rem;
+        scroll-margin: 7rem;
     }
     .about .portrait img{
         width: 100%;
@@ -290,7 +291,7 @@ nav ul{
     .about .sec-0{
         min-height: auto;
         padding:0;
-        padding-top:6rem;
+        padding-top: 0;
     }
     .about .sec-0 h2{
         font-size: 1.5rem;
@@ -629,7 +630,7 @@ img.larga{max-height:70vh;}
     }
     .collection .riga{
         min-height: auto;
-        scroll-margin: 6rem;
+        scroll-margin: 7rem;
     }
     .collection .colonna-dx{
         display: grid;
