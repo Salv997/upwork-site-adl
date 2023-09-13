@@ -103,7 +103,7 @@ nav ul{
 .landing{
     position: relative;
     background-color: white;
-    z-index:6;
+    z-index:99;
 }
 .landing .grid.desktop{
     display: grid;
