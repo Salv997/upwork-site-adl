@@ -249,11 +249,13 @@ nav ul{
     padding-bottom: 9%;
 }
 .about .sec-1 .portrait{
-    justify-self: start;
+    width:100%;
+    height: calc(100% - 0.9vw);
 }
 .about .sec-1 .portrait img{
     width: 100%;
-    max-height:80vh;
+    height: 100%;
+    object-fit: cover;
     display: flex;
 }
 .about .sec-1 h1{
