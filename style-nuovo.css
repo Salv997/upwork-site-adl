@@ -235,7 +235,7 @@ nav ul{
 }
 .about .sec-1{
     display: grid;
-    place-content: start;
+    place-content: center;
     min-height: 100vh;
     position:relative;
 }
@@ -245,15 +245,15 @@ nav ul{
     place-items: center;
     padding: 4.5%;
     column-gap: 12%;
-    min-height: 100vh;
     padding-bottom: 9%;
 }
 .about .sec-1 .portrait{
-    justify-self: start;
+    height: 100%;
 }
 .about .sec-1 .portrait img{
     width: 100%;
-    max-height:80vh;
+    height: 100%;
+    object-fit: cover;
     display: flex;
 }
 .about .sec-1 h1{
@@ -271,7 +271,7 @@ nav ul{
     color: black;
     font-weight: 400;
     line-height: 1.59;
-    font-size: 1.08vw;
+    font-size: 1.068vw;
     padding-right: 11%;
 }
 @media(min-width:100rem){
