@@ -74,38 +74,38 @@
             $('#checkbox').change(function() {
               var isChecked = $(this).prop('checked');
               if (isChecked) {
-                $('#navtitle').css({
-                  'color': '#FFFFFF',
-                  'transition': 'color 0.3s'
-                });
-                $('#lineone, #linetwo').css({
-                  'background-color': '#FFFFFF',
-                  'transition': 'background-color 0.3s'
-                });
+                // $('#navtitle').css({
+                //   'color': '#FFFFFF',
+                //   'transition': 'color 0.3s'
+                // });
+                // $('#lineone, #linetwo').css({
+                //   'background-color': '#FFFFFF',
+                //   'transition': 'background-color 0.3s'
+                // });
                 menuIcon.classList.add('active');
               } else {
-                $('#navtitle').css({
-                  'color': 'black',
-                  'transition': 'color 0.3s'
-                });
-                $('#lineone, #linetwo').css({
-                  'background-color': 'black',
-                  'transition': 'background-color 0.3s'
-                });
+                // $('#navtitle').css({
+                //   'color': 'black',
+                //   'transition': 'color 0.3s'
+                // });
+                // $('#lineone, #linetwo').css({
+                //   'background-color': 'black',
+                //   'transition': 'background-color 0.3s'
+                // });
                 menuIcon.classList.remove('active');
               }
             });
           
             $('.menu-a').click(function() {
               $('#checkbox').prop('checked', false);
-              $('#navtitle').css({
-                'color': 'black',
-                'transition': 'color 0.3s'
-              });
-              $('#lineone, #linetwo').css({
-                'background-color': 'black',
-                'transition': 'background-color 0.3s'
-              });
+            //   $('#navtitle').css({
+            //     'color': 'black',
+            //     'transition': 'color 0.3s'
+            //   });
+            //   $('#lineone, #linetwo').css({
+            //     'background-color': 'black',
+            //     'transition': 'background-color 0.3s'
+            //   });
                 menuIcon.classList.remove('active');
             });
           
@@ -113,14 +113,14 @@
               var isChecked = $('#checkbox').prop('checked');
               if (isChecked) {
                 $('#checkbox').prop('checked', false);
-                $('#navtitle').css({
-                  'color': 'black',
-                  'transition': 'color 0.3s'
-                });
-                $('#lineone, #linetwo').css({
-                  'background-color': 'black',
-                  'transition': 'background-color 0.3s'
-                });
+                // $('#navtitle').css({
+                //   'color': 'black',
+                //   'transition': 'color 0.3s'
+                // });
+                // $('#lineone, #linetwo').css({
+                //   'background-color': 'black',
+                //   'transition': 'background-color 0.3s'
+                // });
                 menuIcon.classList.remove('active');
               }
             });

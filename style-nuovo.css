@@ -273,7 +273,7 @@ nav ul{
 }
 .about .sec-1 h1{
     font-size: 1.38vw;
-    font-family: 'Elephant';
+    font-family: 'Helvetica-Regular';
     line-height: 1;
     padding-bottom: 2.3rem;
     font-weight: 200;
@@ -408,7 +408,7 @@ nav ul{
 .collection{
     margin: 0 auto;
     padding: 12rem 5rem 6rem 5rem;
-    font-family: 'Minion-Variable';
+    font-family: 'Helvetica-Regular';
     color: black;
 }
 .collection .navigation-page{
@@ -424,7 +424,7 @@ nav ul{
     padding-bottom: 2.6vh;
 }
 .collection .navigation-page .title{
-    font-family: 'Elephant';
+    font-family: 'Helvetica-Regular';
     text-transform: uppercase;
     font-size: 1.1rem;
     padding-right: 0.5rem;
@@ -458,7 +458,7 @@ nav ul{
     font-weight: 100;
     padding-top: 3rem;
     padding-bottom: 1rem;
-    font-family: 'elephant';
+    font-family: 'Helvetica-Regular';
     line-height: 0.8;
 }
 .collection .riga p{
@@ -704,7 +704,7 @@ img.larga{max-height:70vh;}
         padding-bottom: 0;
     }
     .collection .list-desc a{
-        font-family: 'Minion-Variable', serif;
+        font-family: 'Helvetica-Regular', serif;
     }
 }
 
@@ -961,7 +961,7 @@ footer.mobile{display:none;}
     transition: transform 0.3s ;
 }
 #menuIcon.active line{
-    stroke: #FFFFFF;
+    stroke: black;
 } 
 #menuIcon.active .linea1{
     transform-origin: 3% 5%;
@@ -1000,9 +1000,9 @@ footer.mobile{display:none;}
 }
 #menu{
     font-family: 'Helvetica-Regular';
-    background-color: black;
+    background-color: white;
     position: absolute;
-    max-width: 90rem;
+    /* max-width: 90rem; */
     width: 100vw;
     height: 120vh;
     padding: 50px;
@@ -1035,7 +1035,7 @@ footer.mobile{display:none;}
 }
 #menu li a{
     font-size: 4.5rem;
-    color: #FFFFFF;
+    color: black;
     text-transform: capitalize;
     font-weight: 400;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
