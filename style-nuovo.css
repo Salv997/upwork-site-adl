@@ -5,6 +5,7 @@
     font-weight: 400;
     font-display: block;
 }
+
 @font-face {
     font-family: "elephant";
     src: url("font/Elephant.ttf") format("truetype");
@@ -12,6 +13,14 @@
 @font-face {
     font-family: "Minion-Variable";
     src: url("font/Minion-Variable-Concept.otf") format("opentype");
+}
+@font-face {
+    font-family: "Helvetica-Regular";
+    src: url("font/Helvetica-Regular.otf") format("opentype");
+}
+@font-face {
+    font-family: "Helvetica-Bold";
+    src: url("font/Helvetica-Bold.ttf") format("truetype");
 }
 *{
     margin: 0;
@@ -214,7 +223,7 @@ nav ul{
 
 /* ABOUT */
 .about {
-    font-family: 'Minion-Variable';
+    font-family: 'Helvetica-Regular';
     margin: 0 auto;
     padding-bottom: 10rem;
     position: relative;
@@ -227,11 +236,16 @@ nav ul{
 }
 .about .sec-0 h2{
     color: black;
-    font-size: 2.14vw;
-    font-weight: 400;
+    font-size: 1.9vw;
+    font-weight: 200;
     line-height: 1.1;
+    padding-top: 10rem;
     padding-bottom: 5rem;
     text-align: justify;
+}
+.about .sec-0 h2 span{
+ font-family: 'Helvetica-Bold';
+ font-size: 2rem;
 }
 .about .sec-1{
     display: grid;
@@ -245,6 +259,7 @@ nav ul{
     place-items: center;
     padding: 4.5%;
     column-gap: 12%;
+    padding-top: 8rem;
     padding-bottom: 9%;
 }
 .about .sec-1 .portrait{
@@ -266,7 +281,7 @@ nav ul{
     text-transform: uppercase;
 }
 .about .description p{
-    font-family: 'Minion-Variable';
+    font-family: 'Helvetica-Regular';
     text-align: justify;
     color: black;
     font-weight: 400;
@@ -399,6 +414,8 @@ nav ul{
 .collection .navigation-page{
     height: 100vh;
     padding: 4.5%;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
     position: relative;
     z-index: 4;
     background-color: white;
@@ -427,17 +444,19 @@ nav ul{
     background-color: white;
 }
 .collection .header h1{
+    font-family: 'Helvetica-Regular';
     color: black;
     font-size: 3.3vw;
     font-weight: 400;
     line-height: 1.1;
     text-align: justify;
     padding: 0 3%;
-    padding-top: 3rem;
+    padding-top: 18rem;
 }
 .collection h2{
     font-size:1.1rem;
     font-weight: 100;
+    padding-top: 3rem;
     padding-bottom: 1rem;
     font-family: 'elephant';
     line-height: 0.8;
@@ -459,6 +478,7 @@ nav ul{
     position: relative;
 }
 .collection .riga .container{
+    font-family: 'Helvetica-Regular';
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 6rem;
@@ -695,7 +715,7 @@ img.larga{max-height:70vh;}
     align-items: center;
     justify-content: flex-end;
     padding: 4.5%;
-    font-family: 'Minion-Variable';
+    font-family: 'Helvetica-Regular';
     color: black;
     position: relative;
     background-color: white;
@@ -723,8 +743,16 @@ img.larga{max-height:70vh;}
     font-weight: 900;
 }
 .contact .email a,
-.contact .telefono a{
+.contact .telefono a,
+.contact .linkedin-link a,
+.contact .instagram-link a{
     color: black;
+}
+.contact .email ,
+.contact .telefono ,
+.contact .linkedin-link ,
+.contact .instagram-link {
+    margin-top: 8px;
 }
 .contact .title h1{
     text-transform: uppercase;
@@ -872,13 +900,7 @@ footer.mobile{display:none;}
     overflow-wrap: break-word;
 }
 
-
-
-
-
-
-
-.mobileonly{
+.topbar{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -889,19 +911,18 @@ footer.mobile{display:none;}
     transform: translateX(-50%);
     width: 100%;
     background-color: white;
-    max-width: 90rem;
-    z-index:999;
+    z-index:98;
 }
-.mobileonly .logo{
+.topbar .logo{
     font-size: 1.2rem;
     font-family: 'couture';
     position: relative;
     z-index: 999;
 }
-.mobileonly .logo a{
+.topbar .logo a{
     color: black;
 }
-.mobileonly .active{
+.topbar .active{
     font-weight: 700;
 }
 #menuToggle{
@@ -978,6 +999,7 @@ footer.mobile{display:none;}
     transform: rotate(-45deg) translate(0, -1px);
 }
 #menu{
+    font-family: 'Helvetica-Regular';
     background-color: black;
     position: absolute;
     max-width: 90rem;
@@ -1023,12 +1045,15 @@ footer.mobile{display:none;}
 }
 #menuToggle input:checked ~ ul{ transform: none; }
 
-.mobileonly{opacity:0;}
+.topbar{opacity:0;}
 .show-nav{opacity:1;}
-.mobileonly{visibility: hidden;}
+/* .topbar{visibility: hidden;} */
+.topbar{
+    padding: 2.2rem 1rem 1rem 2rem;
+}
 
 @media (max-width: 75rem){
-    .mobileonly{
+    .topbar{
         padding: 2.2rem 2rem 1rem 2rem;
     }
     #menu{
@@ -1044,29 +1069,27 @@ footer.mobile{display:none;}
         text-transform: capitalize;
     }
 }
-@media (max-width: 60rem){
-    .mobileonly{visibility:visible; }
-    .mobileonly{
-        padding: 2.2rem 1rem 1rem 1rem;
-    }
-    #menu{
-        right: -1rem;
-        padding-left: 1rem;
-        box-shadow: -1px 0px 0px 1px #10261E;
-        padding-top: 22vh;
-    }
-    #menu li a{
-        font-size: 1rem;
-        text-transform: uppercase;
-    }
-    #menu li{
-        padding-bottom: 0.8rem;
-    }
-    ::-webkit-scrollbar {
-        width: 0;
-        height: 0;
-    }
 
+.topbar{visibility:visible; }
+.topbar{
+    padding: 2.2rem 1rem 1rem 1rem;
+}
+#menu{
+    right: -1rem;
+    padding-left: 1rem;
+    box-shadow: -1px 0px 0px 1px #10261E;
+    padding-top: 22vh;
+}
+#menu li a{
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+#menu li{
+    padding-bottom: 0.8rem;
+}
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
 }
 
 .cursor{
