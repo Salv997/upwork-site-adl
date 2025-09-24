@@ -236,7 +236,7 @@ nav ul{
 }
 .about .sec-0 h2{
     color: black;
-    font-size: 1.9vw;
+    font-size: 1.8vw;
     font-weight: 200;
     line-height: 1.1;
     padding-top: 10rem;
@@ -245,7 +245,7 @@ nav ul{
 }
 .about .sec-0 h2 span{
  font-family: 'Helvetica-Bold';
- font-size: 2rem;
+ font-size: 2.8vw;
 }
 .about .sec-1{
     display: grid;
