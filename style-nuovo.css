@@ -240,7 +240,7 @@ nav ul{
     font-weight: 200;
     line-height: 1.1;
     padding-top: 10rem;
-    padding-bottom: 5rem;
+    padding-bottom: 2rem;
     text-align: justify;
 }
 .about .sec-0 h2 span{
@@ -286,8 +286,9 @@ nav ul{
     color: black;
     font-weight: 400;
     line-height: 1.59;
-    font-size: 1.065vw;
+    font-size: 0.9vw;
     padding-right: 11%;
+
 }
 @media(min-width:100rem){
     .about .sec-1{
@@ -311,7 +312,12 @@ nav ul{
     .about .sec-0 h2{
         font-size: 1.5rem;
         padding-bottom:3rem;
+        padding-top: 0;
         line-height: 1.2;
+    }
+    .about .sec-0 h2 span{
+        font-family: 'Helvetica-Bold';
+        font-size: 2.2rem;
     }
     .about .sec-1{
         min-height: 100vh;
@@ -451,7 +457,7 @@ nav ul{
     line-height: 1.1;
     text-align: justify;
     padding: 0 3%;
-    padding-top: 18rem;
+    padding-top: 10rem;
 }
 .collection h2{
     font-size:1.1rem;
@@ -1034,7 +1040,7 @@ footer.mobile{display:none;}
     padding-bottom: 1.5rem;
 }
 #menu li a{
-    font-size: 4.5rem;
+    font-size: 2.2rem;
     color: black;
     text-transform: capitalize;
     font-weight: 400;
@@ -1081,7 +1087,7 @@ footer.mobile{display:none;}
     padding-top: 22vh;
 }
 #menu li a{
-    font-size: 3rem;
+    font-size: 2.2rem;
     text-transform: uppercase;
 }
 #menu li{
