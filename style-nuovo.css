@@ -238,7 +238,7 @@ nav ul{
     color: black;
     font-size: 1.8vw;
     font-weight: 200;
-    line-height: 1.1;
+    line-height: 36px;
     padding-top: 8rem;
     padding-bottom: 2rem;
     text-align: justify;
@@ -246,6 +246,7 @@ nav ul{
 .about .sec-0 h2 span{
  font-family: 'Helvetica-Bold';
  font-size: 2.8vw;
+ line-height: 36px;
 }
 .about .sec-1{
     display: grid;
@@ -1078,20 +1079,20 @@ footer.mobile{display:none;}
 
 .topbar{visibility:visible; }
 .topbar{
-    padding: 2.2rem 1rem 1rem 1rem;
+    padding: 2.2rem 2.5rem 1rem 2.5rem;
 }
 #menu{
-    right: -1rem;
-    padding-left: 1rem;
+    right: -2.5rem;
+    padding-left: 2.5rem;
     box-shadow: -1px 0px 0px 1px #10261E;
-    padding-top: 22vh;
+    padding-top: 32vh;
 }
 #menu li a{
     font-size: 2.2rem;
     text-transform: uppercase;
 }
 #menu li{
-    padding-bottom: 0.8rem;
+    padding-bottom: 0.2rem;
 }
 ::-webkit-scrollbar {
     width: 0;
