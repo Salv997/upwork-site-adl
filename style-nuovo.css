@@ -260,8 +260,8 @@ nav ul{
     place-items: center;
     padding: 4.5%;
     column-gap: 12%;
-    padding-top: 8rem;
-    padding-bottom: 9%;
+    /* padding-top: 8rem;
+    padding-bottom: 9%; */
 }
 .about .sec-1 .portrait{
     height: 100%;
@@ -274,7 +274,7 @@ nav ul{
 }
 .about .sec-1 h1{
     font-size: 1.38vw;
-    font-family: 'Helvetica-Regular';
+    font-family: 'Helvetica-Bold';
     line-height: 1;
     padding-bottom: 2.3rem;
     font-weight: 200;
@@ -287,7 +287,7 @@ nav ul{
     color: black;
     font-weight: 400;
     line-height: 1.59;
-    font-size: 0.9vw;
+    font-size: 0.95vw;
     padding-right: 11%;
 
 }
@@ -298,7 +298,7 @@ nav ul{
 }
 @media (max-width: 60rem){
     .about {
-        padding: 0 2.5rem;
+        padding: 0 2.2rem;
         scroll-margin: 7rem;
     }
     .about .portrait img{
@@ -431,7 +431,7 @@ nav ul{
     padding-bottom: 2.6vh;
 }
 .collection .navigation-page .title{
-    font-family: 'Helvetica-Regular';
+    font-family: 'Helvetica-Bold';
     text-transform: uppercase;
     font-size: 1.1rem;
     padding-right: 0.5rem;
@@ -670,7 +670,7 @@ img.larga{max-height:70vh;}
         display: flex;
         flex-direction:column;
         row-gap: 0;
-        padding: 0 2.5rem;
+        padding: 0 2.2rem;
     }
     .collection .riga .container .img-slide{
         width: 100%;
@@ -730,6 +730,7 @@ img.larga{max-height:70vh;}
 }
 .wrap{height: 100%; width: 100%}
 .contact section{
+    padding-top: 3rem;
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -1056,12 +1057,13 @@ footer.mobile{display:none;}
 .show-nav{opacity:1;}
 /* .topbar{visibility: hidden;} */
 .topbar{
-    padding: 2.2rem 1rem 1rem 2rem;
+    visibility:visible;
+    padding: 2.2rem 3.2rem 1rem 3.2rem;
 }
 
-@media (max-width: 75rem){
+@media (max-width: 60rem){
     .topbar{
-        padding: 2.2rem 2rem 1rem 2rem;
+        padding: 2.2rem 2.2rem 1rem 2.2rem;
     }
     #menu{
         right: -2rem;
@@ -1072,15 +1074,12 @@ footer.mobile{display:none;}
         padding-bottom: 2rem;
     }
     #menu li a{
+        padding-left: 0;
         font-size: 2.2rem;
         text-transform: capitalize;
     }
 }
 
-.topbar{visibility:visible; }
-.topbar{
-    padding: 2.2rem 2.5rem 1rem 2.5rem;
-}
 #menu{
     right: -2.5rem;
     padding-left: 2.5rem;
@@ -1088,6 +1087,7 @@ footer.mobile{display:none;}
     padding-top: 32vh;
 }
 #menu li a{
+    padding-left: 3rem;
     font-size: 2.2rem;
     text-transform: uppercase;
 }
