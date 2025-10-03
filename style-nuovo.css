@@ -238,7 +238,7 @@ nav ul{
     color: black;
     font-size: 1.8vw;
     font-weight: 200;
-    line-height: 36px;
+    line-height: 2.8vw;
     padding-top: 8rem;
     padding-bottom: 2rem;
     text-align: justify;
@@ -246,7 +246,7 @@ nav ul{
 .about .sec-0 h2 span{
  font-family: 'Helvetica-Bold';
  font-size: 2.8vw;
- line-height: 36px;
+ line-height: 2.8vw;
 }
 .about .sec-1{
     display: grid;
@@ -421,7 +421,7 @@ nav ul{
 .collection .navigation-page{
     height: 100vh;
     padding: 4.5%;
-    padding-top: 6rem;
+    padding-top: 9rem;
     padding-bottom: 6rem;
     position: relative;
     z-index: 4;
@@ -463,7 +463,7 @@ nav ul{
 .collection h2{
     font-size:1.1rem;
     font-weight: 100;
-    padding-top: 3rem;
+    padding-top: 5.8rem;
     padding-bottom: 1rem;
     font-family: 'Helvetica-Regular';
     line-height: 0.8;
@@ -536,7 +536,7 @@ nav ul{
     transform: rotate(0);
 }
 .collection .list-desc{
-    font-size: 1rem;
+    font-size: 0.9rem;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease;
@@ -860,7 +860,7 @@ footer.desktop{
     width: 100vh;
     text-align:center;
     top: -1.4rem;
-    right:0.5rem;
+    right: 2.2rem;
     transform-origin: bottom right;
     color: rgb(93, 93, 90);
     font-family: 'Helvetica-Regular';
